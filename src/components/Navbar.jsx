@@ -1,30 +1,54 @@
 import * as React from "react";
-import PropTypes from "prop-types";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import useFileImport from "../hooks/useFileImport";
+import NavExpanded from "./NavExpanded";
+import { CloseSVG } from "./icons";
 
 const Navbar = ({ className = "" }) => {
   const fileMap = useFileImport();
+  const [isScrolled, setIsScrolled] = React.useState(false);
+  const [expand, setExpand] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
-      <div
-        className={`w-full md:hidden shadow-[2px_3px_5px_2px_rgba(0,_0,_0,_0.05)] bg-white flex flex-row items-start justify-between p-6 box-border leading-[normal] tracking-[normal] gap-[20px] ${className}`}
+    <NavExpanded expand={expand} />
+      <nav
+        className={`fixed top-0 z-50 w-full md:hidden ${isScrolled && 'shadow-[2px_3px_5px_2px_rgba(0,_0,_0,_0.05)]'} bg-white flex flex-row items-start justify-between p-6 box-border leading-[normal] tracking-[normal] gap-[20px] ${className}`}
       >
         <GatsbyImage
           className="h-9 w-9 relative object-cover"
           image={getImage(fileMap["Brand-logo"])}
           alt="Brand Icon"
         />
-        <div className="flex flex-col items-start justify-start pt-px px-0 pb-0">
-          <div className="w-[34px] h-[34px] relative rounded-lg overflow-hidden shrink-0">
+        <div onClick={() => setExpand(!expand)} className="flex flex-col items-start justify-start pt-px px-0 pb-0 cursor-pointer">
+          {!expand ? <div className={`w-[34px] h-[34px] relative rounded-lg overflow-hidden shrink-0`}>
+          
             <div className="absolute top-[10px] left-[8px] w-[18px] h-3.5">
               <div className="absolute top-[0px] left-[0px] rounded-8xs bg-dark-100 w-[18px] h-0.5" />
               <div className="absolute top-[6px] left-[0px] rounded-8xs bg-dark-100 w-[18px] h-0.5" />
               <div className="absolute top-[12px] left-[0px] rounded-8xs bg-dark-100 w-[18px] h-0.5" />
             </div>
           </div>
+          :
+          <CloseSVG />}
         </div>
-      </div>
+        
+      </nav>
       <div
         className={`w-full hidden md:flex flex-row items-end justify-between py-6 px-20 box-border leading-[normal] tracking-[normal] gap-[20px] text-left text-base text-success font-button-m mq750:flex-wrap mq750:pl-10 mq750:pr-10 mq750:box-border ${className}`}
       >
