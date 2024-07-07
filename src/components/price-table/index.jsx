@@ -269,7 +269,7 @@ const PriceTable = () => {
       </main>
     </div>
 
-<div className="md:hidden mx-[30px]">
+<div className="mb-5 md:hidden mx-[30px]">
 <div
 className={`mb-6 w-full flex flex-col items-start justify-start gap-[16px] leading-[normal] tracking-[normal] text-center text-[26px] text-dark-100 font-montserrat`}
 >
