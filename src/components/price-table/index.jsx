@@ -3,10 +3,12 @@ import SectionText from "./section-text";
 import Component from "./component";
 import { TickSVG } from "../icons";
 import Div from "./div";
+import BasicItems from "./basicItems";
 
 const PriceTable = () => {
   return (
-    <div className="w-full relative bg-default-white overflow-hidden flex flex-col items-center justify-start py-20 px-5 box-border gap-[60px] leading-[normal] tracking-[normal] mq675:gap-[30px]">
+    <>
+    <div className="hidden w-full relative bg-default-white overflow-hidden md:flex flex-col items-center justify-start py-20 px-5 box-border gap-[60px] leading-[normal] tracking-[normal] mq675:gap-[30px]">
       <SectionText />
       <main className="w-[1264px] rounded-t rounded-b-none overflow-hidden flex flex-col items-start justify-start max-w-full">
       <div
@@ -88,7 +90,7 @@ const PriceTable = () => {
         </div>
       </div>
 
-      <div className="self-stretch flex text-left text-base text-dark-100 font-body flex-col items-center justify-center pt-[29px] px-5 pb-7 border-[0.5px] border-solid border-dark-25">
+      <div className="bg-seagreen-low self-stretch flex text-left text-base text-dark-100 font-body flex-col items-center justify-center pt-[29px] px-5 pb-7 border-[0.5px] border-solid border-dark-25">
         <div className="relative leading-[140%] inline-block min-w-[75px]">
           1 Location
         </div>
@@ -112,7 +114,7 @@ const PriceTable = () => {
         </div>
       </div>
 
-      <div className="self-stretch text-left text-base text-dark-100 font-body flex flex-col items-center justify-center pt-[29px] px-5 pb-7 border-[0.5px] border-solid border-dark-25">
+      <div className="bg-seagreen-low self-stretch text-left text-base text-dark-100 font-body flex flex-col items-center justify-center pt-[29px] px-5 pb-7 border-[0.5px] border-solid border-dark-25">
         <div className="relative leading-[140%] inline-block min-w-[91px]">
           2 Employees
         </div>
@@ -138,7 +140,7 @@ const PriceTable = () => {
       </div>
 
 
-      <div className="self-stretch flex flex-row items-center justify-center pt-[30px] px-5 pb-[29px] border-[0.5px] border-solid border-dark-25">
+      <div className="bg-seagreen-low self-stretch flex flex-row items-center justify-center pt-[30px] px-5 pb-[29px] border-[0.5px] border-solid border-dark-25">
       <TickSVG />
       </div>
 
@@ -155,7 +157,7 @@ const PriceTable = () => {
           Full POS
         </div>
       </div>
-      <div className="self-stretch flex flex-row items-center justify-center pt-[30px] px-5 pb-[29px] border-[0.5px] border-solid border-dark-25">
+      <div className="bg-seagreen-low self-stretch flex flex-row items-center justify-center pt-[30px] px-5 pb-[29px] border-[0.5px] border-solid border-dark-25">
         <TickSVG />
       </div>
       <div className="self-stretch flex flex-row items-center justify-center pt-[30px] px-5 pb-[29px] border-[0.5px] border-solid border-dark-25">
@@ -170,7 +172,7 @@ const PriceTable = () => {
           Customer Management
         </div>
       </div>
-      <div className="self-stretch flex flex-row items-center justify-center pt-[30px] px-5 pb-[29px] border-[0.5px] border-solid border-dark-25">
+      <div className="bg-seagreen-low self-stretch flex flex-row items-center justify-center pt-[30px] px-5 pb-[29px] border-[0.5px] border-solid border-dark-25">
         <TickSVG />
       </div>
       <div className="self-stretch flex flex-row items-center justify-center pt-[30px] px-5 pb-[29px] border-[0.5px] border-solid border-dark-25">
@@ -185,7 +187,7 @@ const PriceTable = () => {
           Messages
         </div>
       </div>
-      <div className="self-stretch flex flex-row items-center justify-center pt-[30px] px-5 pb-[29px] border-[0.5px] border-solid border-dark-25">
+      <div className="bg-seagreen-low self-stretch flex flex-row items-center justify-center pt-[30px] px-5 pb-[29px] border-[0.5px] border-solid border-dark-25">
         <TickSVG />
       </div>
       <div className="self-stretch flex flex-row items-center justify-center pt-[30px] px-5 pb-[29px] border-[0.5px] border-solid border-dark-25">
@@ -196,7 +198,7 @@ const PriceTable = () => {
       </div>
       <Div reports="Reports" />
 
-      <div className="w-full h-full box-border border-[0.5px] border-solid border-dark-25" />
+      <div className="bg-seagreen-low w-full h-full box-border border-[0.5px] border-solid border-dark-25" />
       <div className="self-stretch flex flex-row items-center justify-center pt-[30px] px-5 pb-[29px] border-[0.5px] border-solid border-dark-25">
         <TickSVG />
       </div>
@@ -205,14 +207,14 @@ const PriceTable = () => {
       </div>
 
       <Div reports="Team Collaboration" />
-      <div className="w-full h-full box-border border-[0.5px] border-solid border-dark-25" />
+      <div className="bg-seagreen-low w-full h-full box-border border-[0.5px] border-solid border-dark-25" />
       <div className="w-full h-full box-border border-[0.5px] border-solid border-dark-25" />
       <div className="self-stretch flex flex-row items-center justify-center pt-[30px] px-5 pb-[29px] border-[0.5px] border-solid border-dark-25">
         <TickSVG />
       </div>
 
       <Div reports="eCommerce" />
-      <div className="w-full h-full box-border border-[0.5px] border-solid border-dark-25" />
+      <div className="bg-seagreen-low w-full h-full box-border border-[0.5px] border-solid border-dark-25" />
       <div className="w-full h-full box-border border-[0.5px] border-solid border-dark-25" />
       <div className="self-stretch flex flex-row items-center justify-center pt-[30px] px-5 pb-[29px] border-[0.5px] border-solid border-dark-25">
         <TickSVG />
@@ -223,7 +225,7 @@ const PriceTable = () => {
           Integrations
         </div>
       </div>
-      <div className="self-stretch flex flex-row text-left text-base text-dark-100 font-body items-center justify-center pt-[29px] px-5 pb-7 border-[0.5px] border-solid border-dark-25">
+      <div className="bg-seagreen-low self-stretch flex flex-row text-left text-base text-dark-100 font-body items-center justify-center pt-[29px] px-5 pb-7 border-[0.5px] border-solid border-dark-25">
         <div className="relative leading-[140%] inline-block min-w-[90px]">
           1 Integration
         </div>
@@ -244,7 +246,7 @@ const PriceTable = () => {
           Support features
         </div>
       </div>
-      <div className="self-stretch flex flex-row text-left text-base text-dark-100 font-body items-center justify-center pt-[29px] px-5 pb-7 z-[1] border-[0.5px] border-solid border-dark-25">
+      <div className="bg-seagreen-low self-stretch flex flex-row text-left text-base text-dark-100 font-body items-center justify-center pt-[29px] px-5 pb-7 z-[1] border-[0.5px] border-solid border-dark-25">
         <div className="relative leading-[140%]">Email Support Only</div>
       </div>
       <div className="self-stretch flex flex-row text-left text-base text-dark-100 font-body items-center justify-center pt-[18px] px-5 pb-[17px] z-[1] border-[0.5px] border-solid border-dark-25">
@@ -266,6 +268,289 @@ const PriceTable = () => {
 
       </main>
     </div>
+
+<div className="md:hidden mx-[30px]">
+<div
+className={`mb-6 w-full flex flex-col items-start justify-start gap-[16px] leading-[normal] tracking-[normal] text-center text-[26px] text-dark-100 font-montserrat`}
+>
+<div className="self-stretch flex flex-row items-start justify-start py-0 px-2 box-border max-w-full">
+  <h1 className="m-0 flex-1 relative text-inherit tracking-[0.02em] leading-[140%] font-bold font-inherit text-transparent !bg-clip-text [background:linear-gradient(90deg,_#61ba5f,_#4c8c4a)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] inline-block max-w-full">
+    Choose your plan
+  </h1>
+</div>
+<div className="self-stretch flex flex-col items-start justify-start gap-[8px] text-base font-info-text">
+  <div className="self-stretch relative leading-[140%]">
+    Choose a plan that's right for your growing team.
+  </div>
+  <div className="self-stretch relative text-xs leading-[140%] text-dark-75">
+    <p className="m-0">{`Simple pricing. No hidden charges. `}</p>
+    <p className="m-0">Free for the first 14 days.</p>
+  </div>
+</div>
+</div>
+<div
+      className={`w-full flex flex-col items-start justify-start gap-[16px] leading-[normal] tracking-[normal]`}
+    >
+      <section className="self-stretch flex flex-col items-start justify-start max-w-full text-center text-sm text-lavender font-inter">
+        <div className="self-stretch border-[0.5px] flex flex-row items-center justify-start max-w-full">
+          <div className="flex-1 rounded-t rounded-b-none bg-success flex flex-row items-center justify-center py-4 px-6 box-border whitespace-nowrap max-w-full">
+            <b className="flex-1 relative leading-[20px]">Now available!</b>
+          </div>
+        </div>
+        <div className="self-stretch rounded-[5px] box-border overflow-hidden flex flex-row items-start justify-start max-w-full text-left text-xs text-dark-100 font-sub-title border-[0.5px] border-solid border-dark-25">
+          <div className="flex-1 [background:linear-gradient(rgba(76,_140,_74,_0.05),_rgba(76,_140,_74,_0.05)),_#fff] flex flex-col items-start justify-center max-w-full">
+            <div className="self-stretch flex flex-col items-start justify-center p-6 gap-[16px]">
+              <h3 className="m-0 relative text-lg leading-[140%] font-semibold font-inherit inline-block min-w-[50px]">
+                Basic
+              </h3>
+              <div className="self-stretch relative leading-[140%] font-info-text">
+                For the repair business committed to delivering a great
+                in-person experience.
+              </div>
+              <div className="w-[122px] flex flex-col items-start justify-center gap-[8px] text-dark-50 font-inter">
+                <div className="relative leading-[17px] font-info-text inline-block min-w-[57px]">
+                  Starting at
+                </div>
+                <div className="w-[115px] flex flex-row items-baseline justify-center gap-[8px] text-sm font-sub-title">
+                  <div className="relative [text-decoration:line-through] leading-[20px] font-semibold inline-block min-w-[26px] whitespace-nowrap">
+                    $75
+                  </div>
+                  <div className="flex-1 relative text-lg leading-[140%] font-semibold text-dark-100 inline-block min-w-[34px] whitespace-nowrap">
+                    $50
+                  </div>
+                  <div className="flex-1 relative text-xs leading-[17px] font-info-text inline-block min-w-[39px]">
+                    /Month
+                  </div>
+                </div>
+                <div className="relative leading-[20px] font-medium text-darkorange inline-block min-w-[119px]">
+                  Early adopters price.
+                </div>
+                <div className="self-stretch relative leading-[20px] text-darkorange">
+                  <p className="m-0 font-medium">Deal ends in</p>
+                  <p className="m-0 font-semibold">3d 2 hrs 23 mins.</p>
+                </div>
+              </div>
+              <button className="cursor-pointer py-[5px] px-5 bg-success self-stretch shadow-[0px_1px_1.92px_rgba(16,_24,_40,_0.05)] rounded-lg overflow-hidden flex flex-row items-center justify-center whitespace-nowrap border-[1px] border-solid border-success">
+                <div className="relative text-xs leading-[17px] font-info-text text-white text-left inline-block min-w-[84px]">
+                  Get started free
+                </div>
+              </button>
+            </div>
+            <BasicItems
+              location1="1 Location"
+              employees="2 Employees"
+              integration="1 Integration"
+              emailSupportOnly="Email Support Only"
+            />
+            <div className="self-stretch flex flex-col items-start justify-center py-4 pr-[132px] pl-6 gap-[4px] font-info-text">
+              <div className="relative leading-[17px] text-dark-50 inline-block min-w-[99px]">
+                Features included:
+              </div>
+              <div className="flex flex-row items-center justify-start py-2 pr-9 pl-0 gap-[8px]">
+              <TickSVG />
+                <div className="relative leading-[17px] inline-block min-w-[106px]">
+                  Order Management
+                </div>
+              </div>
+              <div className="flex flex-row items-center justify-start py-2 pr-[97px] pl-0 gap-[8px]">
+              <TickSVG />
+                <div className="relative leading-[17px] inline-block min-w-[45px]">
+                  Full POS
+                </div>
+              </div>
+              <div className="self-stretch flex flex-row items-center justify-start py-2 px-0 gap-[8px]">
+                <TickSVG />
+                <div className="flex-1 relative leading-[17px]">
+                  Customer Management
+                </div>
+              </div>
+              <div className="self-stretch flex flex-row items-center justify-start py-2 px-0 gap-[8px]">
+                <TickSVG />
+                <div className="flex-1 relative leading-[17px]">Messages</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="self-stretch flex flex-col items-start justify-start max-w-full text-left text-xs text-dark-100 font-info-text">
+        <button className="cursor-pointer pt-[15px] px-[23px] pb-4 bg-blanchedalmond-200 self-stretch rounded-t rounded-b-none flex flex-row items-center justify-center whitespace-nowrap border-t-[0.5px] border-solid border-dark-25 border-r-[0.5px] border-l-[0.5px]">
+          <b className="flex-1 relative text-sm leading-[20px] font-inter text-darksalmon text-center">
+            Coming soon
+          </b>
+        </button>
+        <div className="self-stretch rounded-[5px] box-border overflow-hidden flex flex-row items-start justify-start max-w-full border-[0.5px] border-solid border-dark-25">
+          <div className="flex-1 bg-white flex flex-col items-start justify-center max-w-full">
+            <div className="self-stretch flex flex-col items-start justify-center py-6 pr-5 pl-6 gap-[16px]">
+              <h3 className="m-0 relative text-lg leading-[140%] font-semibold font-sub-title inline-block min-w-[114px]">
+                Professional
+              </h3>
+              <div className="self-stretch relative leading-[140%]">
+                For the growing  repair business with a few employees and
+                multiple sales channels.
+              </div>
+              <div className="flex flex-col items-start justify-center gap-[8px] text-dark-50">
+                <div className="relative leading-[17px] inline-block min-w-[57px]">
+                  Starting at
+                </div>
+                <div className="flex flex-row items-baseline justify-center gap-[8px] text-lg text-dark-100 font-sub-title">
+                  <div className="relative leading-[140%] font-semibold inline-block min-w-[34px] whitespace-nowrap">
+                    $99
+                  </div>
+                  <div className="relative text-xs leading-[17px] font-info-text text-dark-50 inline-block min-w-[39px]">
+                    /Month
+                  </div>
+                </div>
+              </div>
+            </div>
+            <BasicItems
+              location1="1 Location"
+              employees="4 Employees"
+              integration="3 Integrations"
+              emailSupportOnly="12 hr phone and Email support"
+            />
+            <div className="self-stretch flex flex-col items-start justify-center py-4 px-6 gap-[4px]">
+              <div className="relative leading-[17px] text-dark-50 inline-block min-w-[99px]">
+                Features included:
+              </div>
+              <div className="flex flex-row items-center justify-start py-2 pr-9 pl-0 gap-[8px]">
+                <TickSVG />
+                <div className="relative leading-[17px] inline-block min-w-[106px]">
+                  Order Management
+                </div>
+              </div>
+              <div className="flex flex-row items-center justify-start py-2 pr-[97px] pl-0 gap-[8px]">
+                <TickSVG />
+                <div className="relative leading-[17px] inline-block min-w-[45px]">
+                  Full POS
+                </div>
+              </div>
+              <div className="w-[170px] flex flex-row items-center justify-start py-2 px-0 box-border gap-[8px]">
+                <TickSVG />
+                <div className="flex-1 relative leading-[17px]">
+                  Customer Management
+                </div>
+              </div>
+              <div className="w-[170px] flex flex-row items-center justify-start py-2 px-0 box-border gap-[8px]">
+                <TickSVG />
+                <div className="flex-1 relative leading-[17px]">Messages</div>
+              </div>
+              <div className="self-stretch flex flex-row items-center justify-start py-2 pr-[110px] pl-0 gap-[8px]">
+                <TickSVG />
+                <div className="relative leading-[17px] inline-block min-w-[43px]">
+                  Reports
+                </div>
+                <div className="rounded-2xl bg-blanchedalmond-100 flex flex-row items-center justify-center py-0.5 px-2 whitespace-nowrap text-center text-darksalmon">
+                  <div className="relative leading-[17px] inline-block min-w-[73px]">
+                    Coming Soon
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="rounded-8xs box-border border-[0.5px] self-stretch flex flex-col items-start justify-start max-w-full text-left text-xs text-dark-100 font-info-text">
+        <button className="cursor-pointer pt-[15px] px-[23px] pb-4 bg-blanchedalmond-200 self-stretch rounded-t rounded-b-none flex flex-row items-center justify-center whitespace-nowrap border-t-[0.5px] border-solid border-dark-25 border-r-[0.5px] border-l-[0.5px]">
+          <b className="flex-1 relative text-sm leading-[20px] font-inter text-darksalmon text-center">
+            Coming soon
+          </b>
+        </button>
+        <div className="self-stretch overflow-hidden flex flex-row items-start justify-start max-w-full border-[0.5px] border-solid border-dark-25 rounded-[5px]">
+          <div className="flex-1 bg-white flex flex-col items-start justify-center max-w-full">
+            <div className="self-stretch flex flex-col items-start justify-center py-6 pr-5 pl-6 gap-[16px]">
+              <h3 className="m-0 relative text-lg leading-[140%] font-semibold font-sub-title inline-block min-w-[96px]">
+                Enterprise
+              </h3>
+              <div className="self-stretch relative leading-[140%]">
+                For repair businesses with large repair teams and complex
+                operations.
+              </div>
+              <div className="flex flex-col items-start justify-center gap-[8px] text-dark-50">
+                <div className="relative leading-[17px] inline-block min-w-[57px]">
+                  Starting at
+                </div>
+                <div className="flex flex-row items-baseline justify-center gap-[8px] text-lg text-dark-100 font-sub-title">
+                  <div className="relative leading-[140%] font-semibold inline-block min-w-[41px] whitespace-nowrap">
+                    $199
+                  </div>
+                  <div className="relative text-xs leading-[17px] font-info-text text-dark-50 inline-block min-w-[39px]">
+                    /Month
+                  </div>
+                </div>
+              </div>
+            </div>
+            <BasicItems
+              location1="3 Locations"
+              employees="6 Employees"
+              integration="Unlimited Integrations"
+              emailSupportOnly="12 hr priority support"
+            />
+            <div className="self-stretch flex flex-col items-start justify-center py-4 px-6 gap-[4px]">
+              <div className="relative leading-[17px] text-dark-50 inline-block min-w-[99px]">
+                Features included:
+              </div>
+              <div className="flex flex-row items-center justify-start py-2 pr-9 pl-0 gap-[8px]">
+                <TickSVG />
+                <div className="relative leading-[17px] inline-block min-w-[106px]">
+                  Order Management
+                </div>
+              </div>
+              <div className="flex flex-row items-center justify-start py-2 pr-[97px] pl-0 gap-[8px]">
+                <TickSVG />
+                <div className="relative leading-[17px] inline-block min-w-[45px]">
+                  Full POS
+                </div>
+              </div>
+              <div className="w-[170px] flex flex-row items-center justify-start py-2 px-0 box-border gap-[8px]">
+                <TickSVG />
+                <div className="flex-1 relative leading-[17px]">
+                  Customer Management
+                </div>
+              </div>
+              <div className="w-[170px] flex flex-row items-center justify-start py-2 px-0 box-border gap-[8px]">
+                <TickSVG />
+                <div className="flex-1 relative leading-[17px]">Messages</div>
+              </div>
+              <div className="self-stretch flex flex-row items-center justify-start py-2 pr-[110px] pl-0 gap-[8px]">
+                <TickSVG />
+                <div className="relative leading-[17px] inline-block min-w-[43px]">
+                  Reports
+                </div>
+                <div className="rounded-2xl bg-blanchedalmond-100 flex flex-row items-center justify-center py-0.5 px-2 whitespace-nowrap text-center text-darksalmon">
+                  <div className="relative leading-[17px] inline-block min-w-[73px]">
+                    Coming Soon
+                  </div>
+                </div>
+              </div>
+              <div className="self-stretch flex flex-row items-center justify-start py-2 pr-12 pl-0 gap-[8px]">
+              <TickSVG />
+                <div className="relative leading-[17px] inline-block min-w-[105px]">
+                  Team Collaboration
+                </div>
+                <div className="rounded-2xl bg-blanchedalmond-100 flex flex-row items-center justify-center py-0.5 px-2 whitespace-nowrap text-center text-darksalmon">
+                  <div className="relative leading-[17px] inline-block min-w-[73px]">
+                    Coming Soon
+                  </div>
+                </div>
+              </div>
+              <div className="self-stretch flex flex-row items-center justify-start py-2 pr-[86px] pl-0 gap-[8px]">
+              <TickSVG />
+                <div className="relative leading-[17px] inline-block min-w-[67px]">
+                  eCommerce
+                </div>
+                <div className="rounded-2xl bg-blanchedalmond-100 flex flex-row items-center justify-center py-0.5 px-2 whitespace-nowrap text-center text-darksalmon">
+                  <div className="relative leading-[17px] inline-block min-w-[73px]">
+                    Coming Soon
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    </div>
+</>
   );
 };
 

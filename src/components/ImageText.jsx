@@ -27,7 +27,7 @@ const ImageText = ({ imageLeft = true, image, title, summary }) => {
     </div>
 
 <div
-className={`w-full md:hidden overflow-hidden flex flex-col items-end justify-start gap-[32px] leading-[normal] tracking-[normal]`}
+className={`w-full md:hidden overflow-hidden flex flex-col items-end mb-24 justify-start gap-[32px] leading-[normal] tracking-[normal]`}
 >
 <GatsbyImage
         className="self-stretch relative max-w-full overflow-hidden max-h-full object-cover shrink-0"

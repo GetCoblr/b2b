@@ -52,6 +52,7 @@ module.exports = {
         body: "Questrial",
         "button-m": "Roboto",
         "body-xs": "Roboto",
+        "info-text": "Questrial",
         "body-s": "Roboto",
         "open-sans": "'Open Sans'",
         montserrat: "Montserrat",
