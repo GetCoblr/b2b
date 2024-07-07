@@ -6,6 +6,17 @@ import Div from "./div";
 import BasicItems from "./basicItems";
 
 const PriceTable = () => {
+
+  const [seconds, setSeconds] = React.useState(267780);
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setSeconds(prevSeconds => prevSeconds - 1);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
     <div className="hidden w-full relative bg-default-white overflow-hidden md:flex flex-col items-center justify-start py-20 px-5 box-border gap-[60px] leading-[normal] tracking-[normal] mq675:gap-[30px]">
@@ -65,7 +76,7 @@ const PriceTable = () => {
           </div>
           <div className="relative leading-[20px]">
             <span className="font-medium">Deal ends in</span>
-            <span className="font-semibold"> 3 days 2 hours 23 minutes.</span>
+            <span className="font-semibold"> {Math.floor(seconds / (3600 * 24))} days {Math.floor((seconds % (3600 * 24)) / 3600)} hours {Math.floor((seconds % 3600) / 60)} minutes.</span>
           </div>
         </div>
         <button className="cursor-pointer [border:none] py-4 px-6 bg-success self-stretch rounded flex flex-row items-center justify-center whitespace-nowrap hover:bg-mediumseagreen">
@@ -327,7 +338,7 @@ className={`mb-6 w-full flex flex-col items-start justify-start gap-[16px] leadi
                 </div>
                 <div className="self-stretch relative leading-[20px] text-darkorange">
                   <p className="m-0 font-medium">Deal ends in</p>
-                  <p className="m-0 font-semibold">3d 2 hrs 23 mins.</p>
+                  <p className="m-0 font-semibold">{Math.floor(seconds / (3600 * 24))}d {Math.floor((seconds % (3600 * 24)) / 3600)} hrs {Math.floor((seconds % 3600) / 60)} mins.</p>
                 </div>
               </div>
               <button className="cursor-pointer py-[5px] px-5 bg-success self-stretch shadow-[0px_1px_1.92px_rgba(16,_24,_40,_0.05)] rounded-lg overflow-hidden flex flex-row items-center justify-center whitespace-nowrap border-[1px] border-solid border-success">
