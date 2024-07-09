@@ -17,7 +17,7 @@ const ImageText = ({
       <div
         className={`${bottomImage && "mb-8"} w-full hidden md:flex ${
           imageLeft ? "flex-row" : "flex-row-reverse"
-        }  items-center justify-between p-20 box-border gap-[80px] leading-[normal] tracking-[normal] text-left text-base text-dark-100 font-body-xs mq750:gap-[40px] mq750:pl-10 mq750:pr-10 mq750:box-border mq450:gap-[20px] mq1125:flex-wrap`}
+        }  items-center justify-between p-20 box-border gap-[80px] leading-[normal] tracking-[normal] text-left text-base text-dark-100 font-body-xs`}
       >
         <div
           className={`${
@@ -38,7 +38,11 @@ const ImageText = ({
           />
           {bottomImage && (
             <GatsbyImage
-              className="w-[542px] h-[221px] absolute !m-[0] right-[-8px] bottom-[-148px] object-cover z-[2]"
+              style={{
+                width: "88%",
+                bottom: "-33%"
+              }}
+              className="absolute !m-[0] right-[-8px] object-cover z-[2]"
               alt="Image"
               image={getImage(bottomImage)}
             />
@@ -53,7 +57,7 @@ const ImageText = ({
           )}
         </div>
 
-        <div className="w-[450px] flex flex-col items-start justify-center min-w-[450px] max-w-full mq750:min-w-full mq1125:flex-1">
+        <div className="w-1/2 flex flex-col items-start justify-center max-w-full mq750:min-w-full mq1125:flex-1">
           <div className="self-stretch flex flex-col items-start justify-start gap-[32px] max-w-full">
             <div className="self-stretch flex flex-col items-start justify-start gap-[16px] text-xl">
               {comingSoon && (

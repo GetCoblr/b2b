@@ -9,12 +9,21 @@ const FrameComponent = ({ className = "" }) => {
   return (
     <>
     <section
-      className={`hidden w-full overflow-hidden self-stretch md:flex flex-row items-start justify-start pt-0 px-0 pb-20 box-border max-w-full text-left text-41xl text-white font-sub-title mq750:pb-[52px] mq750:box-border ${className}`}
+      className={`hidden w-full self-stretch md:flex flex-row items-start justify-start pt-0 px-0 pb-20 box-border max-w-full text-left text-41xl text-white font-sub-title mq750:pb-[52px] mq750:box-border ${className}`}
     >
-      <div style={{
-        backgroundImage: `url(${backgroundImage})`
-      }} className="relative flex-1 flex flex-row items-start justify-start py-14 px-20 box-border bg-cover bg-no-repeat bg-[top] min-h-[561px] max-w-full mq750:gap-[40px] mq750:pl-10 mq750:pr-10 mq750:box-border mq450:gap-[20px] mq450:pt-9 mq450:pb-9 mq450:box-border">
-        <div className="absolute inset-0 bg-black opacity-50" />
+      <div className="relative">
+      <div
+      className=" bg-cover bg-no-repeat bg-[top]"
+      style={{
+        left: 'min(0px, calc((1440px - 100vw) / 2))',
+        position: 'absolute',
+        width: '100vw',
+        height: '100%',
+        backgroundImage: `url(${backgroundImage})`,
+      }}>
+        <div className="absolute w-full h-full z-[1] inset-0 bg-black opacity-50" />
+      </div>
+      <div className="relative overflow-hidden flex-1 flex flex-row items-start justify-start py-14 px-20 box-border bg-cover bg-no-repeat bg-[top] min-h-[561px] max-w-full mq750:gap-[40px] mq750:pl-10 mq750:pr-10 mq750:box-border mq450:gap-[20px] mq450:pt-9 mq450:pb-9 mq450:box-border">
         <div className="z-10 flex-1 flex flex-col items-start justify-center gap-[24px] max-w-full">
           <div className="self-stretch flex flex-col items-start justify-center gap-[24px] max-w-full">
             <div className="self-stretch flex flex-col items-start justify-center py-0 pr-5 pl-0 box-border max-w-full">
@@ -64,6 +73,7 @@ const FrameComponent = ({ className = "" }) => {
             </button>
           </div>
         </div>
+      </div>
       </div>
     </section>
     
