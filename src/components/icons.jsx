@@ -457,3 +457,37 @@ export const CloseSVG = () => (
     </defs>
   </svg>
 );
+
+export const CheckMarkSVG = () => (
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="8" cy="8" r="8" fill="#4C8C4A"/>
+<path d="M4 8.375L7.27273 11L12 5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+);
+
+export const RectangleSVG = () => (
+<svg width="1440" height="976" viewBox="0 0 1440 976" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.28181 328.623C-7.95046 313.995 -0.0181446 292.656 18.0418 288.916L1409.93 0.725737C1425.45 -2.48689 1440 9.36123 1440 25.2065V950.873C1440 967.171 1424.66 979.111 1408.86 975.107L288.406 691.13C282.961 689.75 278.14 686.577 274.719 682.122L3.28181 328.623Z" fill="url(#paint0_linear_24_14994)"/>
+<path d="M3.28181 328.623C-7.95046 313.995 -0.0181446 292.656 18.0418 288.916L1409.93 0.725737C1425.45 -2.48689 1440 9.36123 1440 25.2065V950.873C1440 967.171 1424.66 979.111 1408.86 975.107L288.406 691.13C282.961 689.75 278.14 686.577 274.719 682.122L3.28181 328.623Z" fill="#4C8C4A" fill-opacity="0.02"/>
+<defs>
+<linearGradient id="paint0_linear_24_14994" x1="520" y1="489" x2="1266.5" y2="411.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F7F7F7"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+</defs>
+</svg>
+);
+
+export const Rectangle1SVG = () => (
+<svg width="1440" height="861" viewBox="0 0 1440 861" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 330.787C0 327.95 0.483073 325.133 1.42852 322.458L42.4238 206.45C45.2737 198.385 52.0488 192.337 60.3839 190.417L750.285 31.5101C751.759 31.1707 753.26 30.9657 754.771 30.8976L1440 0V861H0V330.787Z" fill="url(#paint0_linear_24_14996)"/>
+<path d="M0 330.787C0 327.95 0.483073 325.133 1.42852 322.458L42.4238 206.45C45.2737 198.385 52.0488 192.337 60.3839 190.417L750.285 31.5101C751.759 31.1707 753.26 30.9657 754.771 30.8976L1440 0V861H0V330.787Z" fill="#4C8C4A" fill-opacity="0.02"/>
+<defs>
+<linearGradient id="paint0_linear_24_14996" x1="535.7" y1="243.5" x2="1269.73" y2="168.595" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F7F7F7"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+</defs>
+</svg>
+);
+

@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 
 const Layout = ({ children, bg=false }) => {
   return (
-    <>
+    <div className="w-screen overflow-hidden">
     <div className={`${bg && '[background:linear-gradient(rgba(76,_140,_74,_0.02),_rgba(76,_140,_74,_0.02)),_linear-gradient(180deg,_#fff,_#f7f7f7)]'}`}>
     <div className={`max-w-screen-2xl mt-[84px] md:mt-0 mx-auto`}>
       {
@@ -20,7 +20,7 @@ const Layout = ({ children, bg=false }) => {
         {React.Children.toArray(children).slice(bg ? 1 : 0)}
         <Footer />
       </div>
-      </>
+      </div>
   );
 };
 

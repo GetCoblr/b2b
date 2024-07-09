@@ -23,7 +23,7 @@ const Footer = ({ className = "" }) => {
         <div className="w-[260px] flex flex-col items-start justify-center py-0 pr-5 pl-0 box-border gap-[24px] text-dark-100 font-body">
           <GatsbyImage
             className="w-[33px] h-[34px] relative object-cover"
-            image={getImage(fileMap["Brand-logo"])}
+            image={getImage(fileMap["Brand-logo"].gatsbyImageData)}
             alt="Brand Icon"
           />
           <div className="relative leading-[140%] whitespace-nowrap">
@@ -122,7 +122,7 @@ const Footer = ({ className = "" }) => {
         <div className="flex flex-col items-start justify-center gap-[24px] text-dark-100 font-body">
             <GatsbyImage
             className="w-[33px] h-[34px] relative object-cover"
-            image={getImage(fileMap["Brand-logo"])}
+            image={getImage(fileMap["Brand-logo"].gatsbyImageData)}
             alt="Brand Icon"
           />
           <div className="relative leading-[140%] whitespace-nowrap">

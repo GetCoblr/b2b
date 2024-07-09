@@ -32,7 +32,7 @@ const Navbar = ({ className = "" }) => {
       >
         <GatsbyImage
           className="h-9 w-9 relative object-cover"
-          image={getImage(fileMap["Brand-logo"])}
+          image={getImage(fileMap["Brand-logo"].gatsbyImageData)}
           alt="Brand Icon"
         />
         <div onClick={() => setExpand(!expand)} className="flex flex-col items-start justify-start pt-px px-0 pb-0 cursor-pointer">
@@ -56,7 +56,7 @@ const Navbar = ({ className = "" }) => {
           <div className="h-12 w-12 relative">
             <GatsbyImage
               className="absolute top-[calc(50%_-_18px)] left-[calc(50%_-_18px)] w-9 h-9 object-cover"
-              image={getImage(fileMap["Brand-logo"])}
+              image={getImage(fileMap["Brand-logo"].gatsbyImageData)}
               alt="Brand Icon"
             />
           </div>

@@ -1,5 +1,4 @@
 import * as React from "react";
-import PropTypes from "prop-types";
 import { GreenCircle, RedCircle, YellowCircle } from "./icons";
 import useFileImport from "../hooks/useFileImport";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
@@ -9,9 +8,9 @@ const Header = ({ className = "" }) => {
   return (
     <>
       <div
-        className={`w-full hidden md:flex flex-col items-end justify-start pt-0 px-0 pb-[94px] box-border gap-[32px] leading-[normal] tracking-[normal] mq725:gap-[16px] ${className}`}
+        className={`mt-5 w-full hidden md:flex flex-col items-end justify-start pt-0 px-0 pb-[94px] box-border gap-[32px] leading-[normal] tracking-[normal] mq725:gap-[16px] ${className}`}
       >
-        <section className="self-stretch flex flex-row-reverse items-center justify-start py-0 px-20 box-border min-h-[433px] max-w-full text-left text-[46px] text-dark-100 font-sub-title mq725:pl-10 mq725:pr-10 mq725:box-border">
+        <section className="self-stretch overflow-hidden 2xl:overflow-visible flex flex-row-reverse items-center justify-start py-0 px-20 box-border min-h-[433px] max-w-full text-left text-[46px] text-dark-100 font-sub-title mq725:pl-10 mq725:pr-10 mq725:box-border">
           <div className="mr-[-122px] w-[691px] shadow-[0px_20px_25px_-5px_rgba(0,_0,_0,_0.1),_0px_0px_10px_rgba(0,_0,_0,_0.07)] rounded-[15px] bg-white overflow-hidden flex flex-col items-start justify-start max-w-full z-[1]">
             <div className="self-stretch bg-whitesmoke flex flex-row items-start justify-start py-[9.5px] px-4 box-border max-w-full">
               <div className="flex-1 flex flex-row items-start justify-start gap-[5px] max-w-full mq450:flex-wrap mq450:justify-center">
@@ -20,7 +19,7 @@ const Header = ({ className = "" }) => {
                 <GreenCircle />
               </div>
             </div>
-            <GatsbyImage className="self-stretch h-[404px] relative max-w-full overflow-hidden object-cover" image={getImage(fileMap['rectangle-14@2x'])} alt="Computer program" />
+            <GatsbyImage className="self-stretch min-h-[300px] max-h-[404px] relative max-w-full overflow-hidden object-cover" image={getImage(fileMap['rectangle-14@2x'].gatsbyImageData)} alt="Computer program" />
           </div>
           <div className="flex shrink-0 flex-col items-start justify-center gap-[24px] max-w-full">
             <div className="self-stretch flex flex-col items-start justify-center gap-[24px] max-w-full">
@@ -81,7 +80,7 @@ const Header = ({ className = "" }) => {
             </div>
           </div>
         </section>
-      </div>
+        </div>
       
       <div
       className={`w-full md:hidden [background:linear-gradient(rgba(76,_140,_74,_0.02),_rgba(76,_140,_74,_0.02)),_linear-gradient(180deg,_#fff,_#f7f7f7)] flex flex-row items-start justify-start pb-10 pr-3.5 pl-6 box-border leading-[normal] tracking-[normal] ${className}`}
@@ -97,7 +96,7 @@ const Header = ({ className = "" }) => {
             <GreenCircle />
           </div>
         </div>
-        <GatsbyImage className="self-stretch h-[251px] relative max-w-full overflow-hidden object-cover" image={getImage(fileMap['rectangle-14@2x'])} alt="Computer program" />
+        <GatsbyImage className="self-stretch h-[251px] relative max-w-full overflow-hidden object-cover" image={getImage(fileMap['rectangle-14@2x'].gatsbyImageData)} alt="Computer program" />
       </div>
         <h2 className="m-0 w-[342px] relative text-inherit tracking-[0.02em] leading-[140%] font-bold font-inherit text-transparent !bg-clip-text [background:linear-gradient(90deg,_#61ba5f,_#4c8c4a)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] inline-block max-w-full">
           <p className="[margin-block-start:0] [margin-block-end:5px]">

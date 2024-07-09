@@ -19,7 +19,10 @@ const useFileImport = () => {
   // Map over the queried files and return a map of names to URLs
   const fileMap = {};
   data.allFile.nodes.forEach(node => {
-    fileMap[node.name] = node.childImageSharp.gatsbyImageData;
+    fileMap[node.name] = {
+      gatsbyImageData: node.childImageSharp.gatsbyImageData,
+      publicURL: node.publicURL,
+    };
   });
 
   return fileMap;
