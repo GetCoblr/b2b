@@ -8,6 +8,30 @@ const Navbar = ({ className = "" }) => {
   const fileMap = useFileImport();
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [expand, setExpand] = React.useState(false);
+  const [windowSize, setWindowSize] = React.useState(window.innerWidth);
+
+  React.useEffect(() => {
+    // Function to update window size
+    const updateSize = () => {
+      setWindowSize(window.innerWidth);
+    };
+
+    // Event listener for window resize
+    window.addEventListener('resize', updateSize);
+
+    // Initial call to updateSize
+    updateSize();
+
+    // Cleanup the event listener
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
+
+  // Effect to update expand state based on window width
+  React.useEffect(() => {
+    if (windowSize >= 768) {
+      setExpand(false);
+    }
+  }, [windowSize]);
 
   React.useEffect(() => {
     const handleScroll = () => {
