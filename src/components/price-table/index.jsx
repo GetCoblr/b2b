@@ -29,17 +29,17 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
             className={`grid grid-cols-4 flex-nowrap items-center justify-center`}
           >
             <div className="flex-1 rounded bg-success flex flex-row items-center justify-center py-4 px-6 box-border opacity-[0] w-full whitespace-nowrap" />
-            <button className="border-[0.5px] cursor-pointer border-solid py-4 px-6 bg-success flex-1 rounded-t rounded-b-none flex flex-row items-center justify-center box-border w-full whitespace-nowrap hover:bg-mediumseagreen">
+            <button className="h-full border-[0.5px] cursor-pointer border-solid py-4 px-6 bg-success flex-1 rounded-t rounded-b-none flex flex-row items-center justify-center box-border w-full whitespace-nowrap hover:bg-mediumseagreen">
               <b className="text-sm flex-1 relative leading-[20px] font-inter text-default-white text-center">
                 Now available!
               </b>
             </button>
-            <button className="cursor-pointer pt-[15px] px-[23px] pb-4 bg-blanchedalmond-200 flex-1 rounded-t rounded-b-none box-border flex flex-row items-center justify-center w-full whitespace-nowrap border-t-[0.5px] border-solid border-dark-25 border-r-[0.5px] border-l-[0.5px] hover:bg-peachpuff">
+            <button className="h-full cursor-pointer pt-[15px] px-[23px] pb-4 bg-blanchedalmond-200 flex-1 rounded-t rounded-b-none box-border flex flex-row items-center justify-center w-full whitespace-nowrap border-t-[0.5px] border-solid border-dark-25 border-r-[0.5px] border-l-[0.5px] hover:bg-peachpuff">
               <b className="text-sm flex-1 relative leading-[20px] font-inter text-darksalmon text-center">
                 Coming soon
               </b>
             </button>
-            <button className="cursor-pointer pt-[15px] px-[23px] pb-4 bg-blanchedalmond-200 flex-1 rounded-t rounded-b-none box-border flex flex-row items-center justify-center w-full whitespace-nowrap border-t-[0.5px] border-solid border-dark-25 border-r-[0.5px] border-l-[0.5px] hover:bg-peachpuff">
+            <button className="h-full cursor-pointer pt-[15px] px-[23px] pb-4 bg-blanchedalmond-200 flex-1 rounded-t rounded-b-none box-border flex flex-row items-center justify-center w-full whitespace-nowrap border-t-[0.5px] border-solid border-dark-25 border-r-[0.5px] border-l-[0.5px] hover:bg-peachpuff">
               <b className="flex-1 relative text-sm leading-[20px] font-inter text-darksalmon text-center">
                 Coming soon
               </b>
@@ -352,7 +352,7 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                   <div className="cursor-pointer flex-1 flex relative leading-[140%] font-semibold items-center justify-center gap-1 max-w-full">
                     <div>Recommended</div>
                     <motion.div
-                      animate={{ rotate: isOpen ? 180 : 0 }}
+                      animate={{ rotate: isOpen ? 0 : 180 }}
                       transition={{ duration: 0.5, ease: "easeInOut" }}
                     >
                       <DownArrowSVG />
@@ -416,12 +416,12 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                       </a>
                       <IconLinkSVG />
                     </div>
-                    <div className="relative text-base leading-[140%] font-questrial flex items-center">
-                      For lower volume shipping needs
-                    </div>
+                    <div className="relative text-base leading-[140%] font-questrial flex items-center"></div>
                   </div>
-                  <div className="w-full h-full box-border border-[0.5px] border-solid border-dark-25" />
-                  <div className="self-stretch text-lg col-span-2 flex flex-row text-left font-semibold items-center justify-center pt-[29px] px-5 pb-7 border-[0.5px] border-solid border-dark-25">
+                  <div className="px-8 relative text-base justify-center leading-[140%] font-questrial text-gray-200 ps flex items-center w-full h-full border-[0.5px] border-solid border-dark-25 box-border">
+                    For lower volume shipping needs
+                  </div>
+                  <div className="self-stretch text-lg font-montserrat col-span-2 flex flex-row text-left font-semibold items-center justify-center pt-[29px] px-5 pb-7 border-[0.5px] border-solid border-dark-25">
                     <div className="relative font-semibold leading-[140%] inline-block min-w-[98px]">
                       $259
                     </div>
@@ -441,8 +441,10 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                       For high volume shipping needs
                     </div>
                   </div>
-                  <div className="w-full h-full box-border border-[0.5px] border-solid border-dark-25" />
-                  <div className="self-stretch text-lg col-span-2 flex flex-row text-left font-semibold items-center justify-center pt-[29px] px-5 pb-7 border-[0.5px] border-solid border-dark-25">
+                  <div className="px-8 relative text-base justify-center leading-[140%] font-questrial text-gray-200 ps flex items-center w-full h-full border-[0.5px] border-solid border-dark-25 box-border">
+                    For high volume shipping needs
+                  </div>
+                  <div className="self-stretch font-montserrat text-lg col-span-2 flex flex-row text-left font-semibold items-center justify-center pt-[29px] px-5 pb-7 border-[0.5px] border-solid border-dark-25">
                     <div className="relative font-semibold leading-[140%] inline-block min-w-[98px]">
                       $399
                     </div>
@@ -462,8 +464,10 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                       All-in-one printer solution for order and shipping labels
                     </div>
                   </div>
-                  <div className="w-full h-full box-border border-[0.5px] border-solid border-dark-25" />
-                  <div className="self-stretch text-lg col-span-2 flex flex-row text-left font-semibold items-center justify-center px-5 border-[0.5px] border-solid border-dark-25">
+                  <div className="relative text-base px-8 justify-center leading-[140%] font-questrial text-gray-200 flex items-center w-full h-full border-[0.5px] border-solid border-dark-25 box-border">
+                    All-in-one printer solution for order and shipping labels
+                  </div>
+                  <div className="self-stretch font-montserrat text-lg col-span-2 flex flex-row text-left font-semibold items-center justify-center px-5 border-[0.5px] border-solid border-dark-25">
                     <div className="relative font-semibold leading-[140%] inline-block min-w-[98px]">
                       $419
                     </div>
@@ -490,7 +494,7 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                       <IconLinkSVG />
                     </div>
                   </div>
-                  <div className="w-full h-full box-border px-8 py-4 border-[0.5px] border-solid border-dark-25 relative text-base leading-[140%] font-questrial flex items-center">
+                  <div className="w-full h-full text-gray-200 box-border px-8 py-4 border-[0.5px] border-solid border-dark-25 relative text-base leading-[140%] font-questrial flex items-center">
                     Heavy duty printer for order labels and QR codes
                   </div>
                   <div className="w-full h-full box-border border-[0.5px] border-solid border-dark-25" />
@@ -507,7 +511,7 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                       <IconLinkSVG />
                     </div>
                   </div>
-                  <div className="w-full h-full box-border px-8 py-4 border-[0.5px] border-solid border-dark-25 relative text-base leading-[140%] font-questrial flex items-center">
+                  <div className="w-full h-full text-gray-200 box-border px-8 py-4 border-[0.5px] border-solid border-dark-25 relative text-base leading-[140%] font-questrial flex items-center">
                     Straightforward printer for order labels and QR codes for
                     in-store order management.
                   </div>
@@ -541,7 +545,7 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
           className={`w-full flex flex-col items-start justify-start gap-[16px] leading-[normal] tracking-[normal]`}
         >
           <section className="self-stretch flex flex-col items-start justify-start max-w-full text-center text-sm text-lavender font-inter">
-            <div className="self-stretch border-[0.5px] flex flex-row items-center justify-start max-w-full">
+            <div className="self-stretch h-[52px] border-[0.5px] flex flex-row items-center justify-start max-w-full">
               <div className="flex-1 rounded-t rounded-b-none bg-success flex flex-row items-center justify-center py-4 px-6 box-border whitespace-nowrap max-w-full">
                 <b className="flex-1 relative leading-[20px]">Now available!</b>
               </div>
@@ -628,7 +632,7 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
             </div>
           </section>
           <section className="self-stretch flex flex-col items-start justify-start max-w-full text-left text-xs text-dark-100 font-info-text">
-            <button className="cursor-pointer pt-[15px] px-[23px] pb-4 bg-blanchedalmond-200 self-stretch rounded-t rounded-b-none flex flex-row items-center justify-center whitespace-nowrap border-t-[0.5px] border-solid border-dark-25 border-r-[0.5px] border-l-[0.5px]">
+            <button className="cursor-pointer h-[52px] w-full pt-[15px] px-[23px] pb-4 bg-blanchedalmond-200 self-stretch rounded-t rounded-b-none flex flex-row items-center justify-center whitespace-nowrap border-t-[0.5px] border-solid border-dark-25 border-r-[0.5px] border-l-[0.5px]">
               <b className="flex-1 relative text-sm leading-[20px] font-inter text-darksalmon text-center">
                 Coming soon
               </b>
@@ -679,19 +683,19 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                       Full POS
                     </div>
                   </div>
-                  <div className="w-[170px] flex flex-row items-center justify-start py-2 px-0 box-border gap-[8px]">
+                  <div className="w-full flex flex-row items-center justify-start py-2 px-0 box-border gap-[8px]">
                     <TickSVG />
                     <div className="flex-1 relative leading-[17px]">
                       Customer Management
                     </div>
                   </div>
-                  <div className="w-[170px] flex flex-row items-center justify-start py-2 px-0 box-border gap-[8px]">
+                  <div className="w-full flex flex-row items-center justify-start py-2 px-0 box-border gap-[8px]">
                     <TickSVG />
                     <div className="flex-1 relative leading-[17px]">
                       Messages
                     </div>
                   </div>
-                  <div className="self-stretch flex flex-row items-center justify-start py-2 pr-[110px] pl-0 gap-[8px]">
+                  <div className="w-full flex-wrap self-stretch flex flex-row items-center justify-start py-2 pr-[110px] pl-0 gap-[8px]">
                     <TickSVG />
                     <div className="relative leading-[17px] inline-block min-w-[43px]">
                       Reports
@@ -707,7 +711,7 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
             </div>
           </section>
           <section className="rounded-8xs box-border border-[0.5px] self-stretch flex flex-col items-start justify-start max-w-full text-left text-xs text-dark-100 font-info-text">
-            <button className="cursor-pointer pt-[15px] px-[23px] pb-4 bg-blanchedalmond-200 self-stretch rounded-t rounded-b-none flex flex-row items-center justify-center whitespace-nowrap border-t-[0.5px] border-solid border-dark-25 border-r-[0.5px] border-l-[0.5px]">
+            <button className="cursor-pointer h-[52px] pt-[15px] px-[23px] pb-4 bg-blanchedalmond-200 self-stretch rounded-t rounded-b-none flex flex-row items-center justify-center whitespace-nowrap border-t-[0.5px] border-solid border-dark-25 border-r-[0.5px] border-l-[0.5px]">
               <b className="flex-1 relative text-sm leading-[20px] font-inter text-darksalmon text-center">
                 Coming soon
               </b>
@@ -770,7 +774,7 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                       Messages
                     </div>
                   </div>
-                  <div className="self-stretch flex flex-row items-center justify-start py-2 pr-[110px] pl-0 gap-[8px]">
+                  <div className="w-full flex-wrap self-stretch flex flex-row items-center justify-start py-2 pr-[110px] pl-0 gap-[8px]">
                     <TickSVG />
                     <div className="relative leading-[17px] inline-block min-w-[43px]">
                       Reports
@@ -781,7 +785,7 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                       </div>
                     </div>
                   </div>
-                  <div className="self-stretch flex flex-row items-center justify-start py-2 pr-12 pl-0 gap-[8px]">
+                  <div className="w-full flex-wrap self-stretch flex flex-row items-center justify-start py-2 pr-12 pl-0 gap-[8px]">
                     <TickSVG />
                     <div className="relative leading-[17px] inline-block min-w-[105px]">
                       Team Collaboration
@@ -792,7 +796,7 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                       </div>
                     </div>
                   </div>
-                  <div className="self-stretch flex flex-row items-center justify-start py-2 pr-[86px] pl-0 gap-[8px]">
+                  <div className="w-full flex-wrap self-stretch flex flex-row items-center justify-start py-2 pr-[86px] pl-0 gap-[8px]">
                     <TickSVG />
                     <div className="relative leading-[17px] inline-block min-w-[67px]">
                       eCommerce

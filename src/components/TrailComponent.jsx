@@ -12,7 +12,7 @@ const TrailComponent = ({ className = "" }) => {
             Start your free trial
           </h1>
           <div className="self-stretch relative text-base leading-[140%] font-body">
-            Signup now for 14 days of free premium access. Its free and takes
+            Sign up now for 14 days of free premium access. It's free and takes
             less than 3 minutes.
           </div>
           <button className="z-[1] cursor-pointer [border:none] p-0 bg-[transparent] flex flex-row items-center justify-start">
@@ -32,7 +32,7 @@ const TrailComponent = ({ className = "" }) => {
             Start your free trial
           </h2>
           <div className="self-stretch relative text-base leading-[140%] font-body">
-            Signup now for 14 days of free premium access. Its free and takes
+            Sign up now for 14 days of free premium access. It's free and takes
             less than 3 minutes.
           </div>
           <button className="cursor-pointer p-2 bg-success w-[149px] rounded-[10px] box-border flex flex-row items-center justify-center border-[2px] border-solid border-seagreen">

@@ -90,7 +90,7 @@ const FaqComponent = ({ className = "" }) => {
             time-consuming. To improve the experience, we have built automated
             email notifications throughout the entire Coblr product.
           </p>
-          <ul className="list-decimal">
+          <ul className="list-disc">
             <li>
               <p>
                 Customers will receive updates each time their order status is
@@ -111,7 +111,7 @@ const FaqComponent = ({ className = "" }) => {
             update, but we suggest sending updates each time there is a change
             in status.
           </p>
-          <ul className="list-decimal">
+          <ul className="list-disc">
             <li>
               Customers will receive emails when you send them messages via our
               app
@@ -155,7 +155,7 @@ const FaqComponent = ({ className = "" }) => {
         <FAQItem question="What platforms does Coblr work on?">
           <p>
             Coblr is available everywhere you work — on the web via tablet and
-            desktop. Mobile iscoming soon. Use Coblr on your desktop or tablet
+            desktop. Mobile is coming soon. Use Coblr on your desktop or tablet
             to easily view all details and manage your full business, and use
             the tablet or smartphone to view order details, upload before and
             after images, and update order statuses on the go.
