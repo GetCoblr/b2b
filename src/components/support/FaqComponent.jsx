@@ -8,7 +8,7 @@ const FaqComponent = ({ className = "" }) => {
   const fileMap = useFileImport();
   return (
     <div
-      className={`w-full bg-white flex flex-col items-center justify-center md:p-20 px-6 pt-10 box-border gap-[80px] leading-[normal] tracking-[normal] font-montserrat ${className}`}
+      className={`w-full bg-white flex flex-col items-center justify-center md:p-20 px-6 pt-10 box-border md:gap-[80px] gap-[40px] leading-[normal] tracking-[normal] font-montserrat ${className}`}
     >
       <header className="hidden self-stretch md:flex flex-col items-center justify-start gap-[24px] max-w-full">
         <div className="text-center text-xl text-blue-gray-900 font-body-l self-stretch flex flex-col items-center justify-start gap-[8px] max-w-full">

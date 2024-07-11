@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         "seagreen-low": "rgba(76, 140, 74, 0.05)",
+        silver: "rgba(201, 200, 200, 0.1)",
         "violet-600": "#7c3aed",
         success: "#4c8c4a",
         mediumseagreen: "#66a663",
@@ -41,6 +42,7 @@ module.exports = {
         lavender: "#e6e9f5",
       },
       spacing: {
+        boundvariablesdata: "16px",
         borderRadius: {
           mini: "15px",
           "mini-1": "14.1px",

@@ -459,40 +459,154 @@ export const CloseSVG = () => (
 );
 
 export const CheckMarkSVG = () => (
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="8" cy="8" r="8" fill="#4C8C4A"/>
-<path d="M4 8.375L7.27273 11L12 5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle cx="8" cy="8" r="8" fill="#4C8C4A" />
+    <path
+      d="M4 8.375L7.27273 11L12 5"
+      stroke="white"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
 );
 
 export const RectangleSVG = () => (
-<svg width="1440" height="976" viewBox="0 0 1440 976" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M3.28181 328.623C-7.95046 313.995 -0.0181446 292.656 18.0418 288.916L1409.93 0.725737C1425.45 -2.48689 1440 9.36123 1440 25.2065V950.873C1440 967.171 1424.66 979.111 1408.86 975.107L288.406 691.13C282.961 689.75 278.14 686.577 274.719 682.122L3.28181 328.623Z" fill="url(#paint0_linear_24_14994)"/>
-<path d="M3.28181 328.623C-7.95046 313.995 -0.0181446 292.656 18.0418 288.916L1409.93 0.725737C1425.45 -2.48689 1440 9.36123 1440 25.2065V950.873C1440 967.171 1424.66 979.111 1408.86 975.107L288.406 691.13C282.961 689.75 278.14 686.577 274.719 682.122L3.28181 328.623Z" fill="#4C8C4A" fill-opacity="0.02"/>
-<defs>
-<linearGradient id="paint0_linear_24_14994" x1="520" y1="489" x2="1266.5" y2="411.5" gradientUnits="userSpaceOnUse">
-<stop stop-color="#F7F7F7"/>
-<stop offset="1" stop-color="white"/>
-</linearGradient>
-</defs>
-</svg>
+  <svg
+    width="1440"
+    height="976"
+    viewBox="0 0 1440 976"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M3.28181 328.623C-7.95046 313.995 -0.0181446 292.656 18.0418 288.916L1409.93 0.725737C1425.45 -2.48689 1440 9.36123 1440 25.2065V950.873C1440 967.171 1424.66 979.111 1408.86 975.107L288.406 691.13C282.961 689.75 278.14 686.577 274.719 682.122L3.28181 328.623Z"
+      fill="url(#paint0_linear_24_14994)"
+    />
+    <path
+      d="M3.28181 328.623C-7.95046 313.995 -0.0181446 292.656 18.0418 288.916L1409.93 0.725737C1425.45 -2.48689 1440 9.36123 1440 25.2065V950.873C1440 967.171 1424.66 979.111 1408.86 975.107L288.406 691.13C282.961 689.75 278.14 686.577 274.719 682.122L3.28181 328.623Z"
+      fill="#4C8C4A"
+      fill-opacity="0.02"
+    />
+    <defs>
+      <linearGradient
+        id="paint0_linear_24_14994"
+        x1="520"
+        y1="489"
+        x2="1266.5"
+        y2="411.5"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="#F7F7F7" />
+        <stop offset="1" stop-color="white" />
+      </linearGradient>
+    </defs>
+  </svg>
 );
 
 export const Rectangle1SVG = () => (
-<svg width="1440" height="861" viewBox="0 0 1440 861" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 330.787C0 327.95 0.483073 325.133 1.42852 322.458L42.4238 206.45C45.2737 198.385 52.0488 192.337 60.3839 190.417L750.285 31.5101C751.759 31.1707 753.26 30.9657 754.771 30.8976L1440 0V861H0V330.787Z" fill="url(#paint0_linear_24_14996)"/>
-<path d="M0 330.787C0 327.95 0.483073 325.133 1.42852 322.458L42.4238 206.45C45.2737 198.385 52.0488 192.337 60.3839 190.417L750.285 31.5101C751.759 31.1707 753.26 30.9657 754.771 30.8976L1440 0V861H0V330.787Z" fill="#4C8C4A" fill-opacity="0.02"/>
-<defs>
-<linearGradient id="paint0_linear_24_14996" x1="535.7" y1="243.5" x2="1269.73" y2="168.595" gradientUnits="userSpaceOnUse">
-<stop stop-color="#F7F7F7"/>
-<stop offset="1" stop-color="white"/>
-</linearGradient>
-</defs>
-</svg>
+  <svg
+    width="1440"
+    height="861"
+    viewBox="0 0 1440 861"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M0 330.787C0 327.95 0.483073 325.133 1.42852 322.458L42.4238 206.45C45.2737 198.385 52.0488 192.337 60.3839 190.417L750.285 31.5101C751.759 31.1707 753.26 30.9657 754.771 30.8976L1440 0V861H0V330.787Z"
+      fill="url(#paint0_linear_24_14996)"
+    />
+    <path
+      d="M0 330.787C0 327.95 0.483073 325.133 1.42852 322.458L42.4238 206.45C45.2737 198.385 52.0488 192.337 60.3839 190.417L750.285 31.5101C751.759 31.1707 753.26 30.9657 754.771 30.8976L1440 0V861H0V330.787Z"
+      fill="#4C8C4A"
+      fill-opacity="0.02"
+    />
+    <defs>
+      <linearGradient
+        id="paint0_linear_24_14996"
+        x1="535.7"
+        y1="243.5"
+        x2="1269.73"
+        y2="168.595"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="#F7F7F7" />
+        <stop offset="1" stop-color="white" />
+      </linearGradient>
+    </defs>
+  </svg>
 );
 
 export const DownSVG = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.4545 7.8295C4.89384 7.39017 5.60616 7.39017 6.0455 7.8295L12 13.784L17.9545 7.8295C18.3938 7.39017 19.1062 7.39017 19.5455 7.8295C19.9848 8.26884 19.9848 8.98116 19.5455 9.4205L12.7955 16.1705C12.3562 16.6098 11.6438 16.6098 11.2045 16.1705L4.4545 9.4205C4.01517 8.98116 4.01517 8.26884 4.4545 7.8295Z" fill="#272523"/>
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M4.4545 7.8295C4.89384 7.39017 5.60616 7.39017 6.0455 7.8295L12 13.784L17.9545 7.8295C18.3938 7.39017 19.1062 7.39017 19.5455 7.8295C19.9848 8.26884 19.9848 8.98116 19.5455 9.4205L12.7955 16.1705C12.3562 16.6098 11.6438 16.6098 11.2045 16.1705L4.4545 9.4205C4.01517 8.98116 4.01517 8.26884 4.4545 7.8295Z"
+      fill="#272523"
+    />
   </svg>
-)
+);
+
+export const IconLinkSVG = () => (
+  <svg
+    width="34"
+    height="34"
+    viewBox="0 0 34 34"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <line
+      x1="24.2334"
+      y1="8.86197"
+      x2="15.7032"
+      y2="17.3922"
+      stroke="#939291"
+      stroke-width="2"
+      stroke-linecap="round"
+    />
+    <path
+      d="M18.3635 8.42236H24.3581V14.417"
+      stroke="#939291"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M13.1435 10.6826L9 10.6826V24.8889H23.2063V20.1535"
+      stroke="#939291"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
+export const DownArrowSVG = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="17"
+    viewBox="0 0 16 17"
+    fill="none"
+  >
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M3.64645 6.15967C3.84171 5.94677 4.15829 5.94677 4.35355 6.15967L7.64645 9.75C7.84171 9.9629 8.15829 9.9629 8.35355 9.75L11.6464 6.15968C11.8417 5.94678 12.1583 5.94678 12.3536 6.15968C12.5488 6.37257 12.5488 6.71775 12.3536 6.93065L9.06066 10.521C8.47487 11.1597 7.52513 11.1597 6.93934 10.521L3.64645 6.93065C3.45118 6.71775 3.45118 6.37257 3.64645 6.15967Z"
+      fill="#939291"
+    />
+  </svg>
+);

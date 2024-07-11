@@ -9,7 +9,7 @@ const Component = ({
 }) => {
   return (
     <div
-      className={`self-stretch flex flex-col items-start justify-center pt-6 px-6 pb-[23px] gap-[16px] text-left text-5xl text-dark-100 font-sub-title border-[0.5px] border-solid border-dark-25 mq450:pt-5 mq450:pb-5 mq450:box-border ${className}`}
+      className={`bg-default-white self-stretch flex flex-col items-start justify-center pt-6 px-6 pb-[23px] gap-[16px] text-left text-5xl text-dark-100 font-sub-title border-[0.5px] border-solid border-dark-25 mq450:pt-5 mq450:pb-5 mq450:box-border ${className}`}
     >
       <h3 className="m-0 relative text-inherit leading-[34px] font-bold font-inherit inline-block min-w-[94px] mq450:text-lgi mq450:leading-[27px]">
         {growth}

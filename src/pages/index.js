@@ -23,7 +23,7 @@ const IndexPage = () => {
       <ImageText image={fileMap['frame-9110@2x']} title="Run Your Business Better" summary="No more toggling between different technology solutions and hand written tickets. Simplify your operations with a one stop shop solution for repair businesses (And improve customer experiences while you’re at it.)" />
       <ImageText image={fileMap['pos-1@2x']} imageLeft={false} title="Increase Revenue" summary="Reduce time spent on administrative tasks, grow repair volume, and improve the customer experience to keep customers coming back for repeat business." />
       </div>
-      <PriceTable />
+      <PriceTable title='Choose your plan' subTitle={["Choose a plan that's right for your growing team.", "Free for the first 14 days."]} />
       <div className="relative">
       <div style={{
         left: 'min(0px, calc((1440px - 100vw) / 2))',
