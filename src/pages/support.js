@@ -6,7 +6,7 @@ import FaqComponent from "../components/support/FaqComponent";
 
 const SupportPage = () => {
   return (
-    <Layout bg={true}>
+    <Layout currentPage="support" bg={true}>
       <Header />
       <FaqComponent />
       <div className="relative">

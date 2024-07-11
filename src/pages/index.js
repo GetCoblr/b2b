@@ -10,7 +10,7 @@ import TrailComponent from "../components/TrailComponent";
 const IndexPage = () => {
   const fileMap = useFileImport();
   return (
-    <Layout bg={true}>
+    <Layout bg={true} currentPage="home">
       <Header />
       <div className="relative">
         <div

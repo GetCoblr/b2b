@@ -6,7 +6,7 @@ import TrailComponent from "../components/TrailComponent";
 
 const PricingPage = () => {
   return (
-    <Layout bg={true}>
+    <Layout currentPage="pricing" bg={true}>
       <PriceTable
         extended={true}
         title="Choose a Plan to Grow Your Business"

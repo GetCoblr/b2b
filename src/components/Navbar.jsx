@@ -3,8 +3,9 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import useFileImport from "../hooks/useFileImport";
 import NavExpanded from "./NavExpanded";
 import { CloseSVG } from "./icons";
+import { Link } from "gatsby";
 
-const Navbar = ({ className = "" }) => {
+const Navbar = ({ className = "", currentPage }) => {
   const fileMap = useFileImport();
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [expand, setExpand] = React.useState(false);
@@ -60,11 +61,13 @@ const Navbar = ({ className = "" }) => {
           isScrolled && "shadow-[2px_3px_5px_2px_rgba(0,_0,_0,_0.05)]"
         } bg-white flex flex-row items-start justify-between p-6 box-border leading-[normal] tracking-[normal] gap-[20px] ${className}`}
       >
-        <GatsbyImage
-          className="h-9 w-9 relative object-cover"
-          image={getImage(fileMap["Brand-logo"].gatsbyImageData)}
-          alt="Brand Icon"
-        />
+        <Link className="cursor-pointer" to="/">
+          <GatsbyImage
+            className="relative object-cover"
+            image={getImage(fileMap["Brand-logo"].gatsbyImageData)}
+            alt="Brand Icon"
+          />
+        </Link>
         <div
           onClick={() => setExpand(!expand)}
           className="flex flex-col items-start justify-start pt-px px-0 pb-0 cursor-pointer"
@@ -85,35 +88,56 @@ const Navbar = ({ className = "" }) => {
         </div>
       </nav>
       <div
-        className={`w-full hidden md:flex flex-row items-end justify-between py-6 px-20 box-border leading-[normal] tracking-[normal] gap-[20px] text-left text-base text-success font-button-m mq750:flex-wrap mq750:pl-10 mq750:pr-10 mq750:box-border ${className}`}
+        className={`w-full hidden md:flex flex-row items-end justify-between py-6 px-20 box-border leading-[normal] tracking-[normal] gap-[20px] text-left text-base text-blue-gray-900 font-button-m mq750:flex-wrap mq750:pl-10 mq750:pr-10 mq750:box-border ${className}`}
       >
         <div className="flex flex-row items-start justify-start gap-[48px] max-w-full mq450:flex-wrap mq450:gap-[24px]">
           <div className="h-12 w-12 relative">
-            <GatsbyImage
-              className="absolute top-[calc(50%_-_18px)] left-[calc(50%_-_18px)] w-9 h-9 object-cover"
-              image={getImage(fileMap["Brand-logo"].gatsbyImageData)}
-              alt="Brand Icon"
-            />
+            <Link className="cursor-pointer" to="/">
+              <GatsbyImage
+                className="absolute top-[calc(50%_-_18px)] left-[calc(50%_-_18px)] w-9 h-9 object-cover"
+                image={getImage(fileMap["Brand-logo"].gatsbyImageData)}
+                alt="Brand Icon"
+              />
+            </Link>
           </div>
-          <div className="h-[50.5px] w-[182px] flex flex-col items-start justify-start pt-3 px-0 pb-0 box-border">
-            <div className="self-stretch flex-1 flex flex-col items-start justify-start gap-[8px]">
-              <div className="self-stretch flex-1 flex flex-row items-start justify-start py-0 pr-0 pl-[7px]">
-                <div className="self-stretch flex-1 flex flex-row items-start justify-between gap-[20px]">
-                  <a className="[text-decoration:none] relative tracking-[0.5px] leading-[24px] font-medium text-[inherit] inline-block min-w-[67px]">
-                    Features
-                  </a>
-                  <a className="[text-decoration:none] relative tracking-[0.5px] leading-[24px] font-medium text-blue-gray-900 inline-block min-w-[54px]">
-                    Pricing
-                  </a>
-                </div>
-              </div>
-              <div className="w-20 h-1.5 relative rounded-[100px] bg-success" />
-            </div>
+          <div className="flex flex-col gap-[8px] items-start justify-start pt-3 pb-0">
+            <Link
+              to="/features"
+              className={`[text-decoration:none] hover:text-success cursor-pointer px-[8px] relative tracking-[0.5px] leading-[24px] font-medium text-[inherit] inline-block ${
+                currentPage === "features" && "text-success"
+              }`}
+            >
+              Features
+            </Link>
+            {currentPage === "features" && (
+              <div className="w-full h-1.5 relative rounded-[100px] bg-success" />
+            )}
           </div>
-          <div className="flex flex-col items-start justify-start pt-3 px-0 pb-0 text-blue-gray-900">
-            <a className="[text-decoration:none] relative tracking-[0.5px] leading-[24px] font-medium text-[inherit] inline-block min-w-[61px]">
+          <div className="flex flex-col gap-[8px] items-start justify-start pt-3 pb-0 text-blue-gray-900">
+            <Link
+              to="/pricing"
+              className={`[text-decoration:none] hover:text-success cursor-pointer px-[8px] relative tracking-[0.5px] leading-[24px] font-medium text-[inherit] inline-block ${
+                currentPage === "pricing" && "text-success"
+              }`}
+            >
+              Pricing
+            </Link>
+            {currentPage === "pricing" && (
+              <div className="w-full h-1.5 relative rounded-[100px] bg-success" />
+            )}
+          </div>
+          <div className="flex flex-col gap-[8px] items-start justify-start pt-3 pb-0 text-blue-gray-900">
+            <Link
+              to="/support"
+              className={`[text-decoration:none] hover:text-success cursor-pointer px-[8px] relative tracking-[0.5px] leading-[24px] font-medium text-[inherit] inline-block" ${
+                currentPage === "support" && "text-success"
+              }`}
+            >
               Support
-            </a>
+            </Link>
+            {currentPage === "support" && (
+              <div className="w-full h-1.5 relative rounded-[100px] bg-success" />
+            )}
           </div>
         </div>
         <div className="flex flex-row items-center justify-start text-blue-gray-900 font-body">

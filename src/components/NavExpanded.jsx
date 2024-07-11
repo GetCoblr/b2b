@@ -1,28 +1,41 @@
+import { Link } from "gatsby";
 import * as React from "react";
 
-const NavExpanded = ({expand = false}) => {
+const NavExpanded = ({ expand = false }) => {
   return (
-    <div style={{
+    <div
+      style={{
         transform: `translateX(${expand ? 0 : 100}%)`,
-        transition: "transform 0.4s ease"
-    }} className="pb-44 w-full fixed z-50 h-screen bg-white overflow-hidden flex flex-col items-end justify-between pt-0 px-0 box-border gap-[32px] leading-[normal] tracking-[normal]">
+        transition: "transform 0.4s ease",
+      }}
+      className="pb-44 w-full fixed z-50 h-screen bg-white overflow-hidden flex flex-col items-end justify-between pt-0 px-0 box-border gap-[32px] leading-[normal] tracking-[normal]"
+    >
       <section className="self-stretch flex flex-col items-start justify-start pt-0 px-6 box-border gap-[27.5px] max-w-full text-left text-base text-blue-gray-900 font-button-m">
         <div className="mt-20 flex flex-row items-start justify-start py-0 px-2">
-          <a className="[text-decoration:none] relative tracking-[0.5px] leading-[24px] font-medium text-[inherit] inline-block min-w-[54px]">
+          <Link
+            to="/features"
+            className="[text-decoration:none] relative tracking-[0.5px] leading-[24px] font-medium text-[inherit] inline-block min-w-[54px]"
+          >
             Features
-          </a>
+          </Link>
         </div>
         <div className="w-full h-px relative box-border opacity-[0.3] max-w-full border-t-[1px] border-solid border-dark-25" />
         <div className="flex flex-row items-start justify-start py-0 px-2">
-          <a className="[text-decoration:none] relative tracking-[0.5px] leading-[24px] font-medium text-[inherit] inline-block min-w-[54px]">
+          <Link
+            to="/pricing"
+            className="[text-decoration:none] relative tracking-[0.5px] leading-[24px] font-medium text-[inherit] inline-block min-w-[54px]"
+          >
             Pricing
-          </a>
+          </Link>
         </div>
         <div className="w-full h-px relative box-border opacity-[0.3] max-w-full border-t-[1px] border-solid border-dark-25" />
         <div className="flex flex-row items-start justify-start py-0 px-2">
-          <a className="[text-decoration:none] relative tracking-[0.5px] leading-[24px] font-medium text-[inherit] inline-block min-w-[61px]">
+          <Link
+            to="/support"
+            className="[text-decoration:none] relative tracking-[0.5px] leading-[24px] font-medium text-[inherit] inline-block min-w-[61px]"
+          >
             Support
-          </a>
+          </Link>
         </div>
         <div className="w-full h-px relative box-border opacity-[0.3] max-w-full border-t-[1px] border-solid border-dark-25" />
       </section>
