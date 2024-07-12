@@ -1,6 +1,11 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `b2b`,
@@ -8,10 +13,10 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: "gatsby-plugin-manifest",
       options: {
-        "icon": "src/images/layout/Brand-logo.png"
-      }
+        icon: "src/images/layout/Brand-logo.png",
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,

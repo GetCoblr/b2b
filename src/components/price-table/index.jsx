@@ -22,7 +22,7 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
 
   return (
     <>
-      <div className="hidden w-full relative overflow-hidden md:flex flex-col items-center justify-start py-20 px-5 box-border gap-[60px] leading-[normal] tracking-[normal] mq675:gap-[30px]">
+      <div className="hidden w-full relative overflow-hidden md:flex flex-col items-center justify-start py-10 px-5 box-border gap-[60px] leading-[normal] tracking-[normal] mq675:gap-[30px]">
         <SectionText title={title} subTitle={subTitle} />
         <main className="w-[1264px] rounded-t rounded-b-none overflow-hidden flex flex-col items-start justify-start max-w-full">
           <div

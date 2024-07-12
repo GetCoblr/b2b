@@ -28,18 +28,12 @@ const Footer = ({ className = "" }) => {
               alt="Brand Icon"
             />
             <div className="relative leading-[140%] whitespace-nowrap">
-              info@getcoblr.com
-            </div>
-            <div className="flex flex-row items-center justify-start gap-[16px]">
-              <div className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]">
-                <FacebookSVG />
-              </div>
-              <div className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]">
-                <TwitterSVG />
-              </div>
-              <div className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]">
-                <InstagramSVG />
-              </div>
+              <a
+                className="[text-decoration:none] text-inherit"
+                href="mailto:info@getcoblr.com"
+              >
+                info@getcoblr.com
+              </a>
             </div>
           </div>
           <div className="w-[816px] flex flex-row items-start justify-start gap-[48px] max-w-full mq450:gap-[24px] mq750:flex-wrap">
@@ -120,7 +114,7 @@ const Footer = ({ className = "" }) => {
                     to="/for-brand"
                     className="[text-decoration:none] text-dark-100 relative leading-[140%] inline-block min-w-[48px]"
                   >
-                    For brand
+                    For Brands
                   </Link>
                 </div>
               </div>
@@ -129,7 +123,7 @@ const Footer = ({ className = "" }) => {
         </section>
         <section className="self-stretch flex flex-row items-center justify-start pt-12 px-0 pb-6 box-border gap-[48px] max-w-full text-left text-base text-blue-gray-600 font-body-xs mq750:gap-[24px]">
           <div className="flex-1 relative leading-[140%] font-body text-dark-50 whitespace-pre-wrap inline-block max-w-full">
-            © 2022 Your Company. All rights reserved.
+            © 2024, Coblrshop Inc. All rights reserved.
           </div>
         </section>
       </div>
@@ -145,18 +139,12 @@ const Footer = ({ className = "" }) => {
               alt="Brand Icon"
             />
             <div className="relative leading-[140%] whitespace-nowrap">
-              info@getcoblr.com
-            </div>
-            <div className="flex flex-row items-center justify-start gap-[16px]">
-              <div className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]">
-                <FacebookSVG />
-              </div>
-              <div className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]">
-                <TwitterSVG />
-              </div>
-              <div className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]">
-                <InstagramSVG />
-              </div>
+              <a
+                className="[text-decoration:none] text-inherit"
+                href="mailto:info@getcoblr.com"
+              >
+                info@getcoblr.com
+              </a>
             </div>
           </div>
           <div
@@ -236,7 +224,7 @@ const Footer = ({ className = "" }) => {
                   to="/for-brand"
                   className="[text-decoration:none] text-dark-100 relative leading-[140%] inline-block min-w-[48px]"
                 >
-                  For brand
+                  For Brands
                 </Link>
               </div>
             </div>
@@ -244,7 +232,7 @@ const Footer = ({ className = "" }) => {
         </section>
         <section className="self-stretch flex flex-row items-center justify-start pt-12 px-0 pb-6 box-border gap-[48px] max-w-full text-left text-base text-blue-gray-600 font-body-xs">
           <div className="flex-1 relative leading-[140%] font-body text-dark-50 whitespace-pre-wrap inline-block max-w-full">
-            © 2022 Your Company. All rights reserved.
+            © 2024, Coblrshop Inc. All rights reserved.
           </div>
         </section>
       </div>

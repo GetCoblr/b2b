@@ -16,4 +16,4 @@ const ForBrandPage = () => {
 
 export default ForBrandPage;
 
-export const Head = () => <title>For Brand Page</title>;
+export const Head = () => <title>For Brands</title>;

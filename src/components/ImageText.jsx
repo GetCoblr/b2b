@@ -15,9 +15,9 @@ const ImageText = ({
   return (
     <>
       <div
-        className={`${bottomImage && "mb-8"} w-full hidden md:flex ${
+        className={`${bottomImage && "mb-28 pb-20"} w-full hidden md:flex ${
           imageLeft ? "flex-row" : "flex-row-reverse"
-        }  items-center justify-between p-20 box-border gap-[80px] leading-[normal] tracking-[normal] text-left text-base text-dark-100 font-body-xs`}
+        }  items-center justify-between px-20 py-10 box-border gap-[80px] leading-[normal] tracking-[normal] text-left text-base text-dark-100 font-body-xs`}
       >
         <div
           className={`${

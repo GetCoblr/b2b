@@ -8,7 +8,7 @@ const Header = ({ className = "" }) => {
   return (
     <>
       <div
-        className={`mt-5 w-full hidden md:flex flex-col items-end justify-start pt-0 px-0 pb-[94px] box-border gap-[32px] leading-[normal] tracking-[normal] mq725:gap-[16px] ${className}`}
+        className={`mt-5 w-full hidden md:flex flex-col items-end justify-start pt-0 px-0 pb-10 box-border gap-[32px] leading-[normal] tracking-[normal] mq725:gap-[16px] ${className}`}
       >
         <section className="self-stretch overflow-hidden 2xl:overflow-visible flex flex-row-reverse items-center justify-start py-0 px-20 box-border min-h-[433px] max-w-full text-left text-[46px] text-dark-100 font-sub-title mq725:pl-10 mq725:pr-10 mq725:box-border">
           <div className="mr-[-122px] w-[691px] shadow-[0px_20px_25px_-5px_rgba(0,_0,_0,_0.1),_0px_0px_10px_rgba(0,_0,_0,_0.07)] rounded-[15px] bg-white overflow-hidden flex flex-col items-start justify-start max-w-full z-[1]">
@@ -129,38 +129,18 @@ const Header = ({ className = "" }) => {
           </div>
           <div className="self-stretch flex flex-row flex-wrap items-start justify-start gap-[8px]">
             <div className="w-[195px] rounded-3xs bg-white box-border flex flex-row items-center justify-start py-[11px] px-6 gap-[8px] border-[1px] border-solid border-blue-gray-300">
-              <img
-                className="h-6 w-6 relative overflow-hidden shrink-0 hidden"
-                alt=""
-                src="/icon--jamicons--outline--logos--envelope.svg"
-              />
               <input
                 className="w-[87px] [border:none] [outline:none] font-body text-xs bg-[transparent] h-[17px] relative leading-[140%] text-dark-50 text-left inline-block p-0"
                 placeholder="Enter your email"
                 type="text"
               />
-              <img
-                className="h-6 w-6 relative overflow-hidden shrink-0 hidden"
-                alt=""
-                src="/icon--jamicons--outline--logos--chevrondown.svg"
-              />
             </div>
             <button className="cursor-pointer p-2 bg-success flex-1 rounded-3xs box-border flex flex-row items-center justify-center min-w-[97px] border-[2px] border-solid border-seagreen">
-              <img
-                className="h-6 w-6 relative overflow-hidden shrink-0 hidden"
-                alt=""
-                src="/icon--jamicons--outline--logos--plus.svg"
-              />
               <div className="flex flex-row items-center justify-center py-0 px-6">
                 <div className="relative text-base leading-[140%] font-body text-white text-left inline-block min-w-[81px] whitespace-nowrap">
                   Get started
                 </div>
               </div>
-              <img
-                className="h-6 w-6 relative overflow-hidden shrink-0 hidden"
-                alt=""
-                src="/icon--jamicons--outline--logos--arrowright.svg"
-              />
             </button>
           </div>
         </section>

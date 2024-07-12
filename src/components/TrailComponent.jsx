@@ -5,7 +5,7 @@ const TrailComponent = ({ className = "" }) => {
   return (
     <>
       <div
-        className={`w-full hidden [background:linear-gradient(97.2deg,_rgba(248,_255,_248,_0.01),_rgba(76,_140,_74,_0.05)),_#f7f7f7] md:flex flex-row items-center justify-start p-20 box-border leading-[normal] tracking-[normal] mq450:gap-[20px] mq750:gap-[40px] mq750:pl-10 mq750:pr-10 mq750:box-border ${className}`}
+        className={`w-full hidden [background:linear-gradient(97.2deg,_rgba(248,_255,_248,_0.01),_rgba(76,_140,_74,_0.05)),_#f7f7f7] md:flex flex-row items-center justify-start py-10 px-20 box-border leading-[normal] tracking-[normal] mq450:gap-[20px] mq750:gap-[40px] mq750:pl-10 mq750:pr-10 mq750:box-border ${className}`}
       >
         <section className="flex-1 flex flex-col items-start justify-start gap-[24px] max-w-full text-left text-[56px] text-dark-100 font-montserrat">
           <h1 className="m-0 self-stretch relative text-inherit tracking-[0.02em] leading-[140%] font-bold font-inherit mq450:text-[34px] mq450:leading-[47px] mq750:text-[45px] mq750:leading-[63px]">

@@ -59,11 +59,11 @@ const Navbar = ({ className = "", currentPage }) => {
       <nav
         className={`fixed top-0 z-50 w-full md:hidden ${
           isScrolled && "shadow-[2px_3px_5px_2px_rgba(0,_0,_0,_0.05)]"
-        } bg-white flex flex-row items-start justify-between p-6 box-border leading-[normal] tracking-[normal] gap-[20px] ${className}`}
+        } bg-white flex flex-row items-center justify-between px-6 py-4 box-border leading-[normal] tracking-[normal] gap-[20px] ${className}`}
       >
         <Link className="cursor-pointer" to="/">
           <GatsbyImage
-            className="relative object-cover"
+            className="relative object-cover w-8 h-8"
             image={getImage(fileMap["Brand-logo"].gatsbyImageData)}
             alt="Brand Icon"
           />
@@ -146,7 +146,7 @@ const Navbar = ({ className = "", currentPage }) => {
                 currentPage === "for-brand" && "text-success"
               }`}
             >
-              For brand
+              For Brands
             </Link>
             {currentPage === "for-brand" && (
               <div className="w-full h-1.5 relative rounded-[100px] bg-success" />

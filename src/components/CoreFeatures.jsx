@@ -6,7 +6,7 @@ const CoreFeatures = ({ className = "" }) => {
   return (
     <>
       <div
-        className={`hidden w-full overflow-hidden md:flex flex-col items-center justify-start p-20 box-border gap-[48px] leading-[normal] tracking-[normal] mq750:gap-[24px] mq750:pl-10 mq750:pr-10 mq750:box-border ${className}`}
+        className={`hidden w-full overflow-hidden md:flex flex-col items-center justify-start px-20 py-10 box-border gap-[48px] leading-[normal] tracking-[normal] mq750:gap-[24px] mq750:pl-10 mq750:pr-10 mq750:box-border ${className}`}
       >
         <section className="w-[900px] flex flex-col items-center justify-start gap-[24px] max-w-full text-center text-base text-blue-gray-600 font-body-s">
           <div className="self-stretch flex flex-col items-center justify-start py-0 px-5 box-border gap-[8px] max-w-full text-xl">

@@ -404,9 +404,9 @@ export const TickSVG = () => (
 
 export const CloseSVG = () => (
   <svg
-    width="48"
-    height="48"
-    viewBox="0 0 48 48"
+    width="34"
+    height="34"
+    viewBox="7 3 34 34"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -421,10 +421,6 @@ export const CloseSVG = () => (
     <defs>
       <filter
         id="filter0_d_88_7237"
-        x="-9"
-        y="-9"
-        width="66"
-        height="66"
         filterUnits="userSpaceOnUse"
         color-interpolation-filters="sRGB"
       >

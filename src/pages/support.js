@@ -28,4 +28,4 @@ const SupportPage = () => {
 
 export default SupportPage;
 
-export const Head = () => <title>Support Page</title>;
+export const Head = () => <title>Support</title>;

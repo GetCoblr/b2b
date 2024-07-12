@@ -11,11 +11,11 @@ const FrameComponent = ({ className = "" }) => {
   return (
     <>
       <section
-        className={`hidden w-full self-stretch md:flex flex-row items-start justify-start pt-0 px-0 pb-20 box-border max-w-full text-left text-41xl text-white font-sub-title ${className}`}
+        className={`hidden w-full self-stretch md:flex flex-row items-start justify-start pt-0 px-0 pb-10 box-border max-w-full text-left text-41xl text-white font-sub-title ${className}`}
       >
         <div className="relative">
           <div
-            className=" bg-cover bg-no-repeat bg-[top]"
+            className="z-[1] bg-cover bg-no-repeat bg-[top]"
             style={{
               left: "min(0px, calc((1440px - 100vw) / 2))",
               position: "absolute",
@@ -30,7 +30,7 @@ const FrameComponent = ({ className = "" }) => {
             <div className="z-10 flex-1 flex flex-col items-start justify-center gap-[24px] max-w-full">
               <div className="self-stretch flex flex-col items-start justify-center gap-[24px] max-w-full">
                 <div className="self-stretch flex flex-col items-start justify-center py-0 pr-5 pl-0 box-border max-w-full">
-                  <h1 className="m-0 w-[621px] relative text-inherit tracking-[0.02em] leading-[140%] font-bold font-inherit text-transparent !bg-clip-text [background:linear-gradient(90deg,_#61ba5f,_#4c8c4a)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] inline-block max-w-full mq750:text-29xl mq750:leading-[67px] mq450:text-17xl mq450:leading-[50px]">
+                  <h1 className="m-0 w-[621px] relative text-inherit tracking-[0.02em] leading-[140%] font-bold font-inherit text-transparent !bg-clip-text [background:linear-gradient(90deg,_#61ba5f,_#4c8c4a)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] inline-block max-w-full">
                     The heartbeat of your business.
                   </h1>
                 </div>

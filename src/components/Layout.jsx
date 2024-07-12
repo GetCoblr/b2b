@@ -11,7 +11,7 @@ const Layout = ({ children, bg = false, currentPage }) => {
           "[background:linear-gradient(rgba(76,_140,_74,_0.02),_rgba(76,_140,_74,_0.02)),_linear-gradient(180deg,_#fff,_#f7f7f7)]"
         }`}
       >
-        <div className={`max-w-screen-2xl mt-[96px] md:mt-0 mx-auto`}>
+        <div className={`max-w-screen-2xl mt-[67px] md:mt-0 mx-auto`}>
           {bg && (
             <>
               <Navbar currentPage={currentPage} />

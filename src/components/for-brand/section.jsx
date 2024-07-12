@@ -22,7 +22,7 @@ const Section = ({ className = "" }) => {
         <div className="absolute w-full h-full z-[0] inset-0 bg-black opacity-50" />
       </div>
       <section
-        className={`z-[1] self-stretch flex flex-row items-start justify-start py-14 px-20 box-border bg-cover bg-no-repeat bg-[top] min-h-[561px] max-w-full text-left text-27xl text-white font-sub-title ${className}`}
+        className={`z-[1] self-stretch flex flex-row items-start justify-start py-14 px-20 box-border bg-cover bg-no-repeat bg-[top] min-h-[500px] max-w-full text-left text-27xl text-white font-sub-title ${className}`}
       >
         <div className="flex-1 flex flex-col items-start justify-center gap-[24px] max-w-full">
           <div className="self-stretch flex flex-col items-start justify-center gap-[24px] max-w-full">
