@@ -38,6 +38,15 @@ const NavExpanded = ({ expand = false }) => {
           </Link>
         </div>
         <div className="w-full h-px relative box-border opacity-[0.3] max-w-full border-t-[1px] border-solid border-dark-25" />
+        <div className="flex flex-row items-start justify-start py-0 px-2">
+          <Link
+            to="/for-brand"
+            className="[text-decoration:none] relative tracking-[0.5px] leading-[24px] font-medium text-[inherit] inline-block min-w-[61px]"
+          >
+            For brand
+          </Link>
+        </div>
+        <div className="w-full h-px relative box-border opacity-[0.3] max-w-full border-t-[1px] border-solid border-dark-25" />
       </section>
       <section
         className={`self-stretch flex flex-row items-start justify-end py-0 px-6 box-border max-w-full text-left text-base text-blue-gray-900 font-body`}

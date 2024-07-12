@@ -44,6 +44,7 @@ module.exports = {
       spacing: {
         boundvariablesdata: "16px",
         borderRadius: {
+          "31xl": "50px",
           mini: "15px",
           "mini-1": "14.1px",
           "8xs": "5px",
@@ -80,12 +81,15 @@ module.exports = {
       "4xl": "23px",
       "5xl": "24px",
       "6xl": "25px",
+      "9xl": "28px",
       "11xl": "30px",
       "15xl": "34px",
       "17xl": "36px",
+      "18xl": "37px",
       "19xl": "38px",
       "23xl": "42px",
       "24xl": "43px",
+      "27xl": "46px",
       "29xl": "48px",
       "39xl": "58px",
       "41xl": "60px",

@@ -88,9 +88,9 @@ const Navbar = ({ className = "", currentPage }) => {
         </div>
       </nav>
       <div
-        className={`w-full hidden md:flex flex-row items-end justify-between py-6 px-20 box-border leading-[normal] tracking-[normal] gap-[20px] text-left text-base text-blue-gray-900 font-button-m mq750:flex-wrap mq750:pl-10 mq750:pr-10 mq750:box-border ${className}`}
+        className={`w-full hidden md:flex flex-row items-end justify-between py-6 px-20 box-border leading-[normal] tracking-[normal] gap-[20px] text-left text-base text-blue-gray-900 font-button-m ${className}`}
       >
-        <div className="flex flex-row items-start justify-start gap-[48px] max-w-full mq450:flex-wrap mq450:gap-[24px]">
+        <div className="flex flex-row items-start justify-start gap-[48px] max-w-full">
           <div className="h-12 w-12 relative">
             <Link className="cursor-pointer" to="/">
               <GatsbyImage
@@ -136,6 +136,19 @@ const Navbar = ({ className = "", currentPage }) => {
               Support
             </Link>
             {currentPage === "support" && (
+              <div className="w-full h-1.5 relative rounded-[100px] bg-success" />
+            )}
+          </div>
+          <div className="flex flex-col gap-[8px] items-start justify-start pt-3 pb-0 text-blue-gray-900">
+            <Link
+              to="/for-brand"
+              className={`[text-decoration:none] hover:text-success cursor-pointer px-[8px] relative tracking-[0.5px] leading-[24px] font-medium text-[inherit] inline-block" ${
+                currentPage === "for-brand" && "text-success"
+              }`}
+            >
+              For brand
+            </Link>
+            {currentPage === "for-brand" && (
               <div className="w-full h-1.5 relative rounded-[100px] bg-success" />
             )}
           </div>
