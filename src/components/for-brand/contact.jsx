@@ -14,10 +14,10 @@ import {
 const Contact = ({ className = "" }) => {
   return (
     <section
-      className={`self-stretch flex flex-row items-start justify-start pt-0 px-20 pb-20 box-border max-w-full text-left text-lg text-white font-sub-title mq750:pl-10 mq750:pr-10 mq750:box-border mq450:pb-[52px] mq450:box-border ${className}`}
+      className={`self-stretch flex flex-row items-start justify-start pt-0 md:px-20 px-5 pb-20 box-border max-w-full text-left text-lg text-white font-sub-title ${className}`}
     >
       <div className="flex-1 flex-wrap flex flex-row items-start justify-start gap-[80px] max-w-full mq750:gap-[40px] mq450:gap-[20px] mq1275:flex-wrap">
-        <div className="h-[379.4px] flex-[0.8678] rounded-[10px] bg-success overflow-hidden flex flex-col items-start justify-start pt-10 px-10 pb-[243.4px] box-border gap-[39.5px] min-w-[393px] max-w-full mq750:h-auto mq750:gap-[20px] mq750:pt-[26px] mq750:pb-[158px] mq750:box-border mq750:min-w-full mq750:flex-1">
+        <div className="h-[379.4px] flex-[0.8678] rounded-[10px] bg-success overflow-hidden flex flex-col items-start justify-start pt-10 px-10 pb-[243.4px] box-border gap-[39.5px] min-w-[393px] max-w-full mq750:h-auto">
           <div className="flex flex-col items-start justify-start gap-[8px] shrink-0">
             <div className="relative leading-[140%] font-semibold">
               Contact Information
