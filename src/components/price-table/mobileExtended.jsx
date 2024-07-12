@@ -7,7 +7,7 @@ const MobileExtended = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   return (
     <div className="md:hidden bg-default-white w-full relative grid grid-cols-4 pt-0 px-0 pb-0 box-border leading-[normal] tracking-[normal] text-left text-xs text-dark-100 font-sub-title">
-      <header className="self-stretch col-span-4 [background:linear-gradient(rgba(201,_200,_200,_0.1),_rgba(201,_200,_200,_0.1)),_#fff] box-border flex flex-row items-center justify-center py-[15px] px-[31px] top-[0] z-[99] sticky whitespace-nowrap max-w-full shrink-0 text-center text-base text-gray-200 font-sub-title border-[0.5px] border-solid border-dark-25">
+      <header className="self-stretch col-span-4 [background:linear-gradient(rgba(201,_200,_200,_0.1),_rgba(201,_200,_200,_0.1)),_#fff] box-border flex flex-row items-center justify-center py-[15px] px-[31px] top-[0] z-[1] sticky whitespace-nowrap max-w-full shrink-0 text-center text-base text-gray-200 font-sub-title border-[0.5px] border-solid border-dark-25">
         <div className="flex-1 relative leading-[140%] font-semibold inline-block max-w-full">
           Required Hardware
         </div>
