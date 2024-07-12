@@ -85,3 +85,5 @@ const FeaturesPage = () => {
 };
 
 export default FeaturesPage;
+
+export const Head = () => <title>Features Page</title>;

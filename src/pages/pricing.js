@@ -35,4 +35,4 @@ const PricingPage = () => {
 
 export default PricingPage;
 
-export const Head = () => <title>Pricing</title>;
+export const Head = () => <title>Pricing Page</title>;
