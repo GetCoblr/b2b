@@ -28,9 +28,8 @@ const Footer = ({ className = "" }) => {
               alt="Brand Icon"
             />
             <div className="relative leading-[140%] whitespace-nowrap">
-              info@coblrshop.com
+              info@getcoblr.com
             </div>
-            <div className="relative leading-[140%]">xxxxxxxxxxxxxxxxxxx</div>
             <div className="flex flex-row items-center justify-start gap-[16px]">
               <div className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]">
                 <FacebookSVG />
@@ -146,9 +145,8 @@ const Footer = ({ className = "" }) => {
               alt="Brand Icon"
             />
             <div className="relative leading-[140%] whitespace-nowrap">
-              info@coblrshop.com
+              info@getcoblr.com
             </div>
-            <div className="relative leading-[140%]">xxxxxxxxxxxxxxxxxxx</div>
             <div className="flex flex-row items-center justify-start gap-[16px]">
               <div className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]">
                 <FacebookSVG />

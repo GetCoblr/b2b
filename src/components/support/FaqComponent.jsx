@@ -19,7 +19,7 @@ const FaqComponent = ({ className = "" }) => {
       </header>
       <h2 className="md:hidden m-0 self-stretch relative text-[26px] tracking-[0.02em] leading-[140%] font-bold font-inherit">
         Frequently Asked Questions
-        </h2>
+      </h2>
       <section className="self-stretch flex flex-col items-start justify-start max-w-full">
         <FAQItem question="How does billing work?">
           <p>

@@ -41,7 +41,7 @@ const Contact = ({ className = "" }) => {
                 <div className="flex flex-row items-start justify-start gap-[16px]">
                   <MessageIconSVG />
                   <div className="relative leading-[140%] whitespace-nowrap">
-                    info@coblrshop.com
+                    info@getcoblr.com
                   </div>
                 </div>
               </div>
