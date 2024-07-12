@@ -2,9 +2,22 @@ import * as React from "react";
 import { GreenCircle, RedCircle, YellowCircle } from "./icons";
 import useFileImport from "../hooks/useFileImport";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GATSBY_SIGNUP_URL } from "../constants";
+import { navigate } from "gatsby";
 
 const Header = ({ className = "" }) => {
   const fileMap = useFileImport();
+  const [email, setEmail] = React.useState("");
+
+  const handleChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate(`${GATSBY_SIGNUP_URL}?email=${email}`);
+  };
+
   return (
     <>
       <div
@@ -46,42 +59,32 @@ const Header = ({ className = "" }) => {
                 support your growth with easy technology.
               </div>
             </div>
-            <div className="w-[560px] flex flex-row flex-wrap items-start justify-start gap-[16px] max-w-full">
+            <form
+              onSubmit={handleSubmit}
+              className="w-[560px] flex flex-row flex-wrap items-start justify-start gap-[16px] max-w-full"
+            >
               <div className="flex-1 rounded-md bg-white box-border flex flex-row items-center justify-start py-[11px] px-[23px] gap-[8px] min-w-[223px] max-w-full border-[1px] border-solid border-blue-gray-300">
-                <img
-                  className="h-6 w-6 relative overflow-hidden shrink-0 hidden"
-                  alt=""
-                  src="/icon--jamicons--outline--logos--envelope.svg"
-                />
                 <input
                   className="w-full [border:none] [outline:none] font-body text-base bg-[transparent] h-[22px] flex-1 relative leading-[140%] text-dark-50 text-left inline-block min-w-[177px] p-0"
                   placeholder="Enter your email"
-                  type="text"
-                />
-                <img
-                  className="h-6 w-6 relative overflow-hidden shrink-0 hidden"
-                  alt=""
-                  src="/icon--jamicons--outline--logos--chevrondown.svg"
+                  type="email"
+                  name="email"
+                  value={email}
+                  onChange={handleChange}
+                  required
                 />
               </div>
-              <button className="cursor-pointer py-[9px] px-[22px] bg-success rounded-md flex flex-row items-center justify-center border-[2px] border-solid border-seagreen">
-                <img
-                  className="h-6 w-6 relative overflow-hidden shrink-0 hidden"
-                  alt=""
-                  src="/icon--jamicons--outline--logos--plus.svg"
-                />
+              <button
+                type="submit"
+                className="cursor-pointer py-[9px] px-[22px] bg-success rounded-md flex flex-row items-center justify-center border-[2px] border-solid border-seagreen"
+              >
                 <div className="flex flex-row items-center justify-center py-0 px-6">
                   <div className="relative text-lg leading-[140%] font-semibold font-sub-title text-white text-left inline-block min-w-[105px] whitespace-nowrap">
                     Get started
                   </div>
                 </div>
-                <img
-                  className="h-6 w-6 relative overflow-hidden shrink-0 hidden"
-                  alt=""
-                  src="/icon--jamicons--outline--logos--arrowright.svg"
-                />
               </button>
-            </div>
+            </form>
           </div>
         </section>
       </div>
@@ -127,22 +130,32 @@ const Header = ({ className = "" }) => {
               support your growth with easy technology.
             </div>
           </div>
-          <div className="self-stretch flex flex-row flex-wrap items-start justify-start gap-[8px]">
+          <form
+            onSubmit={handleSubmit}
+            className="self-stretch flex flex-row flex-wrap items-start justify-start gap-[8px]"
+          >
             <div className="w-[195px] rounded-3xs bg-white box-border flex flex-row items-center justify-start py-[11px] px-6 gap-[8px] border-[1px] border-solid border-blue-gray-300">
               <input
                 className="w-[87px] [border:none] [outline:none] font-body text-xs bg-[transparent] h-[17px] relative leading-[140%] text-dark-50 text-left inline-block p-0"
                 placeholder="Enter your email"
-                type="text"
+                type="email"
+                name="email"
+                value={email}
+                onChange={handleChange}
+                required
               />
             </div>
-            <button className="cursor-pointer p-2 bg-success flex-1 rounded-3xs box-border flex flex-row items-center justify-center min-w-[97px] border-[2px] border-solid border-seagreen">
+            <button
+              type="submit"
+              className="cursor-pointer p-2 bg-success flex-1 rounded-3xs box-border flex flex-row items-center justify-center min-w-[97px] border-[2px] border-solid border-seagreen"
+            >
               <div className="flex flex-row items-center justify-center py-0 px-6">
                 <div className="relative text-base leading-[140%] font-body text-white text-left inline-block min-w-[81px] whitespace-nowrap">
                   Get started
                 </div>
               </div>
             </button>
-          </div>
+          </form>
         </section>
       </div>
     </>

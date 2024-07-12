@@ -6,6 +6,8 @@ import Div from "./div";
 import BasicItems from "./basicItems";
 import { motion } from "framer-motion";
 import MobileExtended from "./mobileExtended";
+import { GATSBY_SIGNUP_URL } from "../../constants";
+import { navigate } from "gatsby";
 
 const PriceTable = ({ extended = false, title, subTitle }) => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -87,7 +89,10 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                   </span>
                 </div>
               </div>
-              <button className="cursor-pointer [border:none] py-4 px-6 bg-success self-stretch rounded flex flex-row items-center justify-center whitespace-nowrap hover:bg-mediumseagreen">
+              <button
+                onClick={() => navigate(GATSBY_SIGNUP_URL)}
+                className="cursor-pointer [border:none] py-4 px-6 bg-success self-stretch rounded flex flex-row items-center justify-center whitespace-nowrap hover:bg-mediumseagreen"
+              >
                 <b className="flex-1 relative text-sm leading-[20px] font-inter text-default-white text-center">
                   Get started free
                 </b>
@@ -587,7 +592,10 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                       </p>
                     </div>
                   </div>
-                  <button className="cursor-pointer py-[5px] px-5 bg-success self-stretch shadow-[0px_1px_1.92px_rgba(16,_24,_40,_0.05)] rounded-lg overflow-hidden flex flex-row items-center justify-center whitespace-nowrap border-[1px] border-solid border-success">
+                  <button
+                    onClick={() => navigate(GATSBY_SIGNUP_URL)}
+                    className="cursor-pointer py-[5px] px-5 bg-success self-stretch shadow-[0px_1px_1.92px_rgba(16,_24,_40,_0.05)] rounded-lg overflow-hidden flex flex-row items-center justify-center whitespace-nowrap border-[1px] border-solid border-success"
+                  >
                     <div className="relative text-xs leading-[17px] font-info-text text-white text-left inline-block min-w-[84px]">
                       Get started free
                     </div>

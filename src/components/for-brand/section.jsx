@@ -1,6 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import useFileImport from "../../hooks/useFileImport";
+import { navigate } from "gatsby";
 
 const Section = ({ className = "" }) => {
   const fileMap = useFileImport();
@@ -39,7 +40,10 @@ const Section = ({ className = "" }) => {
             </div>
           </div>
           <div className="z-[1] w-[560px] flex flex-row items-start justify-start gap-[16px] max-w-full mq750:flex-wrap">
-            <button className="cursor-pointer py-[9px] px-[22px] bg-success rounded-md flex flex-row items-center justify-center border-[2px] border-solid border-seagreen">
+            <button
+              onClick={() => navigate("mailto:info@getcoblr.com")}
+              className="cursor-pointer py-[9px] px-[22px] bg-success rounded-md flex flex-row items-center justify-center border-[2px] border-solid border-seagreen"
+            >
               <div className="flex flex-row items-center justify-center py-0 px-6">
                 <div className="relative text-lg leading-[140%] font-semibold font-sub-title text-white text-left inline-block min-w-[105px] whitespace-nowrap">
                   Get started
