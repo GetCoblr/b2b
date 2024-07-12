@@ -11,37 +11,37 @@ const NavExpanded = ({ expand = false }) => {
       className="pb-44 w-full fixed z-50 h-screen bg-white overflow-hidden flex flex-col items-end justify-between pt-0 px-0 box-border gap-[32px] leading-[normal] tracking-[normal]"
     >
       <section className="self-stretch flex flex-col items-start justify-start pt-0 px-6 box-border gap-[27.5px] max-w-full text-left text-base text-blue-gray-900 font-button-m">
-        <div className="mt-20 flex flex-row items-start justify-start py-0 px-2">
+        <div className="mt-20 w-full flex flex-row items-start justify-start py-0 px-2">
           <Link
             to="/features"
-            className="[text-decoration:none] relative tracking-[0.5px] leading-[24px] font-medium text-[inherit] inline-block min-w-[54px]"
+            className="[text-decoration:none] w-full relative tracking-[0.5px] leading-[24px] font-medium text-[inherit] inline-block min-w-[54px]"
           >
             Features
           </Link>
         </div>
         <div className="w-full h-px relative box-border opacity-[0.3] max-w-full border-t-[1px] border-solid border-dark-25" />
-        <div className="flex flex-row items-start justify-start py-0 px-2">
+        <div className="flex flex-row w-full items-start justify-start py-0 px-2">
           <Link
             to="/pricing"
-            className="[text-decoration:none] relative tracking-[0.5px] leading-[24px] font-medium text-[inherit] inline-block min-w-[54px]"
+            className="[text-decoration:none] w-full relative tracking-[0.5px] leading-[24px] font-medium text-[inherit] inline-block min-w-[54px]"
           >
             Pricing
           </Link>
         </div>
         <div className="w-full h-px relative box-border opacity-[0.3] max-w-full border-t-[1px] border-solid border-dark-25" />
-        <div className="flex flex-row items-start justify-start py-0 px-2">
+        <div className="flex w-full flex-row items-start justify-start py-0 px-2">
           <Link
             to="/support"
-            className="[text-decoration:none] relative tracking-[0.5px] leading-[24px] font-medium text-[inherit] inline-block min-w-[61px]"
+            className="[text-decoration:none] w-full relative tracking-[0.5px] leading-[24px] font-medium text-[inherit] inline-block min-w-[61px]"
           >
             Support
           </Link>
         </div>
         <div className="w-full h-px relative box-border opacity-[0.3] max-w-full border-t-[1px] border-solid border-dark-25" />
-        <div className="flex flex-row items-start justify-start py-0 px-2">
+        <div className="w-full flex flex-row items-start justify-start py-0 px-2">
           <Link
             to="/for-brand"
-            className="[text-decoration:none] relative tracking-[0.5px] leading-[24px] font-medium text-[inherit] inline-block min-w-[61px]"
+            className="w-full [text-decoration:none] relative tracking-[0.5px] leading-[24px] font-medium text-[inherit] inline-block min-w-[61px]"
           >
             For brand
           </Link>
