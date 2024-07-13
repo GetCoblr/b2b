@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { GreenCircleSVG, LineSVG, MessageIconSVG } from "../icons";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { SUPPORT_EMAIL_API } from "../../constants";
 
 const Contact = ({ className = "" }) => {
   const [formData, setFormData] = React.useState({
@@ -32,7 +33,7 @@ const Contact = ({ className = "" }) => {
     };
 
     fetch(
-      "https://coblrshop-server-614985b7efc5.herokuapp.com/support_message",
+      SUPPORT_EMAIL_API,
       {
         method: "POST",
         headers: {
