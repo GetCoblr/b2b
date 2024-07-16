@@ -1,9 +1,17 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import { GreenCircleSVG, LineSVG, MessageIconSVG } from "../icons";
+import {
+  CardSVG,
+  GreenCircleSVG,
+  HeartSVG,
+  LineSVG,
+  MailFastSVG,
+  MessageIconSVG,
+} from "../icons";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { SUPPORT_EMAIL_API } from "../../constants";
+import ContentBox from "./content-box";
 
 const Contact = ({ className = "" }) => {
   const [formData, setFormData] = React.useState({
@@ -32,16 +40,13 @@ const Contact = ({ className = "" }) => {
       message: formData.message,
     };
 
-    fetch(
-      SUPPORT_EMAIL_API,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(dataToSend),
-      }
-    )
+    fetch(SUPPORT_EMAIL_API, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(dataToSend),
+    })
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -64,51 +69,53 @@ const Contact = ({ className = "" }) => {
   };
   return (
     <section
-      className={`self-stretch flex flex-row items-start justify-start pt-0 md:px-20 px-5 pb-10 box-border max-w-full text-left text-lg text-white font-sub-title ${className}`}
+      className={`self-stretch flex flex-row items-start justify-start md:px-20 px-5 py-10 box-border max-w-full text-left text-lg text-white font-sub-title ${className}`}
     >
       <ToastContainer />
-      <div className="flex-1 flex-wrap flex flex-row items-start justify-start gap-[80px] max-w-full mq750:gap-[40px] mq450:gap-[20px] mq1275:flex-wrap">
-        <div className="h-full flex-[0.8678] rounded-[10px] bg-success overflow-hidden flex flex-col items-start justify-start pt-10 px-10 box-border  min-w-full md:min-w-[393px] max-w-full mq750:h-auto">
-          <div className="flex flex-col items-start justify-start gap-[8px] shrink-0">
-            <div className="relative leading-[140%] font-semibold">
-              Contact Information
-            </div>
-          </div>
-          <div>
-            <LineSVG />
-          </div>
-          <div className="w-[597px] flex flex-row items-start justify-between shrink-0 max-w-[114%] gap-[20px] text-base font-body mq750:flex-wrap">
-            <div className="flex flex-col mt-auto mb-10 items-end justify-end gap-[40px] min-w-[186px] mq750:flex-1">
-              <div className="flex flex-col items-start justify-start gap-[32px]">
-                <div className="flex flex-row items-start justify-start gap-[16px]">
-                  <MessageIconSVG />
-                  <div className="relative leading-[140%] whitespace-nowrap">
-                    <a
-                      className="[text-decoration:none] text-inherit"
-                      href="mailto:info@getcoblr.com"
-                    >
-                      info@getcoblr.com
-                    </a>
-                  </div>
-                </div>
+      <div className="flex xl:flex-row flex-col items-center justify-center gap-[80px] max-w-full">
+        <section
+          className={`flex-1 flex flex-row items-start justify-start box-border max-w-full text-base text-blue-gray-600 font-body-xs ${className}`}
+        >
+          <div className="flex-grow overflow-hidden flex flex-col items-center justify-start box-border gap-[48px] max-w-full">
+            <div className="flex flex-col items-center justify-start gap-[24px] max-w-full">
+              <div className="flex flex-col items-center justify-start py-0 box-border gap-[8px] max-w-full text-xl">
+                <h1 className="m-0 relative md:text-23xl text-[26px] tracking-[0.02em] leading-[140%] font-bold font-sub-title text-transparent !bg-clip-text [background:linear-gradient(90deg,_#61ba5f,_#4c8c4a)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] inline-block">
+                  <p className="[margin-block-start:0] max-w-[660px] [margin-block-end:5px]">
+                    Outsource the critical repair step and process
+                  </p>
+                </h1>
               </div>
             </div>
-            <div className="flex flex-col items-start justify-start pt-[36px] px-0 pb-0 box-border">
-              <GreenCircleSVG />
+            <div className="self-stretch flex flex-col items-start justify-start gap-[48px] max-w-full text-left text-blue-gray-900">
+              <ContentBox
+                icon={<MailFastSVG />}
+                title="Simple Tracking"
+                paragraph="Easy order tracking, transparent process, and upfront pricing."
+              />
+              <ContentBox
+                icon={<CardSVG />}
+                title="Trusted Repair Artisans"
+                paragraph="Excellent craftsmanship each and every time."
+              />
+              <ContentBox
+                icon={<HeartSVG />}
+                title="Build Loyalty, Support Sustainability"
+                paragraph="Helping customers revive their favorite items builds brand loyalty."
+              />
             </div>
           </div>
-        </div>
+        </section>
         <form
-          className="flex-1 m-0 grid grid-cols-2 items-start justify-start gap-[24px] min-w-full md:min-w-[387px] max-w-full"
+          className="bg-success flex-1 md:w-full z-[1] py-[32px] px-[38px] rounded-[10px] md:m-0 md:grid md:grid-cols-2 items-stretch flex-col flex text-white justify-start gap-[24px]"
           onSubmit={handleSubmit}
         >
-          <h2 className="col-span-2 m-0 relative max-w-[500px] text-11xl tracking-[0.02em] leading-[140%] font-bold font-sub-title text-dark-100 text-left inline-block">
+          <h2 className="col-span-2 m-0 relative md:text-11xl text-lg tracking-[0.02em] leading-[140%] md:font-bold font-semibold font-sub-title text-white text-left inline-block">
             <p className="m-0">
               Want to learn more about what we are building?
             </p>
           </h2>
-          <div className="h-[49px] flex-1 flex flex-col items-start justify-between pt-0 px-0 pb-0 box-border min-w-[181px]">
-            <div className="relative text-xs leading-[17px] font-medium font-sub-title text-dark-50 text-left inline-block min-w-[68px]">
+          <div className="h-[49px] flex-1 flex flex-col items-start justify-between pt-0 px-0 pb-0 box-border">
+            <div className="relative text-xs leading-[17px] font-medium font-sub-title text-left inline-block">
               First Name
             </div>
             <input
@@ -117,11 +124,11 @@ const Contact = ({ className = "" }) => {
               name="firstName"
               value={formData.firstName}
               onChange={handleChange}
-              className="[outline:none] w-full border-b-[0.5px] font-medium font-sub-title text-xs leading-[140%] text-dark-25 text-left inline-block shrink-0 p-0"
+              className="[outline:none] bg-transparent border-white w-full border-b-[1px] h-[32px] font-medium font-sub-title text-xs leading-[140%] text-dark-25 text-left inline-block shrink-0 p-0"
             />
           </div>
-          <div className="h-[49px] flex-1 flex flex-col items-start justify-between pt-0 px-0 pb-0 box-border min-w-[181px]">
-            <div className="relative text-xs leading-[17px] font-medium font-sub-title text-dark-50 text-left inline-block min-w-[68px]">
+          <div className="h-[49px] flex-1 flex flex-col items-start justify-between pt-0 px-0 pb-0 box-border">
+            <div className="relative text-xs leading-[17px] font-medium font-sub-title text-left inline-block">
               Last Name
             </div>
             <input
@@ -130,11 +137,11 @@ const Contact = ({ className = "" }) => {
               name="lastName"
               value={formData.lastName}
               onChange={handleChange}
-              className="[outline:none] w-full border-b-[0.5px] font-medium font-sub-title text-xs leading-[140%] text-dark-25 text-left inline-block shrink-0 p-0"
+              className="[outline:none] bg-transparent border-white w-full border-b-[1px] h-[32px] font-medium font-sub-title text-xs leading-[140%] text-dark-25 text-left inline-block shrink-0 p-0"
             />
           </div>
-          <div className="h-[49px] flex-1 flex flex-col items-start justify-between pt-0 px-0 pb-0 box-border min-w-[181px]">
-            <div className="relative text-xs leading-[17px] font-medium font-sub-title text-dark-50 text-left inline-block min-w-[68px]">
+          <div className="h-[49px] flex-1 flex flex-col items-start justify-between pt-0 px-0 pb-0 box-border">
+            <div className="relative text-xs leading-[17px] font-medium font-sub-title text-left inline-block">
               Email
             </div>
             <input
@@ -143,11 +150,11 @@ const Contact = ({ className = "" }) => {
               required
               value={formData.email}
               onChange={handleChange}
-              className="[outline:none] w-full border-b-[0.5px] font-medium font-sub-title text-xs leading-[140%] text-dark-25 text-left inline-block shrink-0 p-0"
+              className="[outline:none] bg-transparent border-white w-full border-b-[1px] h-[32px] font-medium font-sub-title text-xs leading-[140%] text-dark-25 text-left inline-block shrink-0 p-0"
             />
           </div>
-          <div className="h-[49px] flex-1 flex flex-col items-start justify-between pt-0 px-0 pb-0 box-border min-w-[181px]">
-            <div className="relative text-xs leading-[17px] font-medium font-sub-title text-dark-50 text-left inline-block min-w-[68px]">
+          <div className="h-[49px] flex-1 flex flex-col items-start justify-between pt-0 px-0 pb-0 box-border">
+            <div className="relative text-xs leading-[17px] font-medium font-sub-title text-left inline-block">
               Phone Number
             </div>
             <input
@@ -156,28 +163,29 @@ const Contact = ({ className = "" }) => {
               required
               value={formData.phoneNumber}
               onChange={handleChange}
-              className="[outline:none] w-full border-b-[0.5px] font-medium font-sub-title text-xs leading-[140%] text-dark-25 text-left inline-block shrink-0 p-0"
+              className="[outline:none] bg-transparent border-white w-full border-b-[1px] h-[32px] font-medium font-sub-title text-xs leading-[140%] text-dark-25 text-left inline-block shrink-0 p-0"
             />
           </div>
           <div className="col-span-2 self-stretch flex flex-col items-start justify-start pt-0 px-0 pb-0 gap-[8px]">
-            <div className="relative text-xs leading-[17px] font-medium font-sub-title text-dark-50 text-left inline-block min-w-[54px]">
+            <div className="relative text-xs leading-[17px] font-medium font-sub-title text-left inline-block">
               Message
             </div>
             <input
               type="text"
               name="message"
+              placeholder="Write your message.."
               required
               value={formData.message}
               onChange={handleChange}
-              className="w-full border-b-[0.5px] [outline:none] font-medium font-sub-title text-xs leading-[140%] placeholder:text-dark-25 text-left inline-block shrink-0 p-0"
+              className="w-full border-b-[1px] h-[32px] [outline:none] bg-transparent border-white font-medium font-sub-title text-xs leading-[140%] placeholder:text-dark-25 text-left inline-block shrink-0 p-0"
             />
           </div>
           <button
             type="submit"
-            className="cursor-pointer py-[9px] px-[22px] bg-success rounded-md flex flex-row items-center justify-center border-[2px] border-solid border-seagreen"
+            className="cursor-pointer col-span-2 py-[9px] px-[22px] bg-white text-success md:rounded-md rounded-[10px] flex flex-row items-center justify-center border-[2px] border-solid border-seagreen"
           >
             <div className="flex flex-row items-center justify-center py-0 px-6">
-              <div className="relative text-lg leading-[140%] font-semibold font-sub-title text-white text-left text-nowrap">
+              <div className="relative md:text-lg text-base leading-[140%] font-semibold font-body md:font-sub-title text-left text-nowrap">
                 Send Message
               </div>
             </div>
