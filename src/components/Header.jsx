@@ -55,7 +55,7 @@ const Header = ({ className = "" }) => {
                 </p>
               </div>
               <div className="w-[560px] relative text-base leading-[140%] font-body inline-block max-w-full">
-                A system design specifically for shoe repair businesses, to
+                A system designed specifically for shoe repair businesses, to
                 support your growth with easy technology.
               </div>
             </div>
