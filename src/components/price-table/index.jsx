@@ -1,18 +1,42 @@
 import * as React from "react";
+import { navigate } from "gatsby";
+import moment from "moment";
+import momentTimezone from "moment-timezone";
+
 import SectionText from "./section-text";
 import Component from "./component";
-import { DownArrowSVG, IconLinkSVG, TickSVG } from "../icons";
 import Div from "./div";
 import BasicItems from "./basicItems";
 import { motion } from "framer-motion";
 import MobileExtended from "./mobileExtended";
-import { GATSBY_SIGNUP_URL } from "../../constants";
-import { navigate } from "gatsby";
+
+import { DownArrowSVG, IconLinkSVG, TickSVG } from "../icons";
+import { GATSBY_SIGNUP_URL, GATSBY_BASIC_PLAN_DEADLINE, GATSBY_DEADLINE_TIMEZONE } from "../../constants";
 
 const PriceTable = ({ extended = false, title, subTitle }) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [seconds, setSeconds] = React.useState(267780);
   const containerRef = React.useRef(null);
+
+  const planRemainingTime = (deadline) => {
+    const deadlineDate = moment.tz(
+      deadline + " 00:00",
+      "MM-DD-YYYY HH:mm",
+      GATSBY_DEADLINE_TIMEZONE
+    );
+    const now = moment.tz(moment(), GATSBY_DEADLINE_TIMEZONE);
+    const duration = moment.duration(deadlineDate.diff(now));
+
+    if (duration.asMilliseconds() <= 0) {
+      return `0 days 0 hours 0 minutes`;
+    }
+
+    const days = Math.floor(duration.asDays());
+    const hours = duration.hours();
+    const minutes = duration.minutes();
+
+    return `${days} days ${hours} hours ${minutes} minutes`;
+  }
 
   React.useEffect(() => {
     const interval = setInterval(() => {
@@ -83,9 +107,7 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                   <span className="font-medium">Deal ends in</span>
                   <span className="font-semibold">
                     {" "}
-                    {Math.floor(seconds / (3600 * 24))} days{" "}
-                    {Math.floor((seconds % (3600 * 24)) / 3600)} hours{" "}
-                    {Math.floor((seconds % 3600) / 60)} minutes.
+                    {planRemainingTime(GATSBY_BASIC_PLAN_DEADLINE)}
                   </span>
                 </div>
               </div>
@@ -565,7 +587,7 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                     For the repair business committed to delivering a great
                     in-person experience.
                   </div>
-                  <div className="w-[122px] flex flex-col items-start justify-center gap-[8px] text-dark-50 font-inter">
+                  <div className="w-[165px] flex flex-col items-start justify-center gap-[8px] text-dark-50 font-inter">
                     <div className="relative leading-[17px] font-info-text inline-block min-w-[57px]">
                       Starting at
                     </div>
@@ -585,11 +607,7 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                     </div>
                     <div className="self-stretch relative leading-[20px] text-darkorange">
                       <p className="m-0 font-medium">Deal ends in</p>
-                      <p className="m-0 font-semibold">
-                        {Math.floor(seconds / (3600 * 24))}d{" "}
-                        {Math.floor((seconds % (3600 * 24)) / 3600)} hrs{" "}
-                        {Math.floor((seconds % 3600) / 60)} mins.
-                      </p>
+                      <p className="m-0 font-semibold">{planRemainingTime(GATSBY_BASIC_PLAN_DEADLINE)}</p>
                     </div>
                   </div>
                   <button
