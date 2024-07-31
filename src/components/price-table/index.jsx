@@ -11,11 +11,10 @@ import { motion } from "framer-motion";
 import MobileExtended from "./mobileExtended";
 
 import { DownArrowSVG, IconLinkSVG, TickSVG } from "../icons";
-import { GATSBY_SIGNUP_URL, GATSBY_BASIC_PLAN_DEADLINE, GATSBY_DEADLINE_TIMEZONE } from "../../constants";
+import { GATSBY_SIGNUP_URL, GATSBY_BASIC_PLAN_DEADLINE, GATSBY_DEADLINE_TIMEZONE, GATSBY_STARTER_PLAN_SUBSCRIPTION_LINK_DISCOUNTED, GATSBY_STARTER_PLAN_SUBSCRIPTION_LINK_FLAT } from "../../constants";
 
 const PriceTable = ({ extended = false, title, subTitle }) => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const [seconds, setSeconds] = React.useState(267780);
   const containerRef = React.useRef(null);
 
   const planRemainingTime = (deadline) => {
@@ -28,23 +27,21 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
     const duration = moment.duration(deadlineDate.diff(now));
 
     if (duration.asMilliseconds() <= 0) {
-      return `0 days 0 hours 0 minutes`;
+      return {
+        isTimeRemaining: false,
+        remainingTimeStr: `0 days 0 hours 0 minutes`
+      };
     }
 
     const days = Math.floor(duration.asDays());
     const hours = duration.hours();
     const minutes = duration.minutes();
 
-    return `${days} days ${hours} hours ${minutes} minutes`;
+    return {
+      isTimeRemaining: true,
+      remainingTimeStr: `${days} days ${hours} hours ${minutes} minutes`,
+    };
   }
-
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      setSeconds((prevSeconds) => prevSeconds - 1);
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <>
@@ -107,18 +104,26 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                   <span className="font-medium">Deal ends in</span>
                   <span className="font-semibold">
                     {" "}
-                    {planRemainingTime(GATSBY_BASIC_PLAN_DEADLINE)}
+                    {
+                      planRemainingTime(GATSBY_BASIC_PLAN_DEADLINE)
+                        ?.remainingTimeStr
+                    }
                   </span>
                 </div>
               </div>
-              <button
-                onClick={() => navigate(GATSBY_SIGNUP_URL)}
-                className="cursor-pointer [border:none] py-4 px-6 bg-success self-stretch rounded flex flex-row items-center justify-center whitespace-nowrap hover:bg-mediumseagreen"
+              <a
+                href={
+                  planRemainingTime(GATSBY_BASIC_PLAN_DEADLINE)?.isTimeRemaining
+                    ? GATSBY_STARTER_PLAN_SUBSCRIPTION_LINK_DISCOUNTED
+                    : GATSBY_STARTER_PLAN_SUBSCRIPTION_LINK_FLAT
+                }
+                target="_blank"
+                className="cursor-pointer [border:none] no-underline py-4 px-6 bg-success self-stretch rounded flex flex-row items-center justify-center whitespace-nowrap hover:bg-mediumseagreen"
               >
                 <b className="flex-1 relative text-sm leading-[20px] font-inter text-default-white text-center">
                   Get started free
                 </b>
-              </button>
+              </a>
             </div>
             <Component
               growth="Growth"
@@ -607,17 +612,28 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                     </div>
                     <div className="self-stretch relative leading-[20px] text-darkorange">
                       <p className="m-0 font-medium">Deal ends in</p>
-                      <p className="m-0 font-semibold">{planRemainingTime(GATSBY_BASIC_PLAN_DEADLINE)}</p>
+                      <p className="m-0 font-semibold">
+                        {
+                          planRemainingTime(GATSBY_BASIC_PLAN_DEADLINE)
+                            .remainingTimeStr
+                        }
+                      </p>
                     </div>
                   </div>
-                  <button
-                    onClick={() => navigate(GATSBY_SIGNUP_URL)}
-                    className="cursor-pointer py-[5px] px-5 bg-success self-stretch shadow-[0px_1px_1.92px_rgba(16,_24,_40,_0.05)] rounded-lg overflow-hidden flex flex-row items-center justify-center whitespace-nowrap border-[1px] border-solid border-success"
+                  <a
+                    href={
+                      planRemainingTime(GATSBY_BASIC_PLAN_DEADLINE)
+                        ?.isTimeRemaining
+                        ? GATSBY_STARTER_PLAN_SUBSCRIPTION_LINK_DISCOUNTED
+                        : GATSBY_STARTER_PLAN_SUBSCRIPTION_LINK_FLAT
+                    }
+                    target="_blank"
+                    className="cursor-pointer py-[5px] px-5 no-underline bg-success self-stretch shadow-[0px_1px_1.92px_rgba(16,_24,_40,_0.05)] rounded-lg overflow-hidden flex flex-row items-center justify-center whitespace-nowrap border-[1px] border-solid border-success"
                   >
                     <div className="relative text-xs leading-[17px] font-info-text text-white text-left inline-block min-w-[84px]">
                       Get started free
                     </div>
-                  </button>
+                  </a>
                 </div>
                 <BasicItems
                   location1="1 Location"

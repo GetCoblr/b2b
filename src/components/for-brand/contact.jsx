@@ -10,7 +10,7 @@ import {
 } from "../icons";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { SUPPORT_EMAIL_API } from "../../constants";
+import { GATSBY_SUPPORT_EMAIL_API } from "../../constants";
 import ContentBox from "./content-box";
 
 const Contact = ({ className = "" }) => {
@@ -40,7 +40,7 @@ const Contact = ({ className = "" }) => {
       message: formData.message,
     };
 
-    fetch(SUPPORT_EMAIL_API, {
+    fetch(GATSBY_SUPPORT_EMAIL_API, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
