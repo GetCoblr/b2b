@@ -269,7 +269,7 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
               <TickSVG />
             </div>
 
-            <div className="bg-default-white font-sub-title text-left text-lg self-stretch flex flex-row items-center justify-start pt-[27px] px-8 pb-[26px] text-gray-200 border-[0.5px] border-solid border-dark-25">
+            {/* <div className="bg-default-white font-sub-title text-left text-lg self-stretch flex flex-row items-center justify-start pt-[27px] px-8 pb-[26px] text-gray-200 border-[0.5px] border-solid border-dark-25">
               <div className="flex-1 relative leading-[26px] font-medium">
                 Integrations
               </div>
@@ -290,7 +290,7 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
               <div className="relative leading-[140%]">
                 Unlimited Integrations
               </div>
-            </div>
+            </div> */}
 
             <div className="bg-default-white font-sub-title text-left text-lg self-stretch flex flex-row items-center justify-start pt-[27px] px-8 pb-[26px] z-[1] text-gray-200  border-[0.5px] border-solid border-dark-25">
               <div className="flex-1 relative leading-[26px] font-medium">
@@ -428,7 +428,7 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                       </div>
                     </div>
                   </div>
-                  <section className="self-stretch col-span-4 bg-silver box-border flex flex-col items-start text-center justify-center pt-4 pb-[15px] pr-5 pl-8 gap-[8px] max-w-full text-lg text-gray-200 font-sub-title border-[0.5px] border-solid border-dark-25">
+                  <section className="self-stretch col-span-4 bg-silver box-border flex flex-col items-center text-center justify-center pt-4 pb-[15px] pr-5 pl-8 gap-[8px] max-w-full text-lg text-gray-200 font-sub-title border-[0.5px] border-solid border-dark-25">
                     <div className="relative leading-[140%] font-semibold flex items-center justify-center text-center max-w-full">
                       Shipping Label Printer
                     </div>
@@ -450,7 +450,7 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                     </div>
                     <div className="relative text-base leading-[140%] font-questrial flex items-center"></div>
                   </div>
-                  <div className="px-8 relative text-base justify-center leading-[140%] font-questrial text-gray-200 ps flex items-center w-full h-full border-[0.5px] border-solid border-dark-25 box-border">
+                  <div className="px-8 relative text-[#272523] text-base font-normal font-['Questrial'] leading-snug h-full text-center flex items-center border-[0.5px] border-solid border-dark-25 box-border">
                     For lower volume shipping needs
                   </div>
                   <div className="self-stretch text-lg font-montserrat col-span-2 flex flex-row text-left font-semibold items-center justify-center pt-[29px] px-5 pb-7 border-[0.5px] border-solid border-dark-25">
@@ -469,11 +469,8 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                       </a>
                       <IconLinkSVG />
                     </div>
-                    <div className="relative text-base leading-[140%] font-questrial flex items-center">
-                      For high volume shipping needs
-                    </div>
                   </div>
-                  <div className="px-8 relative text-base justify-center leading-[140%] font-questrial text-gray-200 ps flex items-center w-full h-full border-[0.5px] border-solid border-dark-25 box-border">
+                  <div className="px-8 relative text-[#272523] text-base font-normal font-['Questrial'] leading-snug h-full text-center flex items-center border-[0.5px] border-solid border-dark-25 box-border">
                     For high volume shipping needs
                   </div>
                   <div className="self-stretch font-montserrat text-lg col-span-2 flex flex-row text-left font-semibold items-center justify-center pt-[29px] px-5 pb-7 border-[0.5px] border-solid border-dark-25">
@@ -492,11 +489,8 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                       </a>
                       <IconLinkSVG />
                     </div>
-                    <div className="relative text-base leading-[140%] font-questrial flex items-center">
-                      All-in-one printer solution for order and shipping labels
-                    </div>
                   </div>
-                  <div className="relative text-base px-8 justify-center leading-[140%] font-questrial text-gray-200 flex items-center w-full h-full border-[0.5px] border-solid border-dark-25 box-border">
+                  <div className="px-8 relative text-[#272523] text-base font-normal font-['Questrial'] leading-snug h-full text-center flex items-center border-[0.5px] border-solid border-dark-25 box-border">
                     All-in-one printer solution for order and shipping labels
                   </div>
                   <div className="self-stretch font-montserrat text-lg col-span-2 flex flex-row text-left font-semibold items-center justify-center px-5 border-[0.5px] border-solid border-dark-25">
@@ -526,11 +520,14 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                       <IconLinkSVG />
                     </div>
                   </div>
-                  <div className="w-full h-full text-gray-200 box-border px-8 py-4 border-[0.5px] border-solid border-dark-25 relative text-base leading-[140%] font-questrial flex items-center">
+                  <div className="px-8 relative text-[#272523] text-base font-normal font-['Questrial'] leading-snug h-full text-center flex items-center border-[0.5px] border-solid border-dark-25 box-border">
                     Heavy duty printer for order labels and QR codes
                   </div>
-                  <div className="w-full h-full box-border border-[0.5px] border-solid border-dark-25" />
-                  <div className="w-full h-full box-border border-[0.5px] border-solid border-dark-25" />
+                  <div className="self-stretch font-montserrat text-lg col-span-2 flex flex-row text-left font-semibold items-center justify-center pt-[29px] px-5 pb-7 border-[0.5px] border-solid border-dark-25">
+                    <div className="relative font-semibold leading-[140%] inline-block min-w-[98px]">
+                      $360
+                    </div>
+                  </div>
                   <div className="box-border text-lg text-gray-200 font-sub-title self-stretch flex flex-col items-start justify-center py-[20px] pl-8 pe-3 gap-[4px] border-[0.5px] border-solid border-dark-25">
                     <div className="flex flex-row items-center justify-start">
                       <a
@@ -543,12 +540,15 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                       <IconLinkSVG />
                     </div>
                   </div>
-                  <div className="w-full h-full text-gray-200 box-border px-8 py-4 border-[0.5px] border-solid border-dark-25 relative text-base leading-[140%] font-questrial flex items-center">
+                  <div className="px-8 relative text-[#272523] text-base font-normal font-['Questrial'] leading-snug h-full text-center flex items-center border-[0.5px] border-solid border-dark-25 box-border">
                     Straightforward printer for order labels and QR codes for
                     in-store order management.
                   </div>
-                  <div className="w-full h-full box-border border-[0.5px] border-solid border-dark-25" />
-                  <div className="w-full h-full box-border border-[0.5px] border-solid border-dark-25" />
+                  <div className="self-stretch font-montserrat text-lg col-span-2 flex flex-row text-left font-semibold items-center justify-center px-5 border-[0.5px] border-solid border-dark-25">
+                    <div className="relative font-semibold leading-[140%] inline-block min-w-[98px]">
+                      $110
+                    </div>
+                  </div>
                 </motion.div>
               </>
             )}
@@ -638,7 +638,6 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                 <BasicItems
                   location1="1 Location"
                   employees="2 Employees"
-                  integration="1 Integration"
                   emailSupportOnly="Email Support Only"
                 />
                 <div className="self-stretch flex flex-col items-start justify-center py-4 pr-[132px] pl-6 gap-[4px] font-info-text">
@@ -706,7 +705,6 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                 <BasicItems
                   location1="1 Location"
                   employees="4 Employees"
-                  integration="3 Integrations"
                   emailSupportOnly="12 hr phone and Email support"
                 />
                 <div className="self-stretch flex flex-col items-start justify-center py-4 px-6 gap-[4px]">
@@ -785,7 +783,6 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                 <BasicItems
                   location1="3 Locations"
                   employees="6 Employees"
-                  integration="Unlimited Integrations"
                   emailSupportOnly="12 hr priority support"
                 />
                 <div className="self-stretch flex flex-col items-start justify-center py-4 px-6 gap-[4px]">

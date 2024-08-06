@@ -30,7 +30,7 @@ const Section = ({ className = "" }) => {
             <div className="z-10 flex-1 flex flex-col items-start justify-center gap-[24px] max-w-full">
               <div className="self-stretch flex flex-col items-start justify-center gap-[24px] max-w-full">
                 <div className="self-stretch flex flex-col items-start justify-center py-0 pr-5 pl-0 box-border max-w-full">
-                  <h1 className="m-0 w-[621px] relative text-inherit tracking-[0.02em] leading-[140%] font-bold font-inherit text-transparent !bg-clip-text [background:linear-gradient(90deg,_#61ba5f,_#4c8c4a)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] inline-block max-w-full">
+                  <h1 className="m-0 relative text-inherit tracking-[0.02em] leading-[140%] font-bold font-inherit text-transparent !bg-clip-text [background:linear-gradient(90deg,_#61ba5f,_#4c8c4a)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] inline-block max-w-full">
                     Join the <br />
                     Repair Revolution.
                   </h1>

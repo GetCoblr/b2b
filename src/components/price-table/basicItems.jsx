@@ -22,9 +22,9 @@ const BasicItems = ({
         <div className="relative leading-[17px] inline-block min-w-[69px]">
           {employees}
         </div>
-        <div className="relative leading-[17px] inline-block min-w-[68px]">
+        {integration && (<div className="relative leading-[17px] inline-block min-w-[68px]">
           {integration}
-        </div>
+        </div>)}
         <div className="relative leading-[17px] inline-block min-w-[103px]">
           {emailSupportOnly}
         </div>
