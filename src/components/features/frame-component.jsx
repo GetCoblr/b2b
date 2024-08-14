@@ -90,7 +90,7 @@ const FrameComponent = ({ className = "" }) => {
         className={`mb-20 relative md:hidden w-full flex flex-row items-start justify-start py-[110px] px-6 box-border bg-cover bg-no-repeat bg-[top] leading-[normal] tracking-[normal] ${className}`}
       >
         <GatsbyImage
-          className="w-full h-full object-cover absolute inset-0"
+          className="w-full h-full object-cover !absolute inset-0"
           image={getImage(backgroundImage)}
           alt="Background Image"
         />
