@@ -1,13 +1,13 @@
 import * as React from "react";
-import PropTypes from "prop-types";
 import useFileImport from "../../hooks/useFileImport";
 import { navigate } from "gatsby";
 import { GATSBY_SIGNUP_URL } from "../../constants";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const FrameComponent = ({ className = "" }) => {
   const fileMap = useFileImport();
   const backgroundImage = fileMap["section@3x"]
-    ? fileMap["section@3x"].publicURL
+    ? fileMap["section@3x"].gatsbyImageData
     : "";
 
   const [email, setEmail] = React.useState("");
@@ -28,15 +28,18 @@ const FrameComponent = ({ className = "" }) => {
       >
         <div className="relative">
           <div
-            className="z-[1] bg-cover bg-no-repeat bg-[top]"
             style={{
               left: "min(0px, calc((1440px - 100vw) / 2))",
               position: "absolute",
               width: "100vw",
               height: "100%",
-              backgroundImage: `url(${backgroundImage})`,
             }}
           >
+            <GatsbyImage
+              className="w-full h-full object-cover"
+              image={getImage(backgroundImage)}
+              alt="Background Image"
+            />
             <div className="absolute w-full h-full z-[1] inset-0 bg-black opacity-50" />
           </div>
           <div className="relative overflow-hidden flex-1 flex flex-row items-start justify-start py-14 px-20 box-border bg-cover bg-no-repeat bg-[top] min-h-[561px] max-w-full mq750:gap-[40px] mq750:pl-10 mq750:pr-10 mq750:box-border mq450:gap-[20px] mq450:pt-9 mq450:pb-9 mq450:box-border">
@@ -84,11 +87,13 @@ const FrameComponent = ({ className = "" }) => {
       </section>
 
       <div
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-        }}
         className={`mb-20 relative md:hidden w-full flex flex-row items-start justify-start py-[110px] px-6 box-border bg-cover bg-no-repeat bg-[top] leading-[normal] tracking-[normal] ${className}`}
       >
+        <GatsbyImage
+          className="w-full h-full object-cover absolute inset-0"
+          image={getImage(backgroundImage)}
+          alt="Background Image"
+        />
         <div className="absolute inset-0 bg-black opacity-50" />
         <section className="z-10 flex-1 flex flex-col items-start justify-start gap-[24px] max-w-full text-left text-[26px] text-white font-montserrat">
           <h2 className="m-0 self-stretch relative text-inherit tracking-[0.02em] leading-[140%] font-bold font-inherit text-transparent !bg-clip-text [background:linear-gradient(90deg,_#61ba5f,_#4c8c4a)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
