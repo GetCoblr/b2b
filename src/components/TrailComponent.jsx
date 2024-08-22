@@ -2,18 +2,19 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { GATSBY_SIGNUP_URL } from "../constants";
 import { navigate } from "gatsby";
+import ContactForm from "./for-brand/contact-form";
 
 const TrailComponent = ({ className = "" }) => {
   return (
     <>
       <div
-        className={`w-full hidden [background:linear-gradient(97.2deg,_rgba(248,_255,_248,_0.01),_rgba(76,_140,_74,_0.05)),_#f7f7f7] md:flex flex-row items-center justify-start py-10 px-20 box-border leading-[normal] tracking-[normal] mq450:gap-[20px] mq750:gap-[40px] mq750:pl-10 mq750:pr-10 mq750:box-border ${className}`}
+        className={`w-full hidden [background:linear-gradient(97.2deg,_rgba(248,_255,_248,_0.01),_rgba(76,_140,_74,_0.05)),_#f7f7f7] gap-10 md:flex flex-row items-center justify-start py-10 px-20 box-border leading-[normal] tracking-[normal] mq450:gap-[20px] mq750:gap-[40px] mq750:pl-10 mq750:pr-10 mq750:box-border ${className}`}
       >
         <section className="flex-1 flex flex-col items-start justify-start gap-[24px] max-w-full text-left text-[56px] text-dark-100 font-montserrat">
           <h1 className="m-0 self-stretch relative text-inherit tracking-[0.02em] leading-[140%] font-bold font-inherit mq450:text-[34px] mq450:leading-[47px] mq750:text-[45px] mq750:leading-[63px]">
             Start your free trial
           </h1>
-          <div className="self-stretch relative text-base leading-[140%] font-body">
+          <div className="xl:text-nowrap self-stretch relative text-base leading-[140%] font-body">
             Sign up now for 14 days of free premium access. It's free and takes
             less than 3 minutes.
           </div>
@@ -28,9 +29,10 @@ const TrailComponent = ({ className = "" }) => {
             </div>
           </button>
         </section>
+        <ContactForm />
       </div>
       <div
-        className={`[background:linear-gradient(97.2deg,_rgba(248,_255,_248,_0.01),_rgba(76,_140,_74,_0.05)),_#f7f7f7] m w-full md:hidden flex flex-row items-center justify-start py-[60px] px-6 box-border leading-[normal] tracking-[normal] ${className}`}
+        className={`gap-10 [background:linear-gradient(97.2deg,_rgba(248,_255,_248,_0.01),_rgba(76,_140,_74,_0.05)),_#f7f7f7] w-full md:hidden flex flex-col items-center justify-start py-[60px] px-6 box-border leading-[normal] tracking-[normal] ${className}`}
       >
         <section className="flex-1 flex flex-col items-start justify-start gap-[16px] max-w-full text-left text-[26px] text-dark-100 font-montserrat">
           <h2 className="m-0 relative text-inherit tracking-[0.02em] leading-[140%] font-bold font-inherit">
@@ -42,7 +44,7 @@ const TrailComponent = ({ className = "" }) => {
           </div>
           <button
             onClick={() => navigate(GATSBY_SIGNUP_URL)}
-            className="cursor-pointer p-2 bg-success w-[149px] rounded-[10px] box-border flex flex-row items-center justify-center border-[2px] border-solid border-seagreen"
+            className="cursor-pointer z-[1] p-2 bg-success w-[149px] rounded-[10px] box-border flex flex-row items-center justify-center border-[2px] border-solid border-seagreen"
           >
             <div className="flex flex-row items-center justify-center py-0 px-6">
               <div className="relative text-base leading-[140%] font-body text-white text-left inline-block min-w-[81px] whitespace-nowrap">
@@ -56,6 +58,7 @@ const TrailComponent = ({ className = "" }) => {
             />
           </button>
         </section>
+        <ContactForm className="self-stretch" />
       </div>
     </>
   );
