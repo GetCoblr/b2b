@@ -15,3 +15,13 @@ body {
 ::after {
   border-width: 0;
 }
+
+.Toastify__close-button {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  font-size: 16px;
+  transform: translateY(-50%);
+  color: inherit;
+  /* Inherit color from parent */
+}

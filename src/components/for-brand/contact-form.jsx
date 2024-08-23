@@ -44,10 +44,20 @@ const ContactForm = ({ className }) => {
         return response.text().then((text) => (text ? JSON.parse(text) : {}));
       })
       .then((data) => {
-        toast.success("Message sent successfully!", {
-          position: "top-center",
-        });
+        toast.success(
+          "Thank you for your message. We will respond to you shortly.",
+          {
+            position: "bottom-right",
+          }
+        );
         console.log("Success:", data);
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phoneNumber: "",
+          message: "",
+        });
       })
       .catch((error) => {
         alert("Error sending message");
@@ -76,7 +86,7 @@ const ContactForm = ({ className }) => {
           name="firstName"
           value={formData.firstName}
           onChange={handleChange}
-          className="[outline:none] bg-transparent border-white w-full border-b-[1px] h-[32px] font-medium font-sub-title text-xs leading-[140%] text-dark-25 text-left inline-block shrink-0 p-0"
+          className="[outline:none] ps-2 bg-transparent border-white self-stretch border-b-[1px] h-[32px] font-medium font-sub-title text-xs leading-[140%] text-dark-25 text-left inline-block shrink-0 p-0"
         />
       </div>
       <div className="h-[49px] flex-1 flex flex-col items-start justify-between pt-0 px-0 pb-0 box-border">
@@ -89,7 +99,7 @@ const ContactForm = ({ className }) => {
           name="lastName"
           value={formData.lastName}
           onChange={handleChange}
-          className="[outline:none] bg-transparent border-white w-full border-b-[1px] h-[32px] font-medium font-sub-title text-xs leading-[140%] text-dark-25 text-left inline-block shrink-0 p-0"
+          className="[outline:none] ps-2 bg-transparent border-white self-stretch border-b-[1px] h-[32px] font-medium font-sub-title text-xs leading-[140%] text-dark-25 text-left inline-block shrink-0 p-0"
         />
       </div>
       <div className="h-[49px] flex-1 flex flex-col items-start justify-between pt-0 px-0 pb-0 box-border">
@@ -102,7 +112,7 @@ const ContactForm = ({ className }) => {
           required
           value={formData.email}
           onChange={handleChange}
-          className="[outline:none] bg-transparent border-white w-full border-b-[1px] h-[32px] font-medium font-sub-title text-xs leading-[140%] text-dark-25 text-left inline-block shrink-0 p-0"
+          className="[outline:none] ps-2 bg-transparent border-white self-stretch border-b-[1px] h-[32px] font-medium font-sub-title text-xs leading-[140%] text-dark-25 text-left inline-block shrink-0 p-0"
         />
       </div>
       <div className="h-[49px] flex-1 flex flex-col items-start justify-between pt-0 px-0 pb-0 box-border">
@@ -115,7 +125,7 @@ const ContactForm = ({ className }) => {
           required
           value={formData.phoneNumber}
           onChange={handleChange}
-          className="[outline:none] bg-transparent border-white w-full border-b-[1px] h-[32px] font-medium font-sub-title text-xs leading-[140%] text-dark-25 text-left inline-block shrink-0 p-0"
+          className="[outline:none] ps-2 bg-transparent border-white self-stretch border-b-[1px] h-[32px] font-medium font-sub-title text-xs leading-[140%] text-dark-25 text-left inline-block shrink-0 p-0"
         />
       </div>
       <div className="col-span-2 self-stretch flex flex-col items-start justify-start pt-0 px-0 pb-0 gap-[8px]">
@@ -129,7 +139,7 @@ const ContactForm = ({ className }) => {
           required
           value={formData.message}
           onChange={handleChange}
-          className="w-full border-b-[1px] h-[32px] [outline:none] bg-transparent border-white font-medium font-sub-title text-xs leading-[140%] placeholder:text-dark-25 text-left inline-block shrink-0 p-0"
+          className="self-stretch ps-2 border-b-[1px] h-[32px] [outline:none] bg-transparent border-white font-medium font-sub-title text-xs leading-[140%] placeholder:text-dark-25 text-left inline-block shrink-0 p-0"
         />
       </div>
       <button
