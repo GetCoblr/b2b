@@ -6,6 +6,9 @@ const Component = ({
   growth,
   forTheGrowingRepairBusine,
   prop,
+  disabled = false,
+  planPaymentLink,
+  linkTitle,
 }) => {
   return (
     <div
@@ -41,11 +44,19 @@ const Component = ({
           </span>
         </div>
       </div>
-      <button className="cursor-pointer py-3.5 px-[23px] bg-dark-25 self-stretch rounded flex flex-row items-center justify-center whitespace-nowrap border-[1px] border-solid border-dark-50 hover:bg-darkgray hover:box-border hover:border-[1px] hover:border-solid hover:border-gray-100">
+      <a
+        href={planPaymentLink}
+        target="_blank"
+        className={`${
+          disabled
+            ? "cursor-not-allowed bg-dark-25 border-dark-50 hover:bg-darkgray hover:border-gray-100"
+            : "cursor-pointer bg-success hover:bg-mediumseagreen"
+        } py-3.5 px-[23px] no-underline self-stretch rounded flex flex-row items-center justify-center whitespace-nowrap border-[1px] border-solid hover:box-border hover:border-[1px] hover:border-solid`}
+      >
         <b className="flex-1 relative text-sm leading-[20px] font-inter text-default-white text-center">
-          Coming soon
+          {linkTitle}
         </b>
-      </button>
+      </a>
     </div>
   );
 };
@@ -55,6 +66,8 @@ Component.propTypes = {
   growth: PropTypes.string,
   forTheGrowingRepairBusine: PropTypes.string,
   prop: PropTypes.string,
+  disabled: PropTypes.bool,
+  planPaymentLink: PropTypes.string,
 };
 
 export default Component;

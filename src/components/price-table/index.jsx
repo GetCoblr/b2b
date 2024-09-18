@@ -72,7 +72,7 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                 Features included
               </h3>
             </div>
-            <div className="bg-seagreen-low self-stretch flex flex-col items-start justify-center pt-6 px-6 pb-[23px] gap-[16px] text-5xl font-sub-title border-[0.5px] border-solid border-dark-25 mq450:pt-5 mq450:pb-5 mq450:box-border">
+            {/* <div className="bg-seagreen-low self-stretch flex flex-col items-start justify-center pt-6 px-6 pb-[23px] gap-[16px] text-5xl font-sub-title border-[0.5px] border-solid border-dark-25 mq450:pt-5 mq450:pb-5 mq450:box-border">
               <h3 className="m-0 relative text-inherit leading-[34px] font-bold font-inherit inline-block min-w-[87px] mq450:text-lgi mq450:leading-[27px]">
                 Starter
               </h3>
@@ -124,16 +124,27 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                   Get started free
                 </b>
               </a>
-            </div>
+            </div> */}
+            <Component
+              growth="Starter"
+              forTheGrowingRepairBusine="For the repair business committed to delivering a great in-person experience."
+              prop="$75"
+              planPaymentLink={GATSBY_STARTER_PLAN_SUBSCRIPTION_LINK_FLAT}
+              linkTitle="Get started free"
+            />
             <Component
               growth="Growth"
               forTheGrowingRepairBusine="For the growing  repair business with a few employees and multiple sales channels."
               prop="$99"
+              disabled={true}
+              linkTitle="Coming soon"
             />
             <Component
               growth="Enterprise"
               forTheGrowingRepairBusine="For repair businesses with large repair teams and complex operations."
               prop="$199"
+              disabled={true}
+              linkTitle="Coming soon"
             />
             <div className="bg-default-white self-stretch flex flex-row items-center justify-start pt-[27.5px] px-8 pb-[26px] border-[0.5px] border-solid border-dark-25">
               <div className="text-left text-lg text-dark-100 font-sub-title flex-1 relative leading-[140%] font-semibold">
@@ -586,7 +597,7 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
               <div className="flex-1 [background:linear-gradient(rgba(76,_140,_74,_0.05),_rgba(76,_140,_74,_0.05)),_#fff] flex flex-col items-start justify-center max-w-full">
                 <div className="self-stretch flex flex-col items-start justify-center p-6 gap-[16px]">
                   <h3 className="m-0 relative text-lg leading-[140%] font-semibold font-inherit inline-block min-w-[50px]">
-                    Basic
+                    Starter
                   </h3>
                   <div className="self-stretch relative leading-[140%] font-info-text">
                     For the repair business committed to delivering a great
@@ -596,37 +607,17 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                     <div className="relative leading-[17px] font-info-text inline-block min-w-[57px]">
                       Starting at
                     </div>
-                    <div className="w-[115px] flex flex-row items-baseline justify-center gap-[8px] text-sm font-sub-title">
-                      <div className="relative [text-decoration:line-through] leading-[20px] font-semibold inline-block min-w-[26px] whitespace-nowrap">
+                    <div className="flex flex-row items-baseline justify-center gap-[4px] text-lg text-dark-100 font-sub-title">
+                      <div className="relative leading-[140%] font-semibold inline-block whitespace-nowrap">
                         $75
                       </div>
-                      <div className="flex-1 relative text-lg leading-[140%] font-semibold text-dark-100 inline-block min-w-[34px] whitespace-nowrap">
-                        $50
-                      </div>
-                      <div className="flex-1 relative text-xs leading-[17px] font-info-text inline-block min-w-[39px]">
+                      <div className="relative text-xs leading-[17px] font-info-text text-dark-50 inline-block min-w-[39px]">
                         /Month
                       </div>
                     </div>
-                    <div className="relative leading-[20px] font-medium text-darkorange inline-block min-w-[119px]">
-                      Early adopters price.
-                    </div>
-                    <div className="self-stretch relative leading-[20px] text-darkorange">
-                      <p className="m-0 font-medium">Deal ends in</p>
-                      <p className="m-0 font-semibold">
-                        {
-                          planRemainingTime(GATSBY_BASIC_PLAN_DEADLINE)
-                            .remainingTimeStr
-                        }
-                      </p>
-                    </div>
                   </div>
                   <a
-                    href={
-                      planRemainingTime(GATSBY_BASIC_PLAN_DEADLINE)
-                        ?.isTimeRemaining
-                        ? GATSBY_STARTER_PLAN_SUBSCRIPTION_LINK_DISCOUNTED
-                        : GATSBY_STARTER_PLAN_SUBSCRIPTION_LINK_FLAT
-                    }
+                    href={GATSBY_STARTER_PLAN_SUBSCRIPTION_LINK_FLAT}
                     target="_blank"
                     className="cursor-pointer py-[5px] px-5 no-underline bg-success self-stretch shadow-[0px_1px_1.92px_rgba(16,_24,_40,_0.05)] rounded-lg overflow-hidden flex flex-row items-center justify-center whitespace-nowrap border-[1px] border-solid border-success"
                   >
@@ -682,7 +673,7 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
               <div className="flex-1 bg-white flex flex-col items-start justify-center max-w-full">
                 <div className="self-stretch flex flex-col items-start justify-center py-6 pr-5 pl-6 gap-[16px]">
                   <h3 className="m-0 relative text-lg leading-[140%] font-semibold font-sub-title inline-block min-w-[114px]">
-                    Professional
+                    Growth
                   </h3>
                   <div className="self-stretch relative leading-[140%]">
                     For the growing repair business with a few employees and
@@ -692,8 +683,8 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                     <div className="relative leading-[17px] inline-block min-w-[57px]">
                       Starting at
                     </div>
-                    <div className="flex flex-row items-baseline justify-center gap-[8px] text-lg text-dark-100 font-sub-title">
-                      <div className="relative leading-[140%] font-semibold inline-block min-w-[34px] whitespace-nowrap">
+                    <div className="flex flex-row items-baseline justify-center gap-[4px] text-lg text-dark-100 font-sub-title">
+                      <div className="relative leading-[140%] font-semibold inline-block whitespace-nowrap">
                         $99
                       </div>
                       <div className="relative text-xs leading-[17px] font-info-text text-dark-50 inline-block min-w-[39px]">
@@ -770,8 +761,8 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                     <div className="relative leading-[17px] inline-block min-w-[57px]">
                       Starting at
                     </div>
-                    <div className="flex flex-row items-baseline justify-center gap-[8px] text-lg text-dark-100 font-sub-title">
-                      <div className="relative leading-[140%] font-semibold inline-block min-w-[41px] whitespace-nowrap">
+                    <div className="flex flex-row items-baseline justify-center gap-[4px] text-lg text-dark-100 font-sub-title">
+                      <div className="relative leading-[140%] font-semibold inline-block whitespace-nowrap">
                         $199
                       </div>
                       <div className="relative text-xs leading-[17px] font-info-text text-dark-50 inline-block min-w-[39px]">
