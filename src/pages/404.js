@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import SEO from "../components/seo"
 
 const pageStyles = {
   color: "#232129",
@@ -46,4 +47,11 @@ const NotFoundPage = () => {
 
 export default NotFoundPage
 
-export const Head = () => <title>Not found</title>
+export const Head = () => {
+  return (
+    <SEO
+      title="Not found | 404 Error"
+      description="The page you are looking for doesn't exist. Explore Coblr's services and solutions for repair businesses or return to the homepage to continue browsing."
+    />
+  );
+};

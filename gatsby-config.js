@@ -1,16 +1,15 @@
-/**
- * @type {import('gatsby').GatsbyConfig}
- */
-
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-});
+const dotenv = require("dotenv");
+dotenv.config({ path: `${__dirname}/.env.${process.env.NODE_ENV}` });
 
 module.exports = {
   siteMetadata: {
-    title: `b2b`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: "Coblr | Point-of-Sale and Management System for Repair Businesses",
+    description:
+      "Coblr empowers repair businesses with the tools to streamline operations, from order management and payment processing to CRM. Join the platform built for repair and transform your business",
+    url: "https://getcoblr.com",
+    image: "/rectangle-14@2x.png",
   },
+
   plugins: [
     {
       resolve: "gatsby-plugin-manifest",

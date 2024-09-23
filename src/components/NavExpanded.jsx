@@ -1,6 +1,5 @@
 import { Link, navigate } from "gatsby";
 import * as React from "react";
-import { GATSBY_LOGIN_URL, GATSBY_SIGNUP_URL } from "../constants";
 
 const NavExpanded = ({ expand = false }) => {
   return (
@@ -55,7 +54,7 @@ const NavExpanded = ({ expand = false }) => {
         <div className="flex-1 flex flex-col items-start justify-start gap-[16px] max-w-full">
           <div className="self-stretch rounded-sm overflow-hidden flex flex-row items-start justify-center py-2.5 px-5">
             <div
-              onClick={() => navigate(GATSBY_LOGIN_URL)}
+              onClick={() => navigate(process.env.GATSBY_LOGIN_URL)}
               className="relative leading-[140%] inline-block min-w-[44px] whitespace-nowrap"
             >
               Log In
@@ -63,7 +62,7 @@ const NavExpanded = ({ expand = false }) => {
           </div>
           <button className="cursor-pointer py-[9px] px-5 bg-success self-stretch shadow-[0px_1px_1.92px_rgba(16,_24,_40,_0.05)] rounded-sm overflow-hidden flex flex-row items-start justify-center whitespace-nowrap border-[1px] border-solid border-success">
             <div
-              onClick={() => navigate(GATSBY_SIGNUP_URL)}
+              onClick={() => navigate(process.env.GATSBY_SIGNUP_URL)}
               className="relative text-base leading-[140%] font-body text-white text-left inline-block min-w-[54px]"
             >
               Sign up

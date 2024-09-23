@@ -1,7 +1,6 @@
 import * as React from "react";
 import useFileImport from "../../hooks/useFileImport";
 import { navigate } from "gatsby";
-import { GATSBY_SIGNUP_URL } from "../../constants";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const FrameComponent = ({ className = "" }) => {
@@ -18,7 +17,7 @@ const FrameComponent = ({ className = "" }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate(`${GATSBY_SIGNUP_URL}?email=${email}`);
+    navigate(`${process.env.GATSBY_SIGNUP_URL}?email=${email}`);
   };
 
   return (

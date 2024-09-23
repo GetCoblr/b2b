@@ -1,7 +1,6 @@
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import * as React from "react";
 import useFileImport from "../../hooks/useFileImport";
-import { GATSBY_CONTACT_US_URL } from "../../constants";
 import { navigate } from "gatsby";
 
 const Header = ({ className = "" }) => {
@@ -19,7 +18,7 @@ const Header = ({ className = "" }) => {
             <p className="m-0">We’re here to help!</p>
           </h1>
           <button
-            onClick={() => navigate(GATSBY_CONTACT_US_URL)}
+            onClick={() => navigate(process.env.GATSBY_CONTACT_US_URL)}
             className="cursor-pointer py-[9px] px-[22px] bg-success w-[198px] rounded-md box-border flex flex-row items-center justify-center border-[2px] border-solid border-seagreen"
           >
             <div className="flex flex-row items-center justify-center py-0 px-6">
@@ -64,7 +63,7 @@ const Header = ({ className = "" }) => {
             <p className="m-0">We’re here to help!</p>
           </h2>
           <div
-            onClick={() => navigate(GATSBY_CONTACT_US_URL)}
+            onClick={() => navigate(process.env.GATSBY_CONTACT_US_URL)}
             className="cursor-pointer self-stretch flex flex-row items-start justify-start max-w-full text-base font-body"
           >
             <div className="flex-1 rounded-[10px] bg-success box-border flex flex-row items-center justify-center py-2 px-0 max-w-full border-[2px] border-solid border-seagreen">

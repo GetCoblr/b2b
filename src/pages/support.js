@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import Header from "../components/support/Header";
 import TrailComponent from "../components/TrailComponent";
 import FaqComponent from "../components/support/FaqComponent";
+import SEO from "../components/seo";
 
 const SupportPage = () => {
   return (
@@ -28,4 +29,11 @@ const SupportPage = () => {
 
 export default SupportPage;
 
-export const Head = () => <title>Support</title>;
+export const Head = () => {
+  return (
+    <SEO
+      title="Coblr Support | Expert Help for Your Repair Business"
+      description="Get expert support, from onboarding to troubleshooting. Our team is here to help you every step of the way to help transform your repair business."
+    />
+  );
+};

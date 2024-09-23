@@ -2,7 +2,6 @@ import * as React from "react";
 import { GreenCircle, RedCircle, YellowCircle } from "./icons";
 import useFileImport from "../hooks/useFileImport";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { GATSBY_SIGNUP_URL } from "../constants";
 import { navigate } from "gatsby";
 
 const Header = ({ className = "" }) => {
@@ -15,7 +14,7 @@ const Header = ({ className = "" }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate(`${GATSBY_SIGNUP_URL}?email=${email}`);
+    navigate(`${process.env.GATSBY_SIGNUP_URL}?email=${email}`);
   };
 
   return (

@@ -11,7 +11,6 @@ import { motion } from "framer-motion";
 import MobileExtended from "./mobileExtended";
 
 import { DownArrowSVG, IconLinkSVG, TickSVG } from "../icons";
-import { GATSBY_SIGNUP_URL, GATSBY_BASIC_PLAN_DEADLINE, GATSBY_DEADLINE_TIMEZONE, GATSBY_STARTER_PLAN_SUBSCRIPTION_LINK_DISCOUNTED, GATSBY_STARTER_PLAN_SUBSCRIPTION_LINK_FLAT } from "../../constants";
 
 const PriceTable = ({ extended = false, title, subTitle }) => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -21,9 +20,9 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
     const deadlineDate = moment.tz(
       deadline + " 00:00",
       "MM-DD-YYYY HH:mm",
-      GATSBY_DEADLINE_TIMEZONE
+      process.env.GATSBY_DEADLINE_TIMEZONE
     );
-    const now = moment.tz(moment(), GATSBY_DEADLINE_TIMEZONE);
+    const now = moment.tz(moment(), process.env.GATSBY_DEADLINE_TIMEZONE);
     const duration = moment.duration(deadlineDate.diff(now));
 
     if (duration.asMilliseconds() <= 0) {
@@ -105,7 +104,7 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                   <span className="font-semibold">
                     {" "}
                     {
-                      planRemainingTime(GATSBY_BASIC_PLAN_DEADLINE)
+                      planRemainingTime(process.env.GATSBY_BASIC_PLAN_DEADLINE)
                         ?.remainingTimeStr
                     }
                   </span>
@@ -113,9 +112,9 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
               </div>
               <a
                 href={
-                  planRemainingTime(GATSBY_BASIC_PLAN_DEADLINE)?.isTimeRemaining
-                    ? GATSBY_STARTER_PLAN_SUBSCRIPTION_LINK_DISCOUNTED
-                    : GATSBY_STARTER_PLAN_SUBSCRIPTION_LINK_FLAT
+                  planRemainingTime(process.env.GATSBY_BASIC_PLAN_DEADLINE)?.isTimeRemaining
+                    ? process.env.GATSBY_STARTER_PLAN_SUBSCRIPTION_LINK_DISCOUNTED
+                    : process.env.GATSBY_STARTER_PLAN_SUBSCRIPTION_LINK_FLAT
                 }
                 target="_blank"
                 className="cursor-pointer [border:none] no-underline py-4 px-6 bg-success self-stretch rounded flex flex-row items-center justify-center whitespace-nowrap hover:bg-mediumseagreen"
@@ -129,7 +128,9 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
               growth="Starter"
               forTheGrowingRepairBusine="For the repair business committed to delivering a great in-person experience."
               prop="$75"
-              planPaymentLink={GATSBY_STARTER_PLAN_SUBSCRIPTION_LINK_FLAT}
+              planPaymentLink={
+                process.env.GATSBY_STARTER_PLAN_SUBSCRIPTION_LINK_FLAT
+              }
               linkTitle="Get started free"
             />
             <Component
@@ -617,7 +618,9 @@ const PriceTable = ({ extended = false, title, subTitle }) => {
                     </div>
                   </div>
                   <a
-                    href={GATSBY_STARTER_PLAN_SUBSCRIPTION_LINK_FLAT}
+                    href={
+                      process.env.GATSBY_STARTER_PLAN_SUBSCRIPTION_LINK_FLAT
+                    }
                     target="_blank"
                     className="cursor-pointer py-[5px] px-5 no-underline bg-success self-stretch shadow-[0px_1px_1.92px_rgba(16,_24,_40,_0.05)] rounded-lg overflow-hidden flex flex-row items-center justify-center whitespace-nowrap border-[1px] border-solid border-success"
                   >

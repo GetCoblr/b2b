@@ -4,7 +4,6 @@ import useFileImport from "../hooks/useFileImport";
 import NavExpanded from "./NavExpanded";
 import { CloseSVG } from "./icons";
 import { Link, navigate } from "gatsby";
-import { GATSBY_LOGIN_URL, GATSBY_SIGNUP_URL } from "../constants";
 
 const Navbar = ({ className = "", currentPage }) => {
   const fileMap = useFileImport();
@@ -157,14 +156,14 @@ const Navbar = ({ className = "", currentPage }) => {
         <div className="flex flex-row items-center justify-start text-blue-gray-900 font-body">
           <div className="flex flex-row items-center justify-start gap-[16px]">
             <div
-              onClick={() => navigate(GATSBY_LOGIN_URL)}
+              onClick={() => navigate(process.env.GATSBY_LOGIN_URL)}
               className="cursor-pointer relative leading-[140%] inline-block min-w-[44px] whitespace-nowrap"
             >
               Log In
             </div>
             <button className="cursor-pointer py-[15px] px-[31px] bg-success shadow-[0px_1px_1.92px_rgba(16,_24,_40,_0.05)] rounded-[14px] overflow-hidden flex flex-row items-center justify-center whitespace-nowrap border-[1px] border-solid border-success hover:bg-mediumseagreen hover:box-border hover:border-[1px] hover:border-solid hover:border-mediumseagreen">
               <div
-                onClick={() => navigate(GATSBY_SIGNUP_URL)}
+                onClick={() => navigate(process.env.GATSBY_SIGNUP_URL)}
                 className="relative text-base leading-[140%] font-body text-white text-left inline-block min-w-[54px]"
               >
                 Sign up

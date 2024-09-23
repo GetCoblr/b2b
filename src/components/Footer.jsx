@@ -8,7 +8,6 @@ import {
 import useFileImport from "../hooks/useFileImport";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Link, navigate } from "gatsby";
-import {  GATSBY_CONTACT_US_URL, GATSBY_LOGIN_URL } from "../constants";
 
 const Footer = ({ className = "" }) => {
   const fileMap = useFileImport();
@@ -47,7 +46,10 @@ const Footer = ({ className = "" }) => {
                 </b>
               </div>
               <div className="self-stretch flex flex-col items-start justify-start text-base text-blue-gray-600 font-body-xs">
-                <div onClick={() => navigate(GATSBY_LOGIN_URL)} className="cursor-pointer self-stretch flex flex-row items-center justify-start py-3 px-0 gap-[8px] text-dark-100 font-body">
+                <div
+                  onClick={() => navigate(process.env.GATSBY_LOGIN_URL)}
+                  className="cursor-pointer self-stretch flex flex-row items-center justify-start py-3 px-0 gap-[8px] text-dark-100 font-body"
+                >
                   <div className="relative leading-[140%] inline-block min-w-[48px]">
                     Sign In
                   </div>
@@ -60,7 +62,10 @@ const Footer = ({ className = "" }) => {
                     Pricing
                   </Link>
                 </div>
-                <div onClick={() => navigate(GATSBY_CONTACT_US_URL)} className="cursor-pointer whitespace-nowrap self-stretch flex flex-row items-center justify-start py-3 px-0 gap-[8px] text-dark-100 font-body">
+                <div
+                  onClick={() => navigate(process.env.GATSBY_CONTACT_US_URL)}
+                  className="cursor-pointer whitespace-nowrap self-stretch flex flex-row items-center justify-start py-3 px-0 gap-[8px] text-dark-100 font-body"
+                >
                   <div className="whitespace-nowrap relative leading-[140%] inline-block min-w-[80px]">
                     Contact Us
                   </div>
@@ -157,7 +162,10 @@ const Footer = ({ className = "" }) => {
               </b>
             </div>
             <div className="self-stretch flex flex-col items-start justify-start text-base text-blue-gray-600 font-body-xs">
-              <div onClick={() => navigate(GATSBY_LOGIN_URL)} className="self-stretch flex flex-row items-center justify-start py-3 px-0 gap-[8px] text-dark-100 font-body">
+              <div
+                onClick={() => navigate(process.env.GATSBY_LOGIN_URL)}
+                className="self-stretch flex flex-row items-center justify-start py-3 px-0 gap-[8px] text-dark-100 font-body"
+              >
                 <div className="relative leading-[140%] inline-block min-w-[48px]">
                   Sign In
                 </div>
@@ -170,7 +178,10 @@ const Footer = ({ className = "" }) => {
                   Pricing
                 </Link>
               </div>
-              <div onClick={() => navigate(GATSBY_CONTACT_US_URL)} className="cursor-pointer whitespace-nowrap self-stretch flex flex-row items-center justify-start py-3 px-0 gap-[8px] text-dark-100 font-body">
+              <div
+                onClick={() => navigate(process.env.GATSBY_CONTACT_US_URL)}
+                className="cursor-pointer whitespace-nowrap self-stretch flex flex-row items-center justify-start py-3 px-0 gap-[8px] text-dark-100 font-body"
+              >
                 <div className="whitespace-nowrap relative leading-[140%] inline-block min-w-[80px]">
                   Contact Us
                 </div>

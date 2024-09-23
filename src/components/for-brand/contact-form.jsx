@@ -1,5 +1,4 @@
 import * as React from "react";
-import { GATSBY_SUPPORT_EMAIL_API } from "../../constants";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -30,7 +29,7 @@ const ContactForm = ({ className }) => {
       message: formData.message,
     };
 
-    fetch(GATSBY_SUPPORT_EMAIL_API, {
+    fetch(process.env.GATSBY_SUPPORT_EMAIL_API, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

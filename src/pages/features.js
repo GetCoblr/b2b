@@ -5,6 +5,7 @@ import { Rectangle1SVG, RectangleSVG } from "../components/icons";
 import Layout from "../components/Layout";
 import ImageText from "../components/ImageText";
 import TrailComponent from "../components/TrailComponent";
+import SEO from "../components/seo";
 
 const FeaturesPage = () => {
   const fileMap = useFileImport();
@@ -86,4 +87,11 @@ const FeaturesPage = () => {
 
 export default FeaturesPage;
 
-export const Head = () => <title>Features</title>;
+export const Head = () => {
+  return (
+    <SEO
+      title="Coblr Features | Tools built for Repair Shops"
+      description="Coblr’s features are built to streamline repair processes—order management, point of sale, customer engagement,  payment solutions, and more. Discover how Coblr can transform your business."
+    />
+  );
+};

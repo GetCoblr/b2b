@@ -6,6 +6,7 @@ import ImageText from "../components/ImageText";
 import useFileImport from "../hooks/useFileImport";
 import PriceTable from "../components/price-table";
 import TrailComponent from "../components/TrailComponent";
+import SEO from "../components/seo";
 
 const IndexPage = () => {
   const fileMap = useFileImport();
@@ -62,4 +63,6 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <title>Home</title>;
+export const Head = () => {
+  return <SEO />;
+};

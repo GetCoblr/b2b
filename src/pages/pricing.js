@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import PriceTable from "../components/price-table/index";
 import FaqComponent from "../components/support/FaqComponent";
 import TrailComponent from "../components/TrailComponent";
+import SEO from "../components/seo";
 
 const PricingPage = () => {
   return (
@@ -35,4 +36,11 @@ const PricingPage = () => {
 
 export default PricingPage;
 
-export const Head = () => <title>Pricing</title>;
+export const Head = () => {
+  return (
+    <SEO
+      title="Coblr Pricing | Affordable solutions built for the needs of your repair businesses"
+      description="Explore Coblr’s flexible pricing plans for all types of repair businesses. Find the perfect solution to transform your business with one low monthly cost."
+    />
+  );
+};
