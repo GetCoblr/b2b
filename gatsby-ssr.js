@@ -28,5 +28,9 @@ export const onRenderBody = ({ setHeadComponents }) => {
         `,
       }}
     />,
+    <meta
+      name="google-site-verification"
+      content="yyrckVbu3HdjIjgmlQNIwduoqxCfr-9zYQJa_NEElds"
+    />,
   ]);
 };
