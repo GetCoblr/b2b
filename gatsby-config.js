@@ -8,6 +8,7 @@ module.exports = {
       "Coblr empowers repair businesses with the tools to streamline operations, from order management and payment processing to CRM. Join the platform built for repair and transform your business",
     url: "https://getcoblr.com",
     image: "/rectangle-14@2x.png",
+    siteUrl: "https://getcoblr.com",
   },
 
   plugins: [
@@ -24,6 +25,7 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
