@@ -66,22 +66,23 @@ const FaqComponent = ({ className = "" }) => {
         </FAQItem>
         <FAQItem question="How does billing work for shipping labels?">
           <p>
-            Currently, we have a unique code for your business and each time a
-            shipping label is created we will assign the charge to your
-            business. At the end of each calendar month, we will aggregate all
-            shipping labels created by your store and invoice you for that
-            total.
+            We have an integration with Shipstation. All you need to do is
+            signup for an account with Shipstation (shipstation.com) and link
+            your account to Coblr. Currently, we only allow for shipping via
+            UPS.
           </p>
-          <p>
-            You can also give us your UPS, USPS, or FedEx account number and we
-            can set up 3rd party billing so that your shipper account is charged
-            directly.
-          </p>
-          <p>
-            We are working on improving this experience and will be launching a
-            simpler shipping integration in the near future, so that you are
-            charged directly as you create labels.
-          </p>
+          <ul className="list-decimal">
+            <li>Open a Shipstation Account</li>
+            <li>Go to Settings > Account > API Settings</li>
+            <li>Copy the API Key and API Secret</li>
+            <li>Go to Settings > Account > Payment & Subscription</li>
+            <li>Fund your account</li>
+            <li>Go to Settings in Coblr > Integrations > Click Configure</li>
+            <li>
+              Paste the API key and secret from Shipstation into the popup.
+            </li>
+          </ul>
+          <p>You are now ready to create shipping labels in Coblr!</p>
         </FAQItem>
         <FAQItem question="What automated emails are sent?">
           <p>
