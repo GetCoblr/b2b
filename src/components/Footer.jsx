@@ -124,8 +124,14 @@ const Footer = ({ className = "" }) => {
             </div>
           </div>
         </section>
-        <section className="self-stretch flex flex-row items-center justify-start pt-12 px-0 pb-6 box-border gap-[48px] max-w-full text-left text-base text-blue-gray-600 font-body-xs mq750:gap-[24px]">
-          <div className="flex-1 relative leading-[140%] font-body text-dark-50 whitespace-pre-wrap inline-block max-w-full">
+        <section className="flex flex-row items-center justify-between pt-12 px-0 pb-6 gap-[48px] w-full text-base text-blue-gray-600 font-body-xs">
+          <Link
+            to="/privacy-policy-and-terms"
+            className="text-[#4c8c4a] text-base font-normal font-['Questrial'] underline leading-snug"
+          >
+            Terms & Privacy
+          </Link>
+          <div className="leading-[140%] font-body text-dark-50 whitespace-pre-wrap">
             © 2024, Coblrshop Inc. All rights reserved.
           </div>
         </section>
@@ -239,8 +245,14 @@ const Footer = ({ className = "" }) => {
             </div>
           </div>
         </section>
-        <section className="self-stretch flex flex-row items-center justify-start pt-12 px-0 pb-6 box-border gap-[48px] max-w-full text-left text-base text-blue-gray-600 font-body-xs">
-          <div className="flex-1 relative leading-[140%] font-body text-dark-50 whitespace-pre-wrap inline-block max-w-full">
+        <section className="flex flex-col justify-start pt-12 px-0 pb-6 box-border gap-[8px] max-w-full text-left text-base font-body-xs">
+          <Link
+            to="/privacy-policy-and-terms"
+            className="text-dark-50 text-base font-normal font-['Questrial'] no-underline leading-snug"
+          >
+            Terms & Privacy
+          </Link>
+          <div className="leading-[140%] font-body text-dark-50 whitespace-pre-wrap">
             © 2024, Coblrshop Inc. All rights reserved.
           </div>
         </section>
