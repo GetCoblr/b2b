@@ -9,7 +9,7 @@ import useFileImport from "../hooks/useFileImport";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Link, navigate } from "gatsby";
 
-const Footer = ({ className = "" }) => {
+const Footer = ({ className = "", currentPage }) => {
   const fileMap = useFileImport();
 
   return (
@@ -128,16 +128,24 @@ const Footer = ({ className = "" }) => {
           <div className="leading-[140%] font-body text-dark-50 whitespace-pre-wrap">
             © 2024, Coblrshop Inc. All rights reserved.
           </div>
-          <div className="flex gap-4">
+          <div className="flex gap-5">
             <Link
               to="/terms-of-service"
-              className="text-[#4c8c4a] text-base font-normal font-['Questrial'] underline leading-snug"
+              className={`text-base font-normal font-['Questrial'] leading-snug no-underline hover:underline ${
+                currentPage === "terms-of-service"
+                  ? "text-[#4c8c4a]"
+                  : "text-[#939291]"
+              }`}
             >
               Terms of Service
             </Link>
             <Link
               to="/privacy-policy"
-              className="text-[#4c8c4a] text-base font-normal font-['Questrial'] underline leading-snug"
+              className={`text-base font-normal font-['Questrial'] leading-snug no-underline hover:underline ${
+                currentPage === "privacy-policy"
+                  ? "text-[#4c8c4a]"
+                  : "text-[#939291]"
+              }`}
             >
               Privacy Policy
             </Link>
@@ -254,16 +262,24 @@ const Footer = ({ className = "" }) => {
           </div>
         </section>
         <section className="flex flex-col justify-start pt-12 px-0 pb-6 box-border gap-[8px] max-w-full text-left text-base font-body-xs">
-          <div className="flex gap-4">
+          <div className="flex gap-5">
             <Link
               to="/terms-of-service"
-              className="text-[#4c8c4a] text-base font-normal font-['Questrial'] underline leading-snug"
+              className={`text-base font-normal font-['Questrial'] leading-snug no-underline hover:underline ${
+                currentPage === "terms-of-service"
+                  ? "text-[#4c8c4a]"
+                  : "text-[#939291]"
+              }`}
             >
               Terms of Service
             </Link>
             <Link
               to="/privacy-policy"
-              className="text-[#4c8c4a] text-base font-normal font-['Questrial'] underline leading-snug"
+              className={`text-base font-normal font-['Questrial'] leading-snug no-underline hover:underline ${
+                currentPage === "privacy-policy"
+                  ? "text-[#4c8c4a]"
+                  : "text-[#939291]"
+              }`}
             >
               Privacy Policy
             </Link>

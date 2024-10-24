@@ -23,7 +23,7 @@ const Layout = ({ children, bg = false, currentPage }) => {
       <div className={`max-w-screen-2xl mx-auto`}>
         {!bg && <Navbar currentPage={currentPage} />}
         {React.Children.toArray(children).slice(bg ? 1 : 0)}
-        <Footer />
+        <Footer currentPage={currentPage} />
       </div>
     </div>
   );

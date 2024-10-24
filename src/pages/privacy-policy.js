@@ -3,9 +3,28 @@ import Layout from "../components/Layout";
 import SEO from "../components/seo";
 import { PRIVACY_POLICY } from "../constants";
 
-const PrivacyPolicyPage = ({ }) => {
+export const ContactInformation = () => {
   return (
-    <Layout bg={true}>
+    <div className="pt-5">
+      <span className="text-[#272523] text-base font-normal font-['Questrial'] leading-snug">
+        Coblrshop,Inc
+        <br />
+        588 Boston Post Rd, Weston, MA 02493
+        <br />
+      </span>
+      <a
+        href="mailto:info@coblrshop.com"
+        className="text-[#272523] text-base font-normal font-['Questrial'] underline leading-snug"
+      >
+        info@coblrshop.com
+      </a>
+    </div>
+  );
+}
+
+const PrivacyPolicyPage = () => {
+  return (
+    <Layout bg={true} currentPage="privacy-policy">
       <div className="max-w-[980px] mx-auto">
         <header className="mx-5">
           <p className="text-left md:text-center md:w-auto text-[#61b95e] text-[26px] leading-9 md:text-[52px] font-bold font-['Montserrat'] md:leading-[72.80px] tracking-wide py-10 md:py-0">
@@ -49,20 +68,7 @@ const PrivacyPolicyPage = ({ }) => {
               </div>
             ))}
           </div>
-          <div className="pt-5">
-            <span className="text-[#272523] text-base font-normal font-['Questrial'] leading-snug">
-              Coblrshop,Inc
-              <br />
-              588 Boston Post Rd, Weston, MA 02493
-              <br />
-            </span>
-            <a
-              href="mailto:info@coblrshop.com"
-              className="text-[#272523] text-base font-normal font-['Questrial'] underline leading-snug"
-            >
-              info@coblrshop.com
-            </a>
-          </div>
+          <ContactInformation />
         </section>
       </div>
     </Layout>
