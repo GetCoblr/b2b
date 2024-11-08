@@ -1,4 +1,5 @@
 import * as React from "react";
+import InputMask from "react-input-mask";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -18,6 +19,10 @@ const ContactForm = ({ className }) => {
       [name]: value,
     });
   };
+
+  const isFormComplete = Object.values(formData).every(
+    (value) => value.trim() !== ""
+  );
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -106,7 +111,7 @@ const ContactForm = ({ className }) => {
           Email
         </div>
         <input
-          type="text"
+          type="email"
           name="email"
           required
           value={formData.email}
@@ -118,7 +123,9 @@ const ContactForm = ({ className }) => {
         <div className="relative text-xs leading-[17px] font-medium font-sub-title text-left inline-block">
           Phone Number
         </div>
-        <input
+        <InputMask
+          mask="(999) 999-9999"
+          maskChar=" "
           type="text"
           name="phoneNumber"
           required
@@ -143,7 +150,14 @@ const ContactForm = ({ className }) => {
       </div>
       <button
         type="submit"
-        className="cursor-pointer col-span-2 py-[9px] px-[22px] bg-white text-success md:rounded-md rounded-[10px] flex flex-row items-center justify-center border-[2px] border-solid border-seagreen"
+        disabled={!isFormComplete}
+        className={`col-span-2 py-[9px] px-[22px] ${
+          isFormComplete
+            ? "bg-white text-success cursor-pointer"
+            : "bg-gray-300 text-gray-500 cursor-not-allowed"
+        } md:rounded-md rounded-[10px] flex flex-row items-center justify-center border-[2px] border-solid ${
+          isFormComplete ? "border-seagreen" : "border-gray-300"
+        }`}
       >
         <div className="flex flex-row items-center justify-center py-0 px-6">
           <div className="relative md:text-lg text-base leading-[140%] font-semibold font-body md:font-sub-title text-left text-nowrap">
