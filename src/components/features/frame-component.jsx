@@ -17,7 +17,8 @@ const FrameComponent = ({ className = "" }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate(`${process.env.GATSBY_SIGNUP_URL}?email=${email}`);
+    const url = `${process.env.GATSBY_SIGNUP_URL}?prefilled_email=${email}`;
+    window.open(url, "_blank");
   };
 
   return (
