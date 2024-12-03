@@ -47,7 +47,9 @@ const Footer = ({ className = "", currentPage }) => {
               </div>
               <div className="self-stretch flex flex-col items-start justify-start text-base text-blue-gray-600 font-body-xs">
                 <div
-                  onClick={() => navigate(process.env.GATSBY_LOGIN_URL)}
+                  onClick={() =>
+                    window.open(process.env.GATSBY_LOGIN_URL, "_blank")
+                  }
                   className="cursor-pointer self-stretch flex flex-row items-center justify-start py-3 px-0 gap-[8px] text-dark-100 font-body"
                 >
                   <div className="relative leading-[140%] inline-block min-w-[48px]">
@@ -63,7 +65,9 @@ const Footer = ({ className = "", currentPage }) => {
                   </Link>
                 </div>
                 <div
-                  onClick={() => navigate(process.env.GATSBY_CONTACT_US_URL)}
+                  onClick={() =>
+                    window.open(process.env.GATSBY_CONTACT_US_URL, "_blank")
+                  }
                   className="cursor-pointer whitespace-nowrap self-stretch flex flex-row items-center justify-start py-3 px-0 gap-[8px] text-dark-100 font-body"
                 >
                   <div className="whitespace-nowrap relative leading-[140%] inline-block min-w-[80px]">
@@ -185,7 +189,9 @@ const Footer = ({ className = "", currentPage }) => {
             </div>
             <div className="self-stretch flex flex-col items-start justify-start text-base text-blue-gray-600 font-body-xs">
               <div
-                onClick={() => navigate(process.env.GATSBY_LOGIN_URL)}
+                onClick={() =>
+                  window.open(process.env.GATSBY_LOGIN_URL, "_blank")
+                }
                 className="self-stretch flex flex-row items-center justify-start py-3 px-0 gap-[8px] text-dark-100 font-body"
               >
                 <div className="relative leading-[140%] inline-block min-w-[48px]">
@@ -201,7 +207,9 @@ const Footer = ({ className = "", currentPage }) => {
                 </Link>
               </div>
               <div
-                onClick={() => navigate(process.env.GATSBY_CONTACT_US_URL)}
+                onClick={() =>
+                  window.open(process.env.GATSBY_CONTACT_US_URL, "_blank")
+                }
                 className="cursor-pointer whitespace-nowrap self-stretch flex flex-row items-center justify-start py-3 px-0 gap-[8px] text-dark-100 font-body"
               >
                 <div className="whitespace-nowrap relative leading-[140%] inline-block min-w-[80px]">

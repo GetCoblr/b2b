@@ -17,7 +17,9 @@ const TrailComponent = ({ className = "" }) => {
             less than 3 minutes.
           </div>
           <button
-            onClick={() => navigate(process.env.GATSBY_SIGNUP_URL)}
+            onClick={() =>
+              window.open(process.env.GATSBY_SIGNUP_URL, "_blank")
+            }
             className="z-[1] cursor-pointer [border:none] p-0 bg-[transparent] flex flex-row items-center justify-start"
           >
             <div className="shadow-[0px_1px_1.92px_rgba(16,_24,_40,_0.05)] rounded-lg bg-success overflow-hidden flex flex-row items-center justify-center p-[15px] whitespace-nowrap border-[1px] border-solid border-success">
@@ -41,7 +43,9 @@ const TrailComponent = ({ className = "" }) => {
             less than 3 minutes.
           </div>
           <button
-            onClick={() => navigate(process.env.GATSBY_SIGNUP_URL)}
+            onClick={() =>
+              window.open(process.env.GATSBY_SIGNUP_URL, "_blank")
+            }
             className="cursor-pointer z-[1] p-2 bg-success w-[149px] rounded-[10px] box-border flex flex-row items-center justify-center border-[2px] border-solid border-seagreen"
           >
             <div className="flex flex-row items-center justify-center py-0 px-6">
