@@ -3,6 +3,23 @@ import React from "react";
 export const onRenderBody = ({ setHeadComponents }) => {
   setHeadComponents([
     <script
+      key="amplitude-analytics"
+      src="https://cdn.amplitude.com/libs/analytics-browser-2.11.1-min.js.gz"
+    />,
+    <script
+      key="amplitude-session-replay"
+      src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.8.0-min.js.gz"
+    />,
+    <script
+      key="amplitude-init"
+      dangerouslySetInnerHTML={{
+        __html: `
+          window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));
+          window.amplitude.init('6631288aa8c2a8814945311e14d0d2c0', {"autocapture":{"elementInteractions":true}});
+        `,
+      }}
+    />,
+    <script
       key="facebook-pixel"
       dangerouslySetInnerHTML={{
         __html: `
