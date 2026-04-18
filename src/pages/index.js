@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import CoreFeatures from "../components/CoreFeatures";
 import ImageText from "../components/ImageText";
 import useFileImport from "../hooks/useFileImport";
-import PriceTable from "../components/price-table";
+import StripePricingTableSection from "../components/StripePricingTableSection";
 import TrailComponent from "../components/TrailComponent";
 import SEO from "../components/seo";
 
@@ -37,12 +37,9 @@ const IndexPage = () => {
         title="Increase Revenue"
         summary="Reduce time spent on administrative tasks, grow repair volume, and improve the customer experience to keep customers coming back for repeat business."
       />
-      <PriceTable
+      <StripePricingTableSection
         title="Choose your plan"
-        subTitle={[
-          "Choose a plan that's right for your growing team.",
-          "Free for the first 14 days.",
-        ]}
+        subTitle={["Choose a plan that's right for your growing team"]}
       />
       <div className="relative">
         <div
@@ -55,7 +52,7 @@ const IndexPage = () => {
           }}
           className="[background:linear-gradient(97.2deg,_rgba(248,_255,_248,_0.01),_rgba(76,_140,_74,_0.05)),_#f7f7f7]"
         />
-        <TrailComponent />
+        
       </div>
     </Layout>
   );

@@ -21,7 +21,6 @@ const SupportPage = () => {
           }}
           className="[background:linear-gradient(97.2deg,_rgba(248,_255,_248,_0.01),_rgba(76,_140,_74,_0.05)),_#f7f7f7]"
         />
-        <TrailComponent />
       </div>
     </Layout>
   );

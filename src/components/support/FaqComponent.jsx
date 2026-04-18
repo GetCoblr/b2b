@@ -21,34 +21,6 @@ const FaqComponent = ({ className = "" }) => {
         Frequently Asked Questions
       </h2>
       <section className="self-stretch flex flex-col items-start justify-start max-w-full">
-        <FAQItem question="How does billing work?">
-          <p>
-            The Coblr subscription is charged on a monthly basis. After the 14
-            day free trial, your card will be charged for the next 30 days.
-          </p>
-          <p>
-            <b>For example)</b> If you are signed up for our Basic plan
-            ($50/month) and your free trial ends on the 14th of the month, you
-            will be charged $50 for the next month of access. Your billing date
-            will be the 15th of each month.
-          </p>
-          <p>
-            If you cancel before your billing date, you won’t be charged for the
-            upcoming month.
-          </p>
-          <p>
-            If you cancel after your billing date, we will refund you. We
-            promise. No funny business.
-          </p>
-        </FAQItem>
-        <FAQItem question="How do I add my employees?">
-          <p>
-            When you set up your account you have the ability to add new
-            employees. Note that all users can view all details on the app. We
-            will be launching permissions to tailor access for different user
-            types before Q4 2024.
-          </p>
-        </FAQItem>
         <FAQItem question="How to create a custom quote?">
           <p>
             You can create a full repair order in the POS and when you get to
@@ -84,12 +56,12 @@ const FaqComponent = ({ className = "" }) => {
           </ul>
           <p>You are now ready to create shipping labels in Coblr!</p>
         </FAQItem>
-        <FAQItem question="What automated emails are sent?">
+        <FAQItem question="What automated notifications are sent to my customers?">
           <p>
             We know that customers expect updates on their repairs to make the
             repair experience better. But doing this manually can be
             time-consuming. To improve the experience, we have built automated
-            email notifications throughout the entire Coblr product.
+             notifications throughout the entire Coblr product.
           </p>
           <ul className="list-disc">
             <li>
@@ -112,12 +84,6 @@ const FaqComponent = ({ className = "" }) => {
             update, but we suggest sending updates each time there is a change
             in status.
           </p>
-          <ul className="list-disc">
-            <li>
-              Customers will receive emails when you send them messages via our
-              app
-            </li>
-          </ul>
         </FAQItem>
         <FAQItem question="How do I request new features?">
           <p>
@@ -136,8 +102,7 @@ const FaqComponent = ({ className = "" }) => {
         <FAQItem question="How do I cancel?">
           <p>
             We hate to see you go! But, we are committed to making signing up
-            and canceling as easy as possible. To cancel, please email us at{" "}
-            <a href="mailto:info@getcoblr.com">info@getcoblr.com</a>
+            and canceling as easy as possible. You can cancel from the Billing section within the app.
           </p>
           <p>
             Of course, we would love to know why you are canceling. This helps
@@ -149,8 +114,8 @@ const FaqComponent = ({ className = "" }) => {
             Yes! Getting out the word to all shoe repair shops is so important!
             Please tell your referral to email us at{" "}
             <a href="mailto:referral@getcoblr.com">referral@getcoblr.com</a> and
-            copy your business email and we will offer both businesses 2 months
-            of free access to Coblr!
+            copy your business email and we will extend two months of Coblr
+            service to both businesses through our referral program.
           </p>
         </FAQItem>
         <FAQItem question="What platforms does Coblr work on?">

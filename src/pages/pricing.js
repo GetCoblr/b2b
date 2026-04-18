@@ -1,6 +1,6 @@
 import * as React from "react";
 import Layout from "../components/Layout";
-import PriceTable from "../components/price-table/index";
+import StripePricingTableSection from "../components/StripePricingTableSection";
 import FaqComponent from "../components/support/FaqComponent";
 import TrailComponent from "../components/TrailComponent";
 import SEO from "../components/seo";
@@ -8,12 +8,10 @@ import SEO from "../components/seo";
 const PricingPage = () => {
   return (
     <Layout currentPage="pricing" bg={true}>
-      <PriceTable
-        extended={true}
+      <StripePricingTableSection
         title="Choose a Plan to Grow Your Business"
         subTitle={[
           "Choose From One Of The Plans That Suits Your Business Best.",
-          "Free for the first 14 days.",
         ]}
       />
       <FaqComponent />
@@ -28,7 +26,7 @@ const PricingPage = () => {
           }}
           className="[background:linear-gradient(97.2deg,_rgba(248,_255,_248,_0.01),_rgba(76,_140,_74,_0.05)),_#f7f7f7]"
         />
-        <TrailComponent />
+        
       </div>
     </Layout>
   );
