@@ -59,32 +59,6 @@ const Header = ({ className = "" }) => {
                 support your growth with easy technology.
               </div>
             </div>
-            <form
-              onSubmit={handleSubmit}
-              className="w-[560px] flex flex-row flex-wrap items-start justify-start gap-[16px] max-w-full"
-            >
-              <div className="flex-1 rounded-md bg-white box-border flex flex-row items-center justify-start py-[11px] px-[23px] gap-[8px] min-w-[223px] max-w-full border-[1px] border-solid border-blue-gray-300">
-                <input
-                  className="w-full [border:none] [outline:none] font-body text-base bg-[transparent] h-[22px] flex-1 relative leading-[140%] text-dark-50 text-left inline-block min-w-[177px] p-0"
-                  placeholder="Enter your email"
-                  type="email"
-                  name="email"
-                  value={email}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <button
-                type="submit"
-                className="cursor-pointer py-[9px] px-[22px] bg-success rounded-md flex flex-row items-center justify-center border-[2px] border-solid border-seagreen"
-              >
-                <div className="flex flex-row items-center justify-center py-0 px-6">
-                  <div className="relative text-lg leading-[140%] font-semibold font-sub-title text-white text-left inline-block min-w-[105px] whitespace-nowrap">
-                    Get started
-                  </div>
-                </div>
-              </button>
-            </form>
           </div>
         </section>
       </div>
@@ -130,32 +104,6 @@ const Header = ({ className = "" }) => {
               support your growth with easy technology.
             </div>
           </div>
-          <form
-            onSubmit={handleSubmit}
-            className="self-stretch flex flex-row flex-wrap items-start justify-start gap-[8px]"
-          >
-            <div className="w-[195px] rounded-3xs bg-white box-border flex flex-row items-center justify-start py-[11px] px-6 gap-[8px] border-[1px] border-solid border-blue-gray-300">
-              <input
-                className="w-[87px] [border:none] [outline:none] font-body text-xs bg-[transparent] h-[17px] relative leading-[140%] text-dark-50 text-left inline-block p-0"
-                placeholder="Enter your email"
-                type="email"
-                name="email"
-                value={email}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <button
-              type="submit"
-              className="cursor-pointer p-2 bg-success flex-1 rounded-3xs box-border flex flex-row items-center justify-center min-w-[97px] border-[2px] border-solid border-seagreen"
-            >
-              <div className="flex flex-row items-center justify-center py-0 px-6">
-                <div className="relative text-base leading-[140%] font-body text-white text-left inline-block min-w-[81px] whitespace-nowrap">
-                  Get started
-                </div>
-              </div>
-            </button>
-          </form>
         </section>
       </div>
     </>

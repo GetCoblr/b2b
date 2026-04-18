@@ -4,7 +4,7 @@ import useFileImport from "../hooks/useFileImport";
 import { Rectangle1SVG, RectangleSVG } from "../components/icons";
 import Layout from "../components/Layout";
 import ImageText from "../components/ImageText";
-import TrailComponent from "../components/TrailComponent";
+import ContactForm from "../components/for-brand/contact-form";
 import SEO from "../components/seo";
 
 const FeaturesPage = () => {
@@ -60,7 +60,6 @@ const FeaturesPage = () => {
         <ImageText
           image={fileMap["report-1@2x"].gatsbyImageData}
           bottomImage={fileMap["reportaddon-1@2x"]}
-          comingSoon={true}
           title="Reporting"
           summaryList={[
             "View detailed insights on sales, customers, trends, and orders.",
@@ -68,6 +67,7 @@ const FeaturesPage = () => {
             "Download reports for your accountant.",
           ]}
         />
+        
         <div className="relative">
           <div
             style={{
@@ -78,8 +78,8 @@ const FeaturesPage = () => {
             }}
             className="[background:linear-gradient(97.2deg,_rgba(248,_255,_248,_0.01),_rgba(76,_140,_74,_0.05)),_#f7f7f7]"
           />
-          <TrailComponent />
         </div>
+        
       </div>
     </Layout>
   );
