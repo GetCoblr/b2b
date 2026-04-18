@@ -18,7 +18,7 @@ const StripePricingTableSection = ({ title, subTitle }) => {
         <SectionText title={title} subTitle={subTitle} />
         <div className="w-full self-stretch min-w-0">
           <stripe-pricing-table
-            className="block w-full min-w-0"
+            class="block w-full min-w-0"
             {...stripePricingTableProps}
           />
         </div>
