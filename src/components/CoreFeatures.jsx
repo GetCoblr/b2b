@@ -95,11 +95,6 @@ const CoreFeatures = ({ className = "" }) => {
                   <div className="relative leading-[140%] font-semibold [text-shadow:0px_4px_4px_rgba(0,_0,_0,_0.25)]">
                     Business Reporting
                   </div>
-                  <div className="rounded-2xl bg-blanchedalmond-100 flex flex-row items-center justify-center py-0.5 px-2 whitespace-nowrap text-center text-xs text-darksalmon font-body">
-                    <div className="relative leading-[17px] inline-block max-w-full min-w-[73px]">
-                      Coming Soon
-                    </div>
-                  </div>
                 </div>
               </div>
               <div className="self-stretch relative leading-[140%] font-body text-dark-75">
@@ -194,11 +189,6 @@ const CoreFeatures = ({ className = "" }) => {
                     <GraphSVG width={40} height={40} />
                   </span>
                   <div className="self-stretch flex flex-col items-start justify-start gap-[8px]">
-                    <div className="rounded-2xl bg-blanchedalmond-100 flex flex-row items-center justify-center py-0.5 px-2 whitespace-nowrap text-center">
-                      <div className="relative text-xs text-darksalmon font-body leading-[17px] inline-block min-w-[73px]">
-                        Coming Soon
-                      </div>
-                    </div>
                     <div className="self-stretch relative leading-[140%] font-semibold">
                       Business Reporting
                     </div>
