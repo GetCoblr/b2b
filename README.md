@@ -7,6 +7,19 @@
   Gatsby Minimal Starter
 </h1>
 
+## Stripe pricing table embed
+
+The home and pricing pages render Stripe’s [embeddable pricing table](https://docs.stripe.com/payments/checkout/pricing-table) via `src/components/StripePricingTableSection.jsx`.
+
+**Local setup**
+
+1. Copy `.env.example` to `.env.development` (and `.env.production` when testing a production build).
+2. Set both variables from the embed code in the Stripe Dashboard (**Product catalog → Pricing tables** → your table → **Copy code**):
+   - `GATSBY_STRIPE_PRICING_TABLE_ID` — value of the `pricing-table-id` attribute (starts with `prctbl_`).
+   - `GATSBY_STRIPE_PUBLISHABLE_KEY` — your publishable key (`pk_live_…` or `pk_test_…`).
+
+Restart `gatsby develop` after changing env files. For hosted builds (e.g. Netlify), configure the same `GATSBY_*` variables in the host’s environment settings.
+
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**

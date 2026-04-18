@@ -4,3 +4,4 @@ public
 
 # dotenv environment variable files
 .env*
+!.env.example
